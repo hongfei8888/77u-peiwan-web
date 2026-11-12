@@ -9,6 +9,8 @@
     "test:icons": "node scripts/test-service-icons.mjs",
     "build:sidebar-icons": "node scripts/build-sidebar-icons.mjs",
     "test:sidebar-icons": "node scripts/test-sidebar-icons.mjs",
+    "build:font": "node scripts/build-glacier-font.mjs",
+    "test:font": "node scripts/test-glacier-font.mjs",
     "test:price": "node scripts/test-price.mjs"
   },
   "devDependencies": {

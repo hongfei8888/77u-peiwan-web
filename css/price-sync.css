@@ -29,6 +29,9 @@
 }
 .impeccable-public .platform-games .price-menu-grid .poster-menu-card--compact .poster-menu-name { font-size: 17px; }
 .impeccable-public .platform-games .price-menu-grid .poster-menu-card--compact .poster-menu-summary { font-size: 11px; }
+@media (max-width: 600px) {
+  .impeccable-public .platform-games .price-menu-grid .poster-menu-card--compact .poster-menu-summary { font-size: 12px; }
+}
 .impeccable-public .platform-games .price-menu-grid .poster-menu-card--compact .poster-menu-symbol {
   width: 38px;
   height: 38px;

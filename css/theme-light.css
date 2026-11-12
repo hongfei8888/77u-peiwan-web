@@ -30,7 +30,7 @@ html[data-theme="light"] body.impeccable-public{
 /* 全局 UI 细节（原文件在深色令牌下硬编码） */
 html[data-theme="light"] body.impeccable-public ::selection{ color:#242429; background:#e2e2e6; }
 html[data-theme="light"] body.impeccable-public input::placeholder,
-html[data-theme="light"] body.impeccable-public textarea::placeholder{ color:#8a8a90; opacity:1; }
+html[data-theme="light"] body.impeccable-public textarea::placeholder{ color:#6b6b73; opacity:1; }
 html[data-theme="light"] body.impeccable-public ::-webkit-scrollbar-track{ background:#f5f5f6; }
 html[data-theme="light"] body.impeccable-public ::-webkit-scrollbar-thumb{ background:#c6c6ca; border-color:#f5f5f6; }
 html[data-theme="light"] body.impeccable-public :is(a,button,input,select,textarea,[tabindex]):focus-visible{ outline:2px solid #2a2a31; outline-offset:4px; }
@@ -67,6 +67,7 @@ html[data-theme="light"] body.impeccable-public .nav .nav-link.active{
   background:#f1f1f4;
   box-shadow:inset 0 0 0 1px #e2e2e6;
 }
+html[data-theme="light"] body.impeccable-public .nav-toggle{ background:#ffffff; border-color:#d9d9de; }
 html[data-theme="light"] .nav-toggle span{ background:#242429; }
 
 /* ---------- 品牌字标与 KOOK 栏 ---------- */
@@ -108,7 +109,7 @@ html[data-theme="light"] .footer{
   background:#ffffff;
   border-top:1px solid var(--line);
 }
-html[data-theme="light"] .footer-copy{ color:#8a8a90; }
+html[data-theme="light"] .footer-copy{ color:#6b6b73; }
 html[data-theme="light"] .footer-line{ color:#5e5e64; }
 
 /* ---------- 菜单/海报卡片（service-platform.css 以 (0,3,0) 写死深色，用更强作用域覆盖） ---------- */
@@ -133,6 +134,10 @@ html[data-theme="light"] body.impeccable-public .platform-feature-panel h2{ colo
 html[data-theme="light"] body.impeccable-public .platform-feature-panel p{ color:#4d4d54; }
 html[data-theme="light"] body.impeccable-public .platform-feature-tabs button{ color:#4d4d54; }
 html[data-theme="light"] body.impeccable-public .platform-feature-tabs button.is-active{ color:#1d1d23; }
+/* 手机端标签条压在深色插画上，底板跟随浅色主题，文字才读得清 */
+@media (max-width: 600px){
+  html[data-theme="light"] body.impeccable-public .platform-feature-tabs{ background:#ffffffeb; }
+}
 
 /* ---------- 特色海报卡（三角洲端游/手游）浅色化：浅卡底+立绘全亮+深色文字 ---------- */
 html[data-theme="light"] body.impeccable-public .poster-menu-card--feature{
@@ -172,9 +177,6 @@ html[data-theme="light"] body.impeccable-public .platform-games .poster-menu-car
 html[data-theme="light"] body.impeccable-public .platform-games .poster-menu-card--apricot .poster-menu-arrow,
 html[data-theme="light"] body.impeccable-public .platform-games .poster-menu-card--ice .poster-menu-arrow{ background:#f1f1f4; color:#2a2a31; }
 /* 两张卡在 service-platform.css 中以 ID 选择器写死深色，需同 ID 对抗 */
-html[data-theme="light"] body.impeccable-public #menu-link-other-games{
-  background:#ffffff; border-color:#e4e4e7; color:#242429;
-}
 html[data-theme="light"] body.impeccable-public #menu-link-other-games .poster-menu-name{ color:#242429; }
 html[data-theme="light"] body.impeccable-public #menu-link-other-games .poster-menu-summary{ color:#5e5e64; }
 html[data-theme="light"] body.impeccable-public #menu-link-sweet-day .poster-menu-symbol,
@@ -199,8 +201,6 @@ html[data-theme="light"] body.impeccable-public .platform-promo--join .platform-
 /* ---------- 首页欢迎区 / 分区 ---------- */
 html[data-theme="light"] .platform-welcome h1{ color:#242429; }
 html[data-theme="light"] .platform-welcome p{ color:#5e5e64; }
-html[data-theme="light"] .platform-welcome-link{ color:#1d1d23; }
-html[data-theme="light"] .platform-welcome-link svg{ color:#1d1d23; }
 /* hero 面板文字压在立绘上，保持白色（tabs 位于深色 hero 卡内部，同样保持浅色） */
 html[data-theme="light"] .platform-feature-panel h2{ color:#ffffff; }
 html[data-theme="light"] body.impeccable-public .platform-section-head h2,
@@ -211,7 +211,7 @@ html[data-theme="light"] body.impeccable-public .platform-recommend .platform-se
 html[data-theme="light"] body.impeccable-public .platform-section-head > a,
 html[data-theme="light"] body.impeccable-public .platform-recommend .platform-section-head > a{ color:#1d1d23; }
 html[data-theme="light"] body.impeccable-public .platform-recommend .platform-section-head .platform-disclaimer,
-html[data-theme="light"] body.impeccable-public .platform-disclaimer{ color:#8a8a90; }
+html[data-theme="light"] body.impeccable-public .platform-disclaimer{ color:#6b6b73; }
 
 /* ---------- 主题切换按钮：顶栏内，与"特效"按钮同款芯片造型 ---------- */
 #theme-toggle{
@@ -223,6 +223,9 @@ html[data-theme="light"] body.impeccable-public .platform-disclaimer{ color:#8a8
   transition:color 160ms ease-out, border-color 160ms ease-out, transform 120ms ease-out;
 }
 #theme-toggle svg{ width:16px; height:16px; }
+@media (max-width: 600px){
+  #theme-toggle{ width:44px; height:44px; }
+}
 #theme-toggle .theme-icon-moon{ display:none; }
 html[data-theme="light"] #theme-toggle .theme-icon-sun{ display:none; }
 html[data-theme="light"] #theme-toggle .theme-icon-moon{ display:block; }
@@ -277,8 +280,6 @@ html[data-theme="light"] body.impeccable-public .platform-roster-search input{ c
 html[data-theme="light"] body.impeccable-public .platform-roster-search svg{ color:#8a8a90; }
 html[data-theme="light"] body.impeccable-public .category-strip button,
 html[data-theme="light"] body.impeccable-public .platform-home-filters button{ background:#ffffff; border-color:#e0e0e4; color:#4d4d54; }
-html[data-theme="light"] body.impeccable-public .category-strip button.is-active,
-html[data-theme="light"] body.impeccable-public .platform-home-filters button.is-active{ background:#2a2a31; border-color:#2a2a31; color:#ffffff; }
 
 /* ---- 陪玩资料弹窗/音频/动态 ---- */
 html[data-theme="light"] body.impeccable-public :is(.companion-dialog,.companion-dialog-copy){ background:#ffffff; border-color:#e4e4e7; color:#242429; }
@@ -307,7 +308,6 @@ html[data-theme="light"] body.impeccable-public .campaign-copy>p:last-child{ col
 html[data-theme="light"] body.impeccable-public .page-activities-content .campaign-copy>p:not(.campaign-date):not(.campaign-lead){ color:#5e5e64; }
 html[data-theme="light"] body.impeccable-public .carousel-controls{ color:#5e5e64; }
 html[data-theme="light"] body.impeccable-public .carousel-dot{ background:#d6d6da; }
-html[data-theme="light"] body.impeccable-public .carousel-dot.active{ background:#2a2a31; }
 html[data-theme="light"] body.impeccable-public .carousel-pause{ color:#4d4d54; border-color:#dadade; background:#ffffff; }
 
 /* ---- 通用面板家族：白卡 ---- */
@@ -318,9 +318,7 @@ html[data-theme="light"] body.impeccable-public :is(.contact-card-desc,.contact-
 /* ---- 论坛工具条/标签页/分类芯片 ---- */
 html[data-theme="light"] body.impeccable-public :is(.forum-search,.forum-toolbar,.forum-categories,.forum-tag,.forum-sort,.auth-tabs,.center-tabs){ background:#f2f2f4; color:#4d4d54; border-color:#e0e0e4; }
 html[data-theme="light"] body.impeccable-public :is(.forum-category,.forum-filter,.forum-tab,.auth-tab,.center-tab,.auth-tabs button){ color:#4d4d54; }
-html[data-theme="light"] body.impeccable-public :is(.forum-category.active,.forum-tab.active,.auth-tab.active,.auth-tabs button[aria-selected=true]){ color:#ffffff; background:#2a2a31; }
 html[data-theme="light"] body.impeccable-public .forum-categories button{ color:#4d4d54; border-color:#dcdcdf; background:#ffffff; }
-html[data-theme="light"] body.impeccable-public .forum-categories button.is-active{ color:#ffffff; background:#2a2a31; border-color:#2a2a31; }
 
 /* ---- 全部表单输入 ---- */
 html[data-theme="light"] body.impeccable-public :is(.forum-page input,.forum-page select,.forum-search input,.auth-form input,.auth-form select,.auth-form textarea,.publish-form input,.publish-form textarea,.center-page input,.center-page textarea){ background:#ffffff; color:#242429; border-color:#dcdcdf; }
@@ -346,7 +344,6 @@ html[data-theme="light"] body.impeccable-public .support-header h2{ color:#24242
 html[data-theme="light"] body.impeccable-public :is(.support-agent,.support-agent-button,.support-list button,.support-row){ color:#242429; background:#ffffff; border-color:#e4e4e7; }
 html[data-theme="light"] body.impeccable-public :is(.support-agent-name,.support-detail h3,.support-name){ color:#242429; }
 html[data-theme="light"] body.impeccable-public :is(.support-agent-desc,.support-hint){ color:#5e5e64; }
-html[data-theme="light"] body.impeccable-public .support-button{ color:#ffffff; background:#2a2a31; }
 html[data-theme="light"] body.impeccable-public :is(.support-button--secondary,.recruit-close){ color:#4d4d54; background:#ffffff; border-color:#dadade; }
 html[data-theme="light"] body.impeccable-public dialog::backdrop{ background:rgba(33,30,46,.32); backdrop-filter:blur(4px); }
 
@@ -359,7 +356,6 @@ html[data-theme="light"] body.impeccable-public :is(.site-notice-empty,.recruit-
 html[data-theme="light"] body.impeccable-public .recruit-entry{ color:#1d1d23; border-color:#c6c6cb; }
 html[data-theme="light"] body.impeccable-public .recruit-art{ background:#f2f2f4; }
 html[data-theme="light"] body.impeccable-public :is(.recruit-unavailable,.recruit-empty){ color:#5e5e64; background:#f7f7f8; border:1px dashed #d6d6da; }
-html[data-theme="light"] body.impeccable-public .recruit-save{ color:#ffffff; background:#2a2a31; }
 
 /* ---- 论坛侧栏/话题/回复细节 ---- */
 html[data-theme="light"] body.impeccable-public .feed-heading select{ color:#242429; background:#ffffff; border-color:#dcdcdf; }
@@ -378,7 +374,6 @@ html[data-theme="light"] body.impeccable-public .platform-demo-note{ color:#4d4d
 
 /* ---- 联系页 ---- */
 html[data-theme="light"] body.impeccable-public .contact-scene{ position:relative; }
-html[data-theme="light"] body.impeccable-public .contact-support-cta{ color:#ffffff; background:#2a2a31; }
 html[data-theme="light"] body.impeccable-public .contact-card-desc strong{ color:#242429; }
 html[data-theme="light"] body.impeccable-public .contact-panel .contact-card-qr-placeholder{ color:#5e5e64; background:#f2f2f4; border-color:#e0e0e4; }
 html[data-theme="light"] body.impeccable-public .contact-card-cta-arrow{ color:#1d1d23; background:#f1f1f4; }
@@ -410,6 +405,7 @@ html[data-theme="light"] body.impeccable-public .platform-help{ background:linea
 html[data-theme="light"] body.impeccable-public .platform-help h2{ color:#242429; }
 html[data-theme="light"] body.impeccable-public .platform-help p{ color:#5e5e64; }
 html[data-theme="light"] body.impeccable-public .platform-shortcuts a{ background:#ffffff; border:1px solid #e4e4e7; color:#242429; }
+html[data-theme="light"] body.impeccable-public .platform-shortcuts strong{ color:#242429; }
 html[data-theme="light"] body.impeccable-public .platform-shortcuts small{ color:#5e5e64; }
 html[data-theme="light"] body.impeccable-public .service-quick-item{ background:#ffffff; border:1px solid #e4e4e7; }
 html[data-theme="light"] body.impeccable-public .service-quick-item strong{ color:#242429; }
@@ -446,8 +442,6 @@ html[data-theme="light"] body.impeccable-public .poster-back{ background:#f1f1f4
 
 /* ---- 顶栏"特效"与主题按钮：浅色下改用浅色芯片 ---- */
 html[data-theme="light"] body.impeccable-public .fx-motion-switch,
-html[data-theme="light"] body.impeccable-public #theme-toggle{ background:#ffffff; border-color:#dadade; color:#4d4d54; }
-html[data-theme="light"] body.impeccable-public :is(.fx-motion-switch,#theme-toggle):hover{ border-color:#c6c6cb; color:#1d1d23; }
 
 /* ---- 扫描收尾：6 处深色残留 ---- */
 /* 特色卡内"点击查看详细玩法"芯片 */
@@ -477,22 +471,13 @@ html[data-theme="light"] body.impeccable-public :is(.companion-section-head p,.c
 html[data-theme="light"] body.impeccable-public .text-link{ color:#1d1d23; }
 
 /* ============================================================
-   去紫化收尾：主按钮、联系客服胶囊、光效、插画素材
+   浅色模式光效与插画素材
    ============================================================ */
-/* 主按钮（炭黑）与悬浮态 */
-html[data-theme="light"] body.impeccable-public :is(.button-primary,.auth-submit){ background:#2a2a31; box-shadow:0 6px 14px rgba(33,30,46,.18); }
-html[data-theme="light"] body.impeccable-public :is(.button-primary,.auth-submit):hover{ background:#1d1d23; }
 html[data-theme="light"] body.impeccable-public .button-primary:active{ transform:translateY(0); }
 
-/* 联系客服浮动胶囊（炭黑） */
-html[data-theme="light"] body.impeccable-public .support-entry{ background:#2a2a31; box-shadow:0 10px 22px rgba(33,30,46,.22); }
-html[data-theme="light"] body.impeccable-public .support-entry:hover{ background:#1d1d23; }
-
-/* 杂项紫色点缀 */
-html[data-theme="light"] body.impeccable-public .carousel-dot.active{ background:#2a2a31; }
 html[data-theme="light"] body.impeccable-public .platform-load{ color:#63636b; background:#f7f7f8; }
+html[data-theme="light"] body.impeccable-public .platform-load a{ color:#242429; }
 html[data-theme="light"] body.impeccable-public .fx-holo>.fx-material::before{ background:none; }
-html[data-theme="light"] body.impeccable-public .support-row .support-button:hover{ background:#1d1d23; }
 
 /* 紫色天空 canvas 去紫（players 页极光） */
 html[data-theme="light"] body.impeccable-public canvas.fx-sky{ filter:saturate(.3) brightness(1.15); opacity:.5; }
@@ -500,10 +485,6 @@ html[data-theme="light"] body.impeccable-public canvas.fx-sky{ filter:saturate(.
 /* 插画素材降饱和去紫（保留人物形态，色彩转中性灰调） */
 html[data-theme="light"] body.impeccable-public .platform-feature-art{ filter:brightness(1.12) saturate(.95); }
 html[data-theme="light"] body.impeccable-public .recruit-art img{ filter:none; }
-
-/* ---- 顶栏"登录/注册"按钮去紫 ---- */
-html[data-theme="light"] body.impeccable-public .platform-account{ background:#2a2a31; }
-html[data-theme="light"] body.impeccable-public .platform-account:hover{ background:#1d1d23; }
 
 /* ---- 导航激活滑块与杂项链接去紫 ---- */
 html[data-theme="light"] body.impeccable-public .fx-glider{ background:#ececee; }
@@ -533,15 +514,9 @@ html[data-theme="light"] body.impeccable-public.assessment-service-page .join-ta
 html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.join-table thead th,.join-table caption){ color:#4d4d54; }
 html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.join-table td,.join-table th,.assessment-notice-item,.assessment-resource,.join-rule-tabs button,.examiner-type-filters button){ border-color:#e4e4e7; }
 
-/* 紫色按钮/激活态 → 炭黑 */
-html[data-theme="light"] body.impeccable-public.assessment-service-page .arena-cta{ background:#2a2a31; color:#ffffff; }
-html[data-theme="light"] body.impeccable-public.assessment-service-page .arena-cta:hover{ background:#1d1d20; }
-html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.join-rule-tabs button,.quality-kind-tabs button,.examiner-type-filters button)[aria-pressed=true]{ background:#2a2a31; border-color:#2a2a31; color:#ffffff; }
+/* 未选中的考核筛选与特效开关 */
 html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.join-rule-tabs button,.quality-kind-tabs button,.examiner-type-filters button){ background:#ffffff; color:#4d4d54; }
-html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.join-rule-tabs button,.quality-kind-tabs button,.examiner-type-filters button):hover:not([aria-pressed=true]){ background:#f1f1f3; color:#242429; }
 html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.join-platform-switch a){ background:#ffffff; color:#4d4d54; border-color:#e4e4e7; }
-html[data-theme="light"] body.impeccable-public.assessment-service-page .join-platform-switch a[aria-current]{ background:#2a2a31; border-color:#2a2a31; color:#ffffff; }
-html[data-theme="light"] body.impeccable-public.assessment-service-page .join-platform-switch a:hover{ background:#f1f1f3; }
 html[data-theme="light"] body.impeccable-public.assessment-service-page .assessment-motion-toggle{ background:#f1f1f4; }
 html[data-theme="light"] body.impeccable-public.assessment-service-page .assessment-motion-toggle:hover:not(:disabled){ background:#e4e4e7; }
 html[data-theme="light"] body.impeccable-public.assessment-service-page .assessment-motion-toggle[aria-pressed="false"]{ background:#ffffff; }
@@ -564,8 +539,6 @@ html[data-theme="light"] body.impeccable-public.assessment-service-page .assessm
 html[data-theme="light"] body.impeccable-public.assessment-service-page .report-dialog::backdrop{ background:rgba(33,33,38,.32); }
 html[data-theme="light"] body.impeccable-public.assessment-service-page .club-mobile-actions a:last-child,
 html[data-theme="light"] body.impeccable-public.assessment-service-page .arena-kicker>span{ color:#2a2a31; }
-html[data-theme="light"] body.impeccable-public.assessment-service-page .message-compose-actions button{ background:#2a2a31; }
-html[data-theme="light"] body.impeccable-public.assessment-service-page .message-compose-actions button:hover{ background:#1d1d20; }
 
 /* 考核页插画素材去紫（hero/enrol 立绘） */
 html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.section-art-image,.club-enrol-image img,.club-enrol-image){ filter:brightness(1.5) saturate(.32); }
@@ -576,7 +549,6 @@ html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.are
 
 /* 考核页最后 4 处紫色小元素 */
 html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.join-eyebrow,.arena-step){ color:#4d4d54; }
-html[data-theme="light"] body.impeccable-public.assessment-service-page :is(#message-prev,#message-next){ background:#ffffff; color:#4d4d54; border-color:#dfdfe3; }
 
 /* ---- 最后 4 处紫色残留 ---- */
 /* 首页人物卡姓名/查看资料链接（压在照片上，保持白字） */
@@ -611,7 +583,6 @@ html[data-theme="light"] body.impeccable-public.assessment-service-page :is(
   .join-notices :is(.assessment-notice-item)){ background:#ffffff; background-image:none; border-color:#e4e4e7; color:#242429; }
 html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.assessment-work-resources,.join-notices) :is(p,li,small,span,time){ color:#5e5e64; }
 html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.assessment-work-resources,.join-notices) :is(h2,h3,h4,strong,b){ color:#242429; }
-html[data-theme="light"] body.impeccable-public.assessment-service-page .assessment-choose{ background:#2a2a31; border-color:#2a2a31; color:#ffffff; }
 html[data-theme="light"] body.impeccable-public.assessment-service-page .assessment-message-board :is(input,textarea){ background:#ffffff; color:#242429; border-color:#dcdcdf; }
 html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.message-author-mark,.assessment-examiner-mark){ background:#f1f1f4; color:#4d4d54; }
 html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.message-item-meta time,.message-item-meta strong,.message-role,.assessment-resource-arrow){ color:#4d4d54; }
@@ -622,3 +593,256 @@ html[data-theme="light"] body.impeccable-public.assessment-service-page .assessm
 html[data-theme="light"] body.impeccable-public.assessment-service-page .join-notices li::before{ color:#2a2a31; background:#f1f1f4; }
 html[data-theme="light"] body.impeccable-public.assessment-service-page .ent-process-list li::marker{ color:#2a2a31; }
 html[data-theme="light"] body.impeccable-public.assessment-service-page .join-table tbody th::before{ background:#d6d6da; }
+
+/* ---------- 深色令牌漏改修正 ----------
+   service-platform.css 给 main 内的说明文字统一设了浅紫色（深色底用）。
+   :where() 让这条覆盖与原规则同权重、靠加载顺序生效，不会压过各组件自己的配色。 */
+:where(html[data-theme="light"]) .impeccable-public main :is(p,small,label,li,dt,dd){ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .contact-panel .contact-card:not(.contact-card-primary) .contact-card-desc{ color:#5e5e64; }
+html[data-theme="light"] .page-menu .menu-rights-intro,
+html[data-theme="light"] .page-menu .menu-rights-footer{ color:#5e5e64; }
+html[data-theme="light"] .page-menu .menu-section-kicker,
+html[data-theme="light"] .page-menu .menu-rule-number{ color:#6b6b73; }
+html[data-theme="light"] body.impeccable-public .recruit-strip p span{ color:#6b6b73; }
+html[data-theme="light"] body.impeccable-public .feed-heading span{ color:#6b6b73; }
+html[data-theme="light"] body.impeccable-public .side-heading a{ color:#4d4d54; }
+html[data-theme="light"] body.impeccable-public .active-list b{ color:#17805a; }
+
+/* 虹彩釉瓷 · Hallmark: P5 H5 E4 S5 R5 V4 */
+:root[data-theme="light"]{
+  --porcelain-ink:#30246b;
+  --porcelain-focus:#6744b5;
+  --porcelain-paper:#f9f6fc;
+  --porcelain-card-rim:#b6a6e7;
+  --porcelain-rim:linear-gradient(132deg,#8e9bfd 0%,#b9a8f4 34%,#edc8c6 77%,#b598e3 100%);
+  --porcelain-rim-hover:linear-gradient(132deg,#7888ef,#a88fe7 38%,#ecc0c0 76%,#a182d9);
+  --porcelain-surface:
+    radial-gradient(ellipse at 5% 100%,#c7e9f9 0%,#dedaf8 27%,transparent 62%) padding-box,
+    radial-gradient(ellipse at 100% 0%,#ffe6db 0%,#f5e6f8 24%,transparent 57%) padding-box,
+    linear-gradient(158deg,#fffeff 20%,#f5f1f9 100%) padding-box;
+  --porcelain-tinted-surface:
+    radial-gradient(ellipse at 4% 100%,#d1e6fb 0%,transparent 60%) padding-box,
+    radial-gradient(ellipse at 98% 0%,#fae8e9 0%,transparent 56%) padding-box,
+    linear-gradient(136deg,#edebff,#e5daf8) padding-box;
+  --porcelain-edge:inset 0 1px 0 #ffffffdc,inset 0 -1px 1px #6247a51f;
+  --porcelain-flat:0 1px 2px #3017651c,0 3px 7px #30176512;
+  --porcelain-raised:0 2px 0 #9465e7,0 5px 9px #54278e24;
+  --porcelain-pressed:0 1px 0 #a888e4,0 2px 4px #30176514;
+  --porcelain-rounding:18px 14px 19px 13px / 20px 14px 20px 13px;
+  --porcelain-compact:13px 10px 14px 9px / 14px 10px 14px 9px;
+}
+
+/* 主操作与已选态的紫色薄底使用阴影，避免改动原有尺寸。 */
+html[data-theme="light"] body.impeccable-public :is(
+  .button-primary,.auth-submit,.contact-support-cta,.arena-cta,.message-compose-actions button
+){
+  --porcelain-depth:var(--porcelain-raised);
+}
+html[data-theme="light"] body.impeccable-public .platform-account{
+  --porcelain-face:var(--porcelain-tinted-surface);
+  --porcelain-radius:var(--porcelain-compact);
+}
+/* 首页促销卡整张可点击，内部标签沿用小号釉瓷按钮的外观。 */
+html[data-theme="light"] body.impeccable-public .platform-promo-link{
+  --porcelain-radius:var(--porcelain-compact);
+  --porcelain-depth:var(--porcelain-pressed);
+  display:inline-flex;
+  gap:6px;
+  min-height:30px;
+  padding:4px 10px;
+  font-size:12px;
+  font-weight:700;
+  line-height:1.35;
+  white-space:nowrap;
+}
+/* 分区链接和点单咨询是紧凑的次要操作，抽奖沿用原有按钮尺寸。 */
+html[data-theme="light"] body.impeccable-public :is(.platform-section-head > a,.menu-rights-footer > a[data-support-open]){
+  padding:5px 10px;
+  font-weight:700;
+}
+html[data-theme="light"] body.impeccable-public :is(
+  .platform-section-head > a,.menu-rights-footer > a[data-support-open],.menu-lottery-action,
+  .platform-welcome-link,.poster-menu-heading-note,.forum-back,.poster-feature-hint,
+  .companion-actions > .text-link[data-support-open]
+){
+  --porcelain-radius:var(--porcelain-compact);
+  --porcelain-depth:var(--porcelain-pressed);
+}
+html[data-theme="light"] body.impeccable-public :is(
+  .platform-welcome-link,.poster-menu-heading-note,.forum-back,
+  .companion-actions > .text-link[data-support-open],.platform-person-heading > a:last-child
+){
+  padding:5px 10px;
+  font-weight:700;
+}
+html[data-theme="light"] body.impeccable-public :is(
+  .platform-search button,.platform-feature-tabs button,.platform-topbar-join,
+  .platform-person-audio,.platform-person-heading > a:last-child,
+  .poster-back,.poster-retry,.carousel-pause,.support-close,.companion-dialog-close,
+  .recruit-close,.report-save,.lightbox-close,.support-nudge-close,
+  .forum-categories button,.category-strip button,.platform-home-filters button,
+  .auth-tabs button,.center-tab,.poster-tab
+){
+  --porcelain-radius:var(--porcelain-compact);
+}
+html[data-theme="light"] body.impeccable-public .platform-feature-tabs button{
+  padding-inline:7px;
+}
+html[data-theme="light"] body.impeccable-public .platform-topbar-join{
+  padding:5px 9px;
+}
+html[data-theme="light"] body.impeccable-public .platform-search button{
+  padding-inline:7px;
+}
+html[data-theme="light"] body.impeccable-public .platform-shortcuts > a strong{
+  color:var(--porcelain-ink);
+}
+/* 点单提示与公告抬头是信息标签，釉面更淡，不需要按钮的压下效果。 */
+html[data-theme="light"] body.impeccable-public :is(
+  .menu-rules-label,.recruit-notices > header > :is(h2,span:not(:empty))
+){
+  --porcelain-face:var(--porcelain-tinted-surface);
+  --porcelain-radius:var(--porcelain-compact);
+  --porcelain-depth:0 0 0 transparent;
+  padding:4px 9px;
+}
+html[data-theme="light"] body.impeccable-public :is(
+  .category-strip button.is-active,.platform-home-filters button.is-active,
+  .forum-category.active,.forum-tab.active,.forum-categories button.is-active,
+  .auth-tab.active,.auth-tabs button[aria-selected="true"],.poster-tab[aria-selected="true"],
+  .platform-feature-tabs button.is-active,.platform-person-audio.is-playing,
+  .center-tab[aria-selected="true"],.category-field input:checked + span,
+  .article-actions button.is-liked,.post-stats button.is-liked,
+  .join-rule-tabs button[aria-pressed="true"],.quality-kind-tabs button[aria-pressed="true"],
+  .examiner-type-filters button[aria-pressed="true"],.join-platform-switch a[aria-current]
+){
+  --porcelain-face:var(--porcelain-tinted-surface);
+  --porcelain-radius:var(--porcelain-compact);
+  --porcelain-depth:var(--porcelain-pressed);
+}
+html[data-theme="light"] body.impeccable-public .support-entry{
+  --porcelain-radius:21px 17px 22px 15px / 23px 17px 22px 17px;
+}
+html[data-theme="light"] body.impeccable-public :is(
+  .assessment-dialog-close,.report-close,.upload-previews figure > button,.moment-image-preview button
+),
+html[data-theme="light"] #theme-toggle.theme-toggle--float{
+  --porcelain-radius:var(--porcelain-compact);
+}
+
+/* 虹彩釉瓷的共享表面。 */
+html[data-theme="light"] body.impeccable-public :is(
+  .button-primary,.auth-submit,.platform-account,.support-entry,.contact-support-cta,.platform-promo-link,
+  .button-secondary,.platform-welcome-link,.platform-topbar-join,.platform-search button,
+  .fx-motion-switch,button.nav-toggle,.assessment-motion-toggle,
+  .platform-section-head > a,.platform-shortcuts > a,.service-quick-item,
+  .poster-menu-heading-note,.poster-feature-hint,.poster-back,.poster-retry,
+  .poster-menu-card:not(.poster-menu-card--feature),a.poster-menu-benefit,
+  .menu-rights-footer > a[data-support-open],.menu-lottery-action,.menu-rules-label,
+  a.contact-card-link,.support-button,.support-close,.support-nudge-close,
+  .carousel-pause,.companion-join-button,.companion-dialog-close,
+  .companion-actions > .text-link[data-support-open],.platform-person-audio:not(:disabled),
+  .platform-person-heading > a:last-child,.platform-feature-tabs button,
+  .forum-back,.forum-post[data-post-id],.active-list .active-item,.topic-list button,
+  .side-heading > a,.post-stats button,a.auth-inline-link,.auth-inline-link > a,
+  .security-actions :is(a,button),.article-actions button,.md-toolbar button,
+  .media-reselect button,.captcha-row button,.category-field input + span,
+  .security-form button,.moment-composer-actions > button,.moment-image-button > span,
+  .my-moment button[data-delete-moment],.avatar-upload > span,.upload-box:has(input),
+  .forum-categories button,.auth-tabs button,
+  .category-strip button,.platform-home-filters button,.center-tab,.poster-tab,
+  .recruit-notices > header > :is(h2,span:not(:empty)),
+  .recruit-entry,button.recruit-notice-item,.recruit-close,.recruit-save,.text-button,
+  .arena-secondary,.assessment-quality-all,.assessment-service-page a.join-text-link,
+  a.assessment-document,a.assessment-resource,button.assessment-notice-item,
+  .assessment-examiner-preview button,.assessment-group-entry:not(:disabled),
+  .report-save,.message-pages button,.lightbox-close,
+  .category-strip button.is-active,.platform-home-filters button.is-active,
+  .forum-category.active,.forum-tab.active,.forum-categories button.is-active,
+  .auth-tab.active,.auth-tabs button[aria-selected="true"],.poster-tab[aria-selected="true"],
+  .arena-cta,.message-compose-actions button,.assessment-choose,.assessment-examiner-open,
+  .assessment-back,.assessment-group-save,.assessment-quality-pages button,
+  .assessment-examiner-item,.assessment-dialog-close,.report-close,
+  .message-identity button,.message-identity > a,.message-list-heading button,
+  .join-rule-tabs button,.quality-kind-tabs button,.examiner-type-filters button,.join-platform-switch a,
+  .club-mobile-actions a,.upload-previews figure > button,.moment-image-preview button
+),
+html[data-theme="light"] body.impeccable-public :is(#menu-link-other-games,#theme-toggle),
+html[data-theme="light"] .lost-actions > a,
+html[data-theme="light"] #theme-toggle.theme-toggle--float{
+  color:var(--porcelain-ink);
+  border:1px solid transparent;
+  border-radius:var(--porcelain-radius,var(--porcelain-rounding));
+  background:
+    radial-gradient(ellipse at 54% -12%,rgb(255 255 255 / var(--porcelain-lustre,.66)),transparent 68%) padding-box,
+    var(--porcelain-face,var(--porcelain-surface)),
+    var(--porcelain-outline,var(--porcelain-rim)) border-box var(--porcelain-paper);
+  box-shadow:var(--porcelain-edge),var(--porcelain-depth,var(--porcelain-flat));
+
+  &:where(:not(.menu-rules-label,.recruit-notices > header > *)){
+    @media (hover:hover){
+      &:hover:not(:disabled,[aria-disabled="true"]){
+        --porcelain-lustre:.92;
+        --porcelain-outline:var(--porcelain-rim-hover);
+      }
+    }
+    &:active:not(:disabled,[aria-disabled="true"]){
+      --porcelain-depth:var(--porcelain-pressed);
+      --porcelain-lustre:.32;
+    }
+  }
+  &:focus-visible{
+    outline:2px solid var(--porcelain-focus);
+    outline-offset:3px;
+  }
+  &:is(:disabled,[aria-disabled="true"]){
+    --porcelain-depth:var(--porcelain-flat);
+    cursor:not-allowed;
+  }
+  @media (forced-colors:active){
+    border-color:ButtonText;
+    &:focus-visible{ outline-color:Highlight; }
+  }
+}
+
+/* 图片卡片保留原图、遮罩和尺寸，只添加釉瓷边框和薄底影。 */
+html[data-theme="light"] body.impeccable-public :is(
+  .platform-promo,.menu-lottery,.poster-menu-card--feature,.platform-person-visual,
+  button.showcase-card,button.companion-card,button.curator-card,.avatar-upload,.recruit-qr-button
+){
+  box-shadow:0 0 0 1px var(--porcelain-card-rim),var(--porcelain-flat);
+
+  @media (hover:hover){
+    &:hover:not(:disabled){
+      box-shadow:0 0 0 1px var(--porcelain-focus),var(--porcelain-pressed);
+    }
+  }
+  &:focus-visible{
+    outline:2px solid var(--porcelain-focus);
+    outline-offset:3px;
+  }
+}
+
+/* 修正有独立前景色的控件。 */
+html[data-theme="light"] body.impeccable-public :is(.platform-welcome-link svg,.platform-person-heading > a:last-child){
+  color:var(--porcelain-ink);
+}
+html[data-theme="light"] body.impeccable-public .assessment-service-page .club-mobile-actions a:last-child{
+  color:var(--porcelain-ink);
+}
+html[data-theme="light"] body.impeccable-public .category-field input:focus-visible + span{
+  outline:2px solid var(--porcelain-focus);
+  outline-offset:3px;
+}
+html[data-theme="light"] .lost-actions > a.primary{
+  --porcelain-depth:var(--porcelain-raised);
+}
+
+/* 保留轮播指示器的形状和尺寸，只更新选中的色条。 */
+html[data-theme="light"] body.impeccable-public .carousel-dot.active,
+html[data-theme="light"] body.impeccable-public .carousel-dot.active::after{
+  background:linear-gradient(145deg,#bdb4ff,#8e6de0);
+}
+html[data-theme="light"] body.impeccable-public.assessment-service-page .assessment-examiner-item :is(strong,small){
+  color:inherit;
+}

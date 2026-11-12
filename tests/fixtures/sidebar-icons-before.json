@@ -1,7 +1,7 @@
 {
   "pages": {
     "account.html": {
-      "protectedHtmlSha256": "302d67697f3eca938482ae8c8353295f652a1a8601d8bb6269f72f389a85f377",
+      "protectedHtmlSha256": "142094dd765367935e0bb77fa07d00798fae3638daa3ae1eb6985f09f8bd1aa1",
       "links": [
         {
           "href": "index.html",
@@ -37,7 +37,7 @@
       "iconCount": 5
     },
     "activities.html": {
-      "protectedHtmlSha256": "6dfb42b43c284c122b69e4de28108e0a4ac47ccb02e1867baa6a102a06072b17",
+      "protectedHtmlSha256": "98a47447d25f850b86378a00151f4eb73479c90672a6d8122d27aa947c46ad37",
       "links": [
         {
           "href": "index.html",
@@ -91,7 +91,7 @@
       "iconCount": 8
     },
     "assessment.html": {
-      "protectedHtmlSha256": "dc857378069dbb80002a3a93d887392c2a7fb6b3dfe11969dd711440ed5c0732",
+      "protectedHtmlSha256": "36de2ce74d4d58a2b62cc08052d7651cd2fddf9f14d0d12166df78728d666f9b",
       "links": [
         {
           "href": "index.html",
@@ -151,7 +151,7 @@
       "iconCount": 8
     },
     "community.html": {
-      "protectedHtmlSha256": "e68a52a6991a717b85ae38847ff21863fd6dd5c6e73515b95f5ce678f55ac8df",
+      "protectedHtmlSha256": "3c9d2769f61bd251902aacbc4d7cfc06414bc6f690f18a04f82ae48d3d8cb517",
       "links": [
         {
           "href": "index.html",
@@ -205,7 +205,7 @@
       "iconCount": 8
     },
     "companion-center.html": {
-      "protectedHtmlSha256": "0b61c78caedd22ae0db9f065b50cb5680ae472bde72c2139192460fd2f0879c8",
+      "protectedHtmlSha256": "f54fa2c3c6cee1d4e2f654547a61c1d22fd5908513769f6644f5155d3fc433e7",
       "links": [
         {
           "href": "index.html",
@@ -241,7 +241,7 @@
       "iconCount": 5
     },
     "contact.html": {
-      "protectedHtmlSha256": "d9b0ed8f76b04e66e52a583342a5e2b5755b03e3a96bf0a3739fd7bdb54182ae",
+      "protectedHtmlSha256": "773cec44c4f3c0c612a004088462669d6760192a736da54396a952d08da01fe6",
       "links": [
         {
           "href": "index.html",
@@ -295,7 +295,7 @@
       "iconCount": 8
     },
     "forgot-password.html": {
-      "protectedHtmlSha256": "3fb0789aceae253f7739d894d9cf119f87ee1f2cde397487ad60914a98f27fff",
+      "protectedHtmlSha256": "458fc172f2754f3d9e82cd5a0ad563a0c7db3af92330176952193a77fb289549",
       "links": [
         {
           "href": "index.html",
@@ -331,7 +331,7 @@
       "iconCount": 5
     },
     "home.html": {
-      "protectedHtmlSha256": "67dc3deccd3482342e446d5234e2e551bddbf0efdf0c00a1dcfc491ed71efe8b",
+      "protectedHtmlSha256": "b7e9ac31688d5c372778b0d83e250de60679c510269cc89e8117352309448608",
       "links": [
         {
           "href": "index.html",
@@ -385,7 +385,7 @@
       "iconCount": 8
     },
     "index.html": {
-      "protectedHtmlSha256": "7000d9f73b5c64ffa67400c25e34e92050d5098809b9a3e6689848418e6a9551",
+      "protectedHtmlSha256": "d7765b56e7e0116120aab324b1f8fe649c125924a7913b297d25c631805dbe5b",
       "links": [
         {
           "href": "index.html",
@@ -439,7 +439,7 @@
       "iconCount": 8
     },
     "join.html": {
-      "protectedHtmlSha256": "fb833b905c185ca8752f3f50cd0ed43eec45d7f0167464d0df333f5f1b24e594",
+      "protectedHtmlSha256": "5dcd3f6b0377467cef85c156501a5133ca5f205a7b0712269c7f924c23a7b32c",
       "links": [
         {
           "href": "index.html",
@@ -493,7 +493,7 @@
       "iconCount": 8
     },
     "menu.html": {
-      "protectedHtmlSha256": "c8e4990fe3340ee7e7c056c02e68274dd37b0c9e421bad5cf144e4d04207d7f8",
+      "protectedHtmlSha256": "6c3cafed6e79a8d96c68b210312d830a3c90e6897ccfe08a75f01360906cfa94",
       "links": [
         {
           "href": "index.html",
@@ -547,7 +547,7 @@
       "iconCount": 8
     },
     "players.html": {
-      "protectedHtmlSha256": "fa9568a86ca4f6a5879d84871088cafd5f49e1f62d95a0d617f4fef733de7fbf",
+      "protectedHtmlSha256": "26d7a24647f10a35d4a1314bb2055c14c756dae873f5dccdeda40ca65b962bf0",
       "links": [
         {
           "href": "index.html",
@@ -601,7 +601,7 @@
       "iconCount": 8
     },
     "post.html": {
-      "protectedHtmlSha256": "37ea6159719484a35dab014cbc2c4a809165209fe7ea6be0d289a68f7a028926",
+      "protectedHtmlSha256": "536864f074bd5d957aabaf4bb52f57d041745c4e124ccc132f51f740c4271640",
       "links": [
         {
           "href": "community.html",
@@ -625,7 +625,7 @@
       "iconCount": 2
     },
     "profile.html": {
-      "protectedHtmlSha256": "92c66d7e1db8a3f0e293f10753b61854c2633ecc4a3990a00193487066e8ad75",
+      "protectedHtmlSha256": "3010cf6061785a1f5105900a037df20d00a2d863970efa65a9968cc98e2dc95b",
       "links": [
         {
           "href": "index.html",
@@ -661,7 +661,7 @@
       "iconCount": 5
     },
     "publish.html": {
-      "protectedHtmlSha256": "6d20a45ac6e922b296591517d5a545bc39ba9e36bab897b5c4ad5f4421119e26",
+      "protectedHtmlSha256": "2cb6e324a0102bfaa19460679674e247b324f0eb210fbceb924f166aeac015ec",
       "links": [
         {
           "href": "community.html",
@@ -673,7 +673,7 @@
       "iconCount": 1
     },
     "reviews.html": {
-      "protectedHtmlSha256": "d75f220f587dfb796a3c27edcdfc3d57422a8ec0b6029fe2341251c2191a6409",
+      "protectedHtmlSha256": "07b93f3a716cd5dd58226bc5b5bdfe798411f603925d47de9828ed03201ddb15",
       "links": [
         {
           "href": "index.html",
@@ -727,7 +727,7 @@
       "iconCount": 8
     },
     "price/detail.html": {
-      "protectedHtmlSha256": "66f57046b2a70ad56ca9bf7f07bdbef7a946dd0a202f28e3538e2beed2631c63",
+      "protectedHtmlSha256": "97398bd7d75f4eca7d6e74012a6dd8375b4dbe12c19883c9007be5cf2f0ad0e1",
       "links": [
         {
           "href": "../index.html",

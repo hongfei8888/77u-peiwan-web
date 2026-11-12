@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "family": "Glacier Display",
+  "source": {
+    "family": "Noto Sans SC Black",
+    "version": "Version 2.004;hotconv 1.0.118;makeotfexe 2.5.65603",
+    "sha256": "ccb496022356b7dd14d117538a472ae40feff8f6e8f3fe8bffc5616785d2f3f9",
+    "license": "fonts/glacier-display-OFL.txt"
+  },
+  "stylesheet": {
+    "path": "fonts/glacier-display.css",
+    "version": "103d9701d369"
+  },
+  "slices": [
+    {
+      "file": "fonts/glacier-display-900.woff2",
+      "label": "site copy",
+      "characters": 1333,
+      "bytes": 188056,
+      "sha256": "117171df0e41af6e5264cdc59cf0f65cba1d7966b9e1ba47c8b18b90c344ab37"
+    },
+    {
+      "file": "fonts/glacier-display-900-ext1.woff2",
+      "label": "everyday hanzi 1/3",
+      "characters": 854,
+      "bytes": 148852,
+      "sha256": "4544135da250714b5c3f633cd64c73494ae7393b9240b3b7fa36619a82e1e53f"
+    },
+    {
+      "file": "fonts/glacier-display-900-ext2.woff2",
+      "label": "everyday hanzi 2/3",
+      "characters": 855,
+      "bytes": 147288,
+      "sha256": "8b3a18dc13544921b09375ac1bc5289e6ded90aacd3a0c25fa04214be99396cb"
+    },
+    {
+      "file": "fonts/glacier-display-900-ext3.woff2",
+      "label": "everyday hanzi 3/3",
+      "characters": 855,
+      "bytes": 143736,
+      "sha256": "12ceec2a2926d026c8ee32c933913f085eba5f5b908d95964c7f84c7c242a0de"
+    }
+  ],
+  "unsupported": []
+}

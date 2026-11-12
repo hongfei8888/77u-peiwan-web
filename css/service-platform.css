@@ -456,6 +456,10 @@ body.impeccable-public {
 .impeccable-public .platform-demo-note { color:#ceb3df; padding:12px 15px; border-radius:8px; background:#382246; font-size:12px; }
 .impeccable-public .poster-back { background:#342240; border-color:#6b487d; color:#e2c5f4; }
 
+/* 旧配色在深色底上不足 4.5:1；浅色主题由 theme-light.css 单独处理 */
+html:not([data-theme="light"]) .impeccable-public.page-menu .menu-rights-footer a,
+html:not([data-theme="light"]) .impeccable-public .side-heading a { color:#d1adff; }
+html:not([data-theme="light"]) .impeccable-public .recruit-strip p span { color:#b3a39a; }
 @media(min-width:1600px) {
  .impeccable-public .platform-feature { min-height:400px; }
  .platform-feature-panel { padding-top:52px; }
@@ -493,7 +497,7 @@ body.impeccable-public {
  body.impeccable-public { padding-left:0; padding-top:140px; }
  .impeccable-public .nav { width:100%; height:67px; inset:0 0 auto; border-right:0; border-bottom:1px solid #302537; }
  .impeccable-public .nav-inner { width:100%; padding:0 22px; min-height:67px; flex-direction:row; align-items:center; justify-content:space-between; }
- .impeccable-public .brand { margin:0; }
+ .impeccable-public .brand { margin:0; min-height:44px; }
  .impeccable-public .brand-cn { font-size:19px; }
  .impeccable-public .nav-toggle { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; border:1px solid #544060; background:#2c1e37; }
  .impeccable-public .nav-toggle span { background:#e6cffa; }
@@ -519,16 +523,18 @@ body.impeccable-public {
 @media(max-width:600px) {
  html { scroll-padding-top:150px; }
  .impeccable-public .container,.impeccable-public .poster-menu>.container { width:calc(100% - 32px); }
- .impeccable-public .platform-topbar { padding-inline:16px; gap:12px; }
- .platform-search { width:100%; flex:1; }
+ .impeccable-public .platform-topbar { padding-inline:16px; gap:10px; }
+ .platform-search { width:100%; flex:1; height:44px; gap:8px; padding:0 10px; }
  .platform-topbar-join { display:none; }
- .platform-topbar-actions { flex:none; }
- .platform-account { padding:9px 12px; font-size:10px; }
- .platform-search input { font-size:11px; }
- .platform-search button { font-size:10px; }
+ .platform-topbar-actions { flex:none; gap:6px; }
+ .platform-account { display:inline-flex; align-items:center; min-height:44px; padding:0 12px; font-size:13px; }
+ /* 16px 以下的输入框在 iOS 上聚焦时会放大整页；窄屏靠键盘的搜索键提交，把宽度留给输入 */
+ .platform-search input { height:100%; font-size:16px; }
+ .platform-search input::placeholder { font-size:13px; }
+ .platform-search button { display:none; }
  .platform-welcome { margin-bottom:19px; }
  .platform-welcome h1 { font-size:22px; }
- .platform-welcome p { font-size:10px; margin-top:5px; }
+ .platform-welcome p { font-size:13px; margin-top:5px; }
  .platform-welcome-link { display:none; }
  .platform-banner-grid { grid-template-columns:1fr; gap:12px; }
  .platform-feature { min-height:455px; }
@@ -536,19 +542,20 @@ body.impeccable-public {
  .platform-feature::after { background:linear-gradient(180deg,#181320 35%,#18132070 62%,transparent); }
  .platform-feature-panel { width:95%; padding:25px 20px 220px 23px; }
  .platform-feature-panel h2 { font-size:25px; line-height:1.45; }
- .platform-feature-panel p { font-size:11px; margin:12px 0 14px; }
- .platform-feature-panel .button { flex:none; font-size:11px; min-height:39px; }
- .platform-feature-tabs { left:16px; bottom:12px; gap:15px; background:#1b1323df; padding:3px 12px; border-radius:6px; }
+ .platform-feature-panel p { font-size:13px; margin:12px 0 14px; }
+ .platform-feature-panel .button { flex:none; font-size:14px; min-height:44px; }
+ .platform-feature-tabs { left:16px; bottom:12px; gap:15px; background:#1b1323df; padding:0 12px; border-radius:6px; }
+ .platform-feature-tabs button { min-height:44px; font-size:13px; }
  .platform-banner-aside { grid-template-columns:1fr 1fr; grid-template-rows:auto; gap:12px; }
  .platform-promo { min-height:137px; padding:15px; }
  .platform-promo h2 { font-size:16px; }
- .platform-promo-label { font-size:9px; }
- .platform-promo-link { font-size:9px; margin-top:8px; }
+ .platform-promo-label { font-size:12px; }
+ .platform-promo-link { font-size:12px; margin-top:8px; }
  .platform-promo>img { width:52%; right:-11%; opacity:.65; }
  .platform-section-head { margin-bottom:17px; gap:12px; }
  .platform-section-head h2 { font-size:19px; }
- .platform-section-head p { font-size:10px; }
- .platform-section-head>a { font-size:10px; gap:5px; }
+ .platform-section-head p { font-size:13px; }
+ .platform-section-head>a { font-size:13px; gap:5px; min-height:44px; }
  .platform-section-head>a>svg { width:13px; }
  .platform-games,.platform-recommend,.platform-service-section { padding-top:28px; }
  .impeccable-public .platform-games .poster-menu-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
@@ -557,13 +564,13 @@ body.impeccable-public {
  .impeccable-public .platform-games .poster-menu-card:nth-child(9) { grid-column:span 2; min-height:65px; }
  .impeccable-public .platform-games .poster-menu-name { font-size:14px; }
  .impeccable-public .platform-games .poster-menu-card:nth-child(n+6) .poster-menu-name { font-size:13px; }
- .impeccable-public .platform-games .poster-menu-summary { font-size:9px; }
+ .impeccable-public .platform-games .poster-menu-summary { font-size:12px; }
  .impeccable-public .platform-games .poster-menu-symbol { width:29px; height:32px; background:none; }
  .impeccable-public .platform-games .poster-menu-symbol svg { width:22px; height:22px; }
  .impeccable-public .platform-games .poster-feature-art { right:-24%; width:135%; opacity:.6; }
  .impeccable-public .platform-games .poster-feature-copy { width:95%; }
  .platform-home-filters { gap:6px; }
- .platform-home-filters button { padding:6px 10px; font-size:10px; }
+ .platform-home-filters button { min-height:40px; padding:0 12px; font-size:13px; }
  .platform-people-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
  .platform-person-heading strong { font-size:15px; }
  .platform-person-heading>a { font-size:9px; }
@@ -576,16 +583,16 @@ body.impeccable-public {
  .service-quick-item { padding:13px 15px; }
  .service-quick-item img { width:39px; height:39px; }
  .service-quick-item strong { font-size:13px; }
- .service-quick-item small { font-size:10px; }
+ .service-quick-item small { font-size:12px; }
  .platform-bottom { padding-top:25px; padding-bottom:32px; gap:12px; }
  .platform-help { display:block; padding:23px; }
  .platform-help h2 { font-size:19px; }
- .platform-help p { font-size:11px; }
- .platform-help>.button { width:max-content; margin-top:16px; }
+ .platform-help p { font-size:13px; }
+ .platform-help>.button { width:max-content; margin-top:16px; min-height:44px; font-size:14px!important; }
  .platform-shortcuts { gap:10px; }
  .platform-shortcuts>a { gap:9px; padding:13px; }
- .platform-shortcuts strong { font-size:12px; }
- .platform-shortcuts small { font-size:9px; }
+ .platform-shortcuts strong { font-size:14px; }
+ .platform-shortcuts small { font-size:12px; }
  .platform-shortcuts>a>svg:last-child { display:none; }
  .impeccable-public .showcase-intro { margin-bottom:22px; }
  .impeccable-public .showcase-intro h1 { font-size:29px; }
@@ -600,8 +607,8 @@ body.impeccable-public {
  .impeccable-public .companion-lead { font-size:12px; margin:14px 0 18px; }
  .impeccable-public .companion-actions { gap:9px; }
  .impeccable-public .companion-actions .button { flex:0 1 auto; font-size:12px; padding:10px 13px; }
- .impeccable-public .companion-actions .text-link { font-size:10px; }
- .impeccable-public .companion-promises { font-size:10px; gap:18px; margin-top:20px; }
+ .impeccable-public .companion-actions .text-link { font-size:12px; }
+ .impeccable-public .companion-promises { font-size:12px; gap:18px; margin-top:20px; }
  .impeccable-public .companion-showcase { height:225px; gap:10px; }
  .impeccable-public .showcase-card img,.impeccable-public .showcase-card:not(.showcase-card--lead) img { height:155px; }
  .impeccable-public .showcase-card span { padding:9px; }
@@ -615,19 +622,19 @@ body.impeccable-public {
  .impeccable-public .curator-faces img { width:53px; height:53px; }
  .impeccable-public .category-strip { gap:7px; }
  .impeccable-public .category-strip button { padding:8px 10px; }
- .impeccable-public .category-strip strong { font-size:11px; }
- .impeccable-public .category-strip small { font-size:9px; }
+ .impeccable-public .category-strip strong { font-size:13px; }
+ .impeccable-public .category-strip small { font-size:12px; }
  .impeccable-public .companion-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:11px; }
  .impeccable-public .companion-card { min-height:270px; }
  .impeccable-public .companion-card-body { padding:35px 12px 13px; }
  .impeccable-public .companion-card-top strong { font-size:19px; }
- .impeccable-public .companion-card-top em { font-size:9px; padding:3px 5px; }
+ .impeccable-public .companion-card-top em { font-size:12px; padding:3px 5px; }
  .impeccable-public .companion-card-meta { font-size:9px; gap:4px; margin-bottom:11px; }
  .impeccable-public .companion-card-foot small,.impeccable-public .companion-card-foot b { font-size:8px; }
  .impeccable-public .roster-toolbar { align-items:center; }
- .impeccable-public .roster-toolbar>p { max-width:150px; font-size:10px; text-align:right; }
+ .impeccable-public .roster-toolbar>p { max-width:150px; font-size:12px; text-align:right; }
  .platform-roster-search { gap:7px; }
- .platform-roster-search select { min-width:88px; font-size:10px; }
+ .platform-roster-search select { min-width:88px; font-size:16px; }
  .impeccable-public .companion-cta { display:block; padding:25px; margin-bottom:35px; }
  .impeccable-public .companion-cta h2 { font-size:23px; }
  .impeccable-public .companion-cta .button { width:max-content; margin-top:22px; }
@@ -644,15 +651,39 @@ body.impeccable-public {
  .impeccable-public .feedback-art { min-height:220px; border-radius:0 0 13px 13px; }
  .impeccable-public.page-menu .menu-assurance .menu-guarantees { grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px; }
  .impeccable-public.page-menu .menu-assurance .menu-guarantees li { padding:13px 10px; gap:7px; }
- .impeccable-public.page-menu .menu-assurance .menu-guarantees h3 { font-size:11px; }
- .impeccable-public.page-menu .menu-assurance .menu-guarantees p { font-size:10px; }
+ .impeccable-public.page-menu .menu-assurance .menu-guarantees h3 { font-size:13px; }
+ .impeccable-public.page-menu .menu-assurance .menu-guarantees p { font-size:12px; }
  .impeccable-public.page-home .hero-right { height:250px; }
  .impeccable-public.page-home .hero-inner { min-height:0; width:calc(100% - 32px); aspect-ratio:auto; align-items:stretch; }
  .impeccable-public.page-home .hero .hero-left { padding-top:26px; padding-bottom:12px; }
  .impeccable-public.account-page .account-nav a { display:none; }
  .impeccable-public.account-page .account-nav { margin-right:55px; max-width:90px; }
  .impeccable-public .companion-card { min-height:295px; border-width:1px; box-shadow:none; }
- .impeccable-public .platform-person-heading>a,.impeccable-public .platform-person-copy>p,.impeccable-public .platform-person-tags span,.impeccable-public .platform-person-audio,.impeccable-public .platform-person-level,.impeccable-public .companion-card-meta,.impeccable-public .companion-card-foot small,.impeccable-public .companion-card-foot b,.impeccable-public .showcase-card small { font-size:11px; }
+ .impeccable-public .platform-person-heading>a,.impeccable-public .platform-person-copy>p,.impeccable-public .platform-person-tags span,.impeccable-public .platform-person-audio,.impeccable-public .platform-person-level,.impeccable-public .companion-card-meta,.impeccable-public .companion-card-foot small,.impeccable-public .companion-card-foot b,.impeccable-public .showcase-card small { font-size:12px; }
+ .platform-disclaimer,.impeccable-public .footer-line,.impeccable-public .footer-copy { font-size:12px; }
+ /* 手机端可读性下限：说明文字不小于 12px，可点击控件不小于 44px，输入类控件 16px（iOS 聚焦不放大页面） */
+ .impeccable-public :is(input:not([type=checkbox],[type=radio],[type=range],[type=file]),select,textarea) { font-size:16px; }
+ .impeccable-public.page-menu .poster-menu .poster-menu-card--compact .poster-menu-summary,
+ .impeccable-public.page-menu :is(.poster-feature-hint,.menu-lottery-kicker,.menu-lottery-prizes,.menu-lottery-copy small,.menu-section-kicker,.menu-section-heading>p,.menu-rules-label,.menu-rule-number) { font-size:12px; }
+ .impeccable-public.page-menu :is(.menu-rights-intro,.menu-rights-footer) { font-size:13px; }
+ .impeccable-public.page-menu .menu-rights-footer a { display:inline-flex; align-items:center; min-height:44px; }
+ .impeccable-public .recruit-section-head>p { font-size:12px; }
+ .impeccable-public .recruit-entry { position:relative; font-size:14px; }
+ .impeccable-public .recruit-entry::after { content:''; position:absolute; inset:-10px -8px; }
+ .impeccable-public .contact-panel :is(.contact-card-qr-placeholder,.contact-card-cta) { font-size:12px; }
+ .impeccable-public .contact-panel .contact-card-desc,.impeccable-public .contact-note { font-size:13px; }
+ .impeccable-public .campaign-date { font-size:12px; }
+ .impeccable-public .carousel-pause { min-height:44px; font-size:13px; }
+ .impeccable-public .carousel-dots { gap:0; }
+ .impeccable-public .carousel-dot { width:44px; height:44px; }
+ .impeccable-public .carousel-dot::after { inset:20px 7px; }
+ .impeccable-public .forum-search { font-size:13px; }
+ .impeccable-public .forum-search input,.impeccable-public .feed-heading select { height:44px; }
+ .impeccable-public .forum-categories button,.impeccable-public .auth-tabs button { min-height:44px; }
+ .impeccable-public :is(.feed-heading span,.side-heading a,.active-list small,.active-list b,.rules-panel p,.topic-list small,.auth-intro li span) { font-size:12px; }
+ .impeccable-public :is(.side-heading a,.auth-inline-link a) { position:relative; }
+ .impeccable-public :is(.side-heading a,.auth-inline-link a)::after { content:''; position:absolute; inset:-14px -8px; }
+ .impeccable-public .auth-inline-link a { font-size:13px; }
 }
 @media(prefers-reduced-motion:reduce) {
  .impeccable-public *,.impeccable-public *::before,.impeccable-public *::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; }

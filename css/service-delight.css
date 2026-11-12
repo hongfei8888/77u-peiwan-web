@@ -42,7 +42,7 @@
 @media(min-width:601px) { .fx-hero-ready .platform-feature-art { inset:-10px; width:calc(100% + 20px); height:calc(100% + 20px); } }
 @media(max-width:900px) { .impeccable-public .nav-links.fx-glide-ready { position:absolute; } }
 @media(max-width:600px) {
- .fx-motion-switch { min-width:32px; width:32px; padding:0; }
+ .fx-motion-switch { min-width:44px; width:44px; height:44px; padding:0; }
  .fx-motion-switch span { display:none; }
  .impeccable-public .platform-topbar-actions { gap:8px; }
  .fx-hero-ready .platform-feature-art { animation:none; }

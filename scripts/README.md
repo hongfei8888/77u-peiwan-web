@@ -54,3 +54,22 @@ npm run test:sidebar-icons
 ```
 
 构建器更新所有具有对应导航入口的17个页面，并自动处理价格详情页的相对路径和CSS版本。SVG直接内嵌，不依赖额外图片请求或运行时替换脚本。页面特有的“入驻与考核”“发布帖子”等入口保留原样。验证包括全部页面的静态覆盖与非图标内容保护、390/768/1440像素的明暗主题、键盘操作、手机菜单、点击SVG跳转和无JavaScript降级；报告位于 `_本地工作记录/sidebar-icons/2026-11-12-mature-a/validation/`。
+
+## 标题字体
+
+标题使用的 Glacier Display 是 Noto Sans SC Black（900 字重）的本地子集。子集外的字会回退到系统字体，在同一个标题里显得更细，所以**改过任何页面文案后都要运行检查**：
+
+```powershell
+npm run test:font
+```
+
+检查不依赖 `npm ci`。它读取全部页面、`js/` 和 `content/` 中出现的字符，对照 `fonts/glacier-display.css` 的 `unicode-range`；同时核对字体文件哈希、`content/glacier-font.json` 清单和各页面的 CSS 版本。出现缺字时按文件列出，退出码为 1。
+
+重建需要 Python 的 fonttools 与 brotli，以及源字体 `NotoSansSC-Black.otf`（[notofonts/noto-cjk](https://github.com/notofonts/noto-cjk) 的 `Sans/SubsetOTF/SC/`，约 8.9 MB，不随仓库保存）：
+
+```powershell
+pip install fonttools brotli
+npm run build:font -- --source <NotoSansSC-Black.otf 的路径>
+```
+
+`fonttools` 不在 PATH 时用 `--fonttools <路径>` 指定。构建输出四个 WOFF2：`glacier-display-900.woff2` 包含全站文案用字，每个页面都会加载；`glacier-display-900-ext1~3.woff2` 是 GB 2312 一级汉字中其余的常用字，浏览器只在标题里实际出现这些字（如陪玩昵称、帖子标题、公告）时才下载对应文件。构建同时重写 `fonts/glacier-display.css`、更新全部页面的 CSS 版本并生成清单。源字体本身没有的符号记录在清单的 `unsupported` 中，继续使用系统字体。字体许可见 `fonts/glacier-display-OFL.txt`。

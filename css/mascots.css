@@ -1,0 +1,81 @@
+/* 双人吉祥物：定位、入场与持续浮动分别由不同层负责。 */
+.hero-right.hero-duo { min-width: 0; display: flex; align-items: center; justify-content: center; }
+.mascot-stage {
+  position: relative;
+  width: min(100%, 700px);
+  aspect-ratio: 1;
+  margin: -36px 0 0;
+  isolation: isolate;
+  pointer-events: none;
+}
+.mascot-character { position: absolute; width: 58%; }
+.mascot-character--male { left: 0; top: 5%; z-index: 1; }
+.mascot-character--female { right: 0; top: 5%; z-index: 2; }
+.mascot-float { transform-origin: 50% 60%; }
+.mascot-image { width: 100%; height: auto; user-select: none; }
+.mascot-stage.is-motion-ready .mascot-float {
+  animation: mascot-float-male 5s ease-in-out infinite;
+  animation-play-state: paused;
+}
+.mascot-stage.is-motion-ready .mascot-character--female .mascot-float {
+  animation-name: mascot-float-female;
+  animation-duration: 6s;
+  animation-delay: -1.4s;
+}
+.mascot-stage.is-motion-playing .mascot-float { animation-play-state: running; }
+@keyframes mascot-float-male {
+  0%, 100% { transform: translateY(0) rotate(-.5deg); }
+  50% { transform: translateY(-6px) rotate(.5deg); }
+}
+@keyframes mascot-float-female {
+  0%, 100% { transform: translateY(0) rotate(.6deg); }
+  50% { transform: translateY(-8px) rotate(-.6deg); }
+}
+@media (max-width: 1200px) {
+  .hero-duo .mascot-stage { margin-top: 0; }
+}
+@media (min-width: 821px) and (max-width: 1200px) {
+  .hero--mascots { padding-top: 190px; }
+  .hero--mascots .hero-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; }
+  .hero--mascots .hero-left { min-width: 0; }
+  .hero--mascots .hero-badges { gap: 8px; }
+  .hero--mascots .badge-pill { height: 30px; padding: 0 12px; font-size: 12px; }
+  .hero--mascots .hero-title { font-size: clamp(60px, 7vw, 80px); margin-top: 28px; }
+  .hero--mascots .hero-title-en { font-size: clamp(26px, 3vw, 36px); letter-spacing: 3px; }
+  .hero--mascots .hero-stats { margin-top: 40px; }
+  .hero--mascots .stat { padding-right: 24px; }
+  .hero--mascots .stat + .stat { padding-left: 24px; }
+  .hero--mascots .stat-num { font-size: 34px; }
+  .hero--mascots .stat-label { font-size: 15px; }
+  .hero--mascots .hero-divider { margin: 32px 0 24px; }
+  .hero--mascots .hero-tagline { font-size: 22px; }
+}
+@media (min-width: 601px) and (max-width: 820px) {
+  .hero--mascots .hero-inner { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+  .hero-duo .mascot-stage { width: 100%; }
+}
+@media (max-width: 600px) {
+  .hero--mascots { padding-top: 100px; }
+  .hero--mascots .hero-inner { grid-template-columns: minmax(0, 1fr); }
+  .hero--mascots .hero-left { padding-inline: 0; }
+  .hero--mascots .hero-badges { gap: 7px; flex-wrap: wrap; }
+  .hero--mascots .badge-pill { height: 24px; padding: 0 9px; border-radius: 14px; font-size: 10px; }
+  .hero--mascots .hero-title { font-size: clamp(38px, 10.6vw, 60px); margin-top: 23px; }
+  .hero--mascots .hero-title-en { font-size: clamp(18px, 5vw, 28px); margin-top: 9px; letter-spacing: .1em; }
+  .hero--mascots .hero-stats { margin-top: 25px; }
+  .hero--mascots .stat { padding-right: 23px; }
+  .hero--mascots .stat + .stat { padding-left: 23px; }
+  .hero--mascots .stat-num { font-size: 26px; }
+  .hero--mascots .stat-label { margin-top: 5px; font-size: 12px; }
+  .hero--mascots .hero-divider { width: 90px; height: 2px; margin: 21px 0 15px; }
+  .hero--mascots .hero-tagline { font-size: 14px; line-height: 1.7; }
+  .hero-duo .mascot-stage { width: min(92vw, 400px); height: clamp(280px, 78vw, 340px); aspect-ratio: auto; margin: 10px auto 0; }
+  .hero-duo .mascot-character { width: 58%; }
+  .hero-duo .mascot-character--male { top: 2%; }
+  .hero-duo .mascot-character--female { top: 2%; }
+  .hero--mascots + .activities { padding-top: 32px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mascot-stage .mascot-float { animation: none !important; transform: none; }
+  .hero-duo, .mascot-character { opacity: 1 !important; transform: none !important; }
+}

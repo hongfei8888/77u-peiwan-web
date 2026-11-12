@@ -1,0 +1,40 @@
+/* Set the initial view before scripts load, so the page never collapses after painting. */
+html:not(.join-ready):not(.join-start-mobile) #mobile-standards,
+html.join-start-mobile:not(.join-ready) #pc-standards,
+html:not(.join-ready) [data-rule-panel]:not([data-rule-panel="single"]){display:none}
+.join-intro{animation:join-first-paint .7s cubic-bezier(.22,1,.36,1) both}
+.join-intro>div{animation:join-heading-enter .8s .04s cubic-bezier(.22,1,.36,1) both}
+.join-intro-art{animation:join-art-enter .95s .1s cubic-bezier(.22,1,.36,1) both}
+.join-intro>.join-text-link{animation:join-heading-enter .75s .15s cubic-bezier(.22,1,.36,1) both}
+.join-content{animation:join-card-enter .85s .14s cubic-bezier(.22,1,.36,1) both}
+.join-enroll{animation:join-card-enter .9s .24s cubic-bezier(.22,1,.36,1) both}
+@keyframes join-first-paint{from{opacity:0}to{opacity:1}}
+@keyframes join-heading-enter{from{opacity:0;translate:0 10px}to{opacity:1;translate:0 0}}
+@keyframes join-art-enter{from{opacity:0;translate:18px 0}to{opacity:var(--join-art-opacity,1);translate:0 0}}
+@keyframes join-card-enter{from{opacity:0;translate:0 16px}to{opacity:1;translate:0 0}}
+.join-content,.join-enroll,.join-notices{transition:box-shadow .24s ease,border-color .24s ease}
+.join-text-link{transition:color .2s ease,background-color .2s ease,border-color .2s ease}
+.join-intro>.join-text-link:hover{background:#fff;border-color:#9bb8df}
+.join-rule-tabs button{transition:background-color .22s ease,color .22s ease,box-shadow .22s ease,transform .15s ease}
+.join-rule-tabs button:active,.join-save:active{transform:translateY(1px)}
+.join-platform-switch{position:relative}
+.join-platform-switch.has-motion-line a{border-bottom-color:transparent}
+.join-tab-line{position:absolute;height:3px;bottom:-1px;left:0;background:var(--blue);border-radius:3px;pointer-events:none;transition:transform .3s cubic-bezier(.22,1,.36,1),width .3s cubic-bezier(.22,1,.36,1)}
+.join-original summary{transition:color .2s ease}.join-original summary:hover{color:#3669e8}
+.report-dialog{padding:0;border:1px solid #dbe5f3;border-radius:14px;width:min(368px,calc(100% - 32px));max-height:calc(100dvh - 40px);color:var(--ink);background:#fff;box-shadow:0 24px 90px #14294735;overflow:auto;overscroll-behavior:contain}
+.report-dialog::backdrop{background:#162a465c;backdrop-filter:blur(3px);animation:join-backdrop-enter .36s ease-out both}
+.report-dialog.is-closing::backdrop{animation:join-backdrop-exit .22s ease-in both}
+@keyframes join-backdrop-enter{from{background:#162a4600}to{background:#162a465c}}
+@keyframes join-backdrop-exit{from{background:#162a465c}to{background:#162a4600}}
+.report-dialog-header{display:flex;justify-content:space-between;align-items:center;padding:19px 22px;border-bottom:1px solid #e4ebf4;background:#f4f8fe}
+.report-dialog-header h2{font-size:21px;margin:0}.report-dialog-header p{font-size:11px;color:#7089a8;margin-top:3px}
+.report-close{display:grid;place-items:center;flex:none;width:34px;height:34px;border:1px solid #dce5f1;border-radius:50%;background:white;color:#5c7495;font-size:23px;line-height:1;transition:background-color .2s ease,color .2s ease}
+.report-close:hover{background:#e9f1fe;color:#275db7}.report-dialog-body{padding:21px 24px 24px;text-align:center}
+.report-qr{position:relative;width:min(280px,100%);aspect-ratio:1;margin:0 auto;background:white;overflow:hidden;border-radius:6px}
+.report-qr img{position:absolute;max-width:none;width:322.5%;height:auto;left:-205.714286%;top:-341.071429%}
+.report-dialog-body>p{font-size:12px;line-height:1.8;color:#6882a1;margin:10px 0 17px}
+.report-save{display:flex;align-items:center;justify-content:center;gap:8px;border:1px solid #cbdcf1;background:#f1f6ff;color:#3d66a0;padding:10px 16px;font-size:13px;font-weight:700;border-radius:6px;transition:background-color .2s ease}
+.report-save:hover{background:#e3edff}
+@media(hover:hover) and (pointer:fine){.join-content:hover,.join-enroll:hover{border-color:#c8d9ed;box-shadow:0 10px 28px #304f7614}}
+@media(max-width:760px){.join-intro-art{--join-art-opacity:.6}}
+@media(prefers-reduced-motion:reduce){.join-intro,.join-intro>div,.join-intro-art,.join-intro>.join-text-link,.join-content,.join-enroll{animation:none}.join-tab-line,.join-content,.join-enroll,.join-notices,.join-text-link,.join-rule-tabs button,.report-close,.report-save{transition:none}.join-rule-tabs button:active,.join-save:active{transform:none}.report-dialog::backdrop{backdrop-filter:none;animation:none}}

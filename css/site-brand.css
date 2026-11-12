@@ -1,0 +1,41 @@
+/* Raised silver panda, larger and directly on the site's own surface. */
+img.site-logo {
+ box-sizing:border-box;
+ object-fit:contain!important;
+ padding:0;
+ background:transparent;
+ border-radius:0!important;
+ filter:brightness(0) invert(1)!important;
+ mix-blend-mode:normal!important;
+}
+.site-emblem {
+ --emblem-size:48px;
+ position:relative;
+ display:inline-grid;
+ place-items:center;
+ width:var(--emblem-size);
+ height:40px;
+ flex:none;
+ overflow:visible;
+}
+.site-emblem>img.site-logo {
+ display:block;
+ width:100%!important;
+ height:100%!important;
+ padding:0;
+}
+@supports ((mask-image:url("")) or (-webkit-mask-image:url(""))) {
+ .site-emblem>img.site-logo { opacity:0; }
+ .site-emblem::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(140deg,#fffafa 0%,#d9d0e5 26%,#aaa0bc 43%,#f5edf9 57%,#c6b9d5 77%,#a094b3 100%);
+  -webkit-mask:url("../images/brand/qiqiyou-panda-mark-20261020.webp") center/contain no-repeat;
+  mask:url("../images/brand/qiqiyou-panda-mark-20261020.webp") center/contain no-repeat;
+  filter:drop-shadow(0 1px 0 #f9eeff75) drop-shadow(0 2px 1px #08050eb3);
+ }
+}
+.footer-logo--qiqiyou { background:transparent; overflow:visible; border-radius:0; }
+.footer-logo--qiqiyou>.site-emblem { --emblem-size:50px; width:100%; height:100%; }
+.management-brand>.site-emblem { height:34px; }

@@ -1,0 +1,18 @@
+/* Motion accents for the existing assessment reader; editable field markup stays intact. */
+.club-assessment .arena-actions { flex-wrap:wrap; }
+.assessment-motion-toggle { display:inline-grid; place-items:center; flex:none; width:34px; height:34px; padding:7px; border:1px solid #b9cce7; border-radius:6px; background:#edf3ff; color:#285dce; cursor:pointer; }
+.assessment-motion-toggle svg { width:17px; height:17px; }
+.assessment-motion-toggle:hover:not(:disabled) { background:#dce9fd; border-color:#91b0dc; }
+.assessment-motion-toggle[aria-pressed="false"] { color:#53667c; background:#f2f5f9; border-color:#d4deeb; }
+.assessment-motion-toggle:focus-visible { outline:2px solid #285dce; outline-offset:4px; }
+.assessment-motion-toggle:disabled { cursor:default; }
+.assessment-motion-tabs { position:relative; isolation:isolate; }
+.assessment-selection-track { display:block; position:absolute; bottom:0; left:0; height:2px; z-index:2; background:#356ac1; border-radius:2px; pointer-events:none; transition:translate .3s cubic-bezier(.16,1,.3,1),width .25s ease,opacity .15s ease; }
+.assessment-motion-paused .assessment-selection-track { transition:none; }
+@media(max-width:600px) {
+ .club-assessment .arena-actions { gap:12px; }
+ .assessment-motion-toggle { width:30px; height:30px; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .assessment-selection-track { transition:none; }
+}

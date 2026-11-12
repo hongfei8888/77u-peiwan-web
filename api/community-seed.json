@@ -1,0 +1,617 @@
+{
+  "posts": [
+    {
+      "id": "admin-rules",
+      "pinned": true,
+      "official": true,
+      "category": "公告",
+      "author": "社区管理员",
+      "avatar": "images/brand/panda-controller-da54c5b998eb.png",
+      "time": "刚刚",
+      "title": "欢迎来到玩家动态",
+      "content": "陪玩和玩家都可以在这里分享游戏日常、战绩、找搭子和攻略。请勿公开手机号、住址、证件与收款账号等私人信息。",
+      "views": 1286,
+      "likes": 96,
+      "replies": 18
+    },
+    {
+      "id": "moment-clear",
+      "companion": true,
+      "category": "陪玩日常",
+      "author": "小透明",
+      "avatar": "images/companions/player-5ab5b3a3bf3c.webp",
+      "profile": "players.html?filter=appearance",
+      "time": "18 分钟前",
+      "content": "今天的状态比想象中好，连续几局配合都特别舒服。晚上继续在线，想轻松聊天或者认真上分都可以。",
+      "images": [
+        "images/companions/player-5ab5b3a3bf3c.webp"
+      ],
+      "views": 986,
+      "likes": 142,
+      "replies": 26
+    },
+    {
+      "id": "moment-pa",
+      "companion": true,
+      "category": "攻略",
+      "author": "PA",
+      "avatar": "images/companions/PA.webp",
+      "profile": "players.html?filter=technical",
+      "time": "1 小时前",
+      "title": "长弓溪谷转点思路",
+      "content": "不要一听枪声就直线赶过去。先看撤离方向，再判断交战区外侧有没有更安全的观察位。能拿信息的时候，往往比先开枪更重要。",
+      "images": [
+        "images/companions/PA.webp"
+      ],
+      "views": 1532,
+      "likes": 188,
+      "replies": 37
+    },
+    {
+      "id": "moment-night",
+      "companion": true,
+      "category": "陪玩日常",
+      "author": "早晚",
+      "avatar": "images/companions/player-bb24698389ce.webp",
+      "profile": "players.html?filter=voice",
+      "time": "2 小时前",
+      "content": "新调了一版声音样片，录完发现御姐音打游戏报点也挺有感觉。今天想找几位不压力、愿意沟通的队友。",
+      "images": [
+        "images/companions/player-bb24698389ce.webp"
+      ],
+      "views": 761,
+      "likes": 119,
+      "replies": 31
+    },
+    {
+      "id": "moment-team",
+      "category": "找搭子",
+      "author": "南风",
+      "time": "昨天",
+      "title": "今晚九点休闲三排，缺一位",
+      "content": "主要做任务和熟图，不压力、不抢物资。希望队友愿意沟通，遇到交战先报点再行动，新手也可以。",
+      "views": 426,
+      "likes": 39,
+      "replies": 21
+    },
+    {
+      "id": "moment-win",
+      "companion": true,
+      "category": "战绩",
+      "author": "鹅宝",
+      "avatar": "images/companions/player-619315e83387.webp",
+      "profile": "players.html?filter=appearance",
+      "time": "昨天",
+      "content": "最后一分钟绕开正面交火，卡着倒计时撤出来了。游戏结束以后才发现手心全是汗，你们最惊险的一次撤离是什么？",
+      "images": [
+        "images/companions/player-619315e83387.webp"
+      ],
+      "views": 1108,
+      "likes": 216,
+      "replies": 48
+    }
+  ],
+  "companions": [
+    {
+      "name": "小透明",
+      "gender": "女",
+      "level": "大S",
+      "tone": "少女音",
+      "service": "端游娱乐",
+      "groups": [
+        "ge",
+        "voice",
+        "appearance"
+      ],
+      "avatar": "images/companions/player-5ab5b3a3bf3c.webp",
+      "video": "media/companions/video/player-5ab5b3a3bf3c.mp4",
+      "audio": "media/companions/audio/player-5ab5b3a3bf3c.mp3"
+    },
+    {
+      "name": "早晚",
+      "gender": "女",
+      "level": "大S",
+      "tone": "御姐音",
+      "service": "端游娱乐",
+      "groups": [
+        "ge",
+        "voice",
+        "appearance"
+      ],
+      "avatar": "images/companions/player-bb24698389ce.webp",
+      "video": "media/companions/video/player-bb24698389ce.mp4",
+      "audio": "media/companions/audio/player-bb24698389ce.mp3"
+    },
+    {
+      "name": "PA",
+      "gender": "男",
+      "level": "顶尖",
+      "tone": "资料待补充",
+      "service": "端游技术",
+      "groups": [
+        "ge",
+        "technical",
+        "appearance"
+      ],
+      "avatar": "images/companions/PA.webp"
+    },
+    {
+      "name": "有风",
+      "gender": "男",
+      "level": "魔王",
+      "tone": "青年音",
+      "service": "端游技术",
+      "groups": [
+        "ge",
+        "singer",
+        "voice",
+        "technical",
+        "demon"
+      ],
+      "avatar": "images/brand/male-avatar-807aa04e4358.webp",
+      "audio": "media/companions/audio/player-3760f3e55000.mp3",
+      "placeholder": true
+    },
+    {
+      "name": "鹅宝",
+      "gender": "女",
+      "level": "大S",
+      "tone": "资料待补充",
+      "service": "端游娱乐",
+      "groups": [
+        "yue",
+        "appearance"
+      ],
+      "avatar": "images/companions/player-619315e83387.webp",
+      "video": "media/companions/video/player-619315e83387.mp4"
+    },
+    {
+      "name": "薇恩",
+      "gender": "女",
+      "level": "大S",
+      "tone": "少女音",
+      "service": "端游娱乐",
+      "groups": [
+        "yue",
+        "appearance"
+      ],
+      "avatar": "images/companions/player-e73809f616b9.webp",
+      "video": "media/companions/video/player-e73809f616b9.mp4"
+    },
+    {
+      "name": "麻辣兔",
+      "gender": "女",
+      "level": "大S",
+      "tone": "少女音",
+      "service": "端游娱乐",
+      "groups": [
+        "yue",
+        "appearance"
+      ],
+      "avatar": "images/companions/player-2c7bb54e3000.webp",
+      "video": "media/companions/video/player-2c7bb54e3000.mp4"
+    },
+    {
+      "name": "诗妤",
+      "gender": "女",
+      "level": "大S",
+      "tone": "资料待补充",
+      "service": "端游娱乐",
+      "groups": [
+        "yue",
+        "appearance"
+      ],
+      "avatar": "images/companions/player-154a755d25ab.webp",
+      "video": "media/companions/video/player-154a755d25ab.mp4"
+    },
+    {
+      "name": "雪饼",
+      "gender": "女",
+      "level": "大S",
+      "tone": "少女音",
+      "service": "端游娱乐",
+      "groups": [
+        "singer",
+        "voice"
+      ],
+      "avatar": "images/brand/female-avatar-3857d93d2250.webp",
+      "audio": "media/companions/audio/player-0f3b08f1cbb9.mp3",
+      "placeholder": true
+    },
+    {
+      "name": "葬爱冷少",
+      "gender": "女",
+      "level": "大S",
+      "tone": "御姐音",
+      "service": "端游娱乐",
+      "groups": [
+        "singer",
+        "voice"
+      ],
+      "avatar": "images/brand/female-avatar-3857d93d2250.webp",
+      "audio": "media/companions/audio/player-acdeef7bb9c1.mp3",
+      "placeholder": true
+    },
+    {
+      "name": "雪花",
+      "gender": "女",
+      "level": "大S",
+      "tone": "少女音",
+      "service": "端游娱乐",
+      "groups": [
+        "singer",
+        "voice"
+      ],
+      "avatar": "images/brand/female-avatar-3857d93d2250.webp",
+      "audio": "media/companions/audio/player-4c1d79e56f4a.mp3",
+      "placeholder": true
+    },
+    {
+      "name": "小Mi",
+      "gender": "女",
+      "level": "Pro",
+      "tone": "少女音 · 少御音",
+      "service": "端游娱乐",
+      "groups": [
+        "singer",
+        "voice"
+      ],
+      "avatar": "images/brand/female-avatar-3857d93d2250.webp",
+      "audio": "media/companions/audio/Mi.mp3",
+      "placeholder": true
+    },
+    {
+      "name": "陈可",
+      "gender": "女",
+      "level": "大S",
+      "tone": "御姐音",
+      "service": "端游娱乐",
+      "groups": [
+        "singer",
+        "voice"
+      ],
+      "avatar": "images/brand/female-avatar-3857d93d2250.webp",
+      "audio": "media/companions/audio/player-83e5c79aeb8f.mp3",
+      "placeholder": true
+    },
+    {
+      "name": "雾里",
+      "gender": "女",
+      "level": "大S",
+      "tone": "少御音",
+      "service": "端游娱乐",
+      "groups": [
+        "singer",
+        "voice"
+      ],
+      "avatar": "images/brand/female-avatar-3857d93d2250.webp",
+      "audio": "media/companions/audio/player-d08b6b891a6b.mp3",
+      "placeholder": true
+    },
+    {
+      "name": "讯号",
+      "gender": "未公开",
+      "level": "资料待补充",
+      "tone": "声音样片",
+      "service": "声音陪伴",
+      "groups": [
+        "voice"
+      ],
+      "avatar": "images/brand/female-avatar-3857d93d2250.webp",
+      "audio": "media/companions/audio/player-9bc31b1c7457.mp3",
+      "placeholder": true
+    },
+    {
+      "name": "路小雨",
+      "gender": "未公开",
+      "level": "资料待补充",
+      "tone": "声音样片",
+      "service": "声音陪伴",
+      "groups": [
+        "voice"
+      ],
+      "avatar": "images/brand/female-avatar-3857d93d2250.webp",
+      "audio": "media/companions/audio/player-b288de582773.mp3",
+      "placeholder": true
+    },
+    {
+      "name": "小梦",
+      "gender": "未公开",
+      "level": "资料待补充",
+      "tone": "声音样片",
+      "service": "声音陪伴",
+      "groups": [
+        "voice"
+      ],
+      "avatar": "images/brand/female-avatar-3857d93d2250.webp",
+      "audio": "media/companions/audio/player-5dcde6bb4a0d.mp3",
+      "placeholder": true
+    },
+    {
+      "name": "冷",
+      "gender": "未公开",
+      "level": "资料待补充",
+      "tone": "声音样片",
+      "service": "声音陪伴",
+      "groups": [
+        "voice"
+      ],
+      "avatar": "images/brand/female-avatar-3857d93d2250.webp",
+      "audio": "media/companions/audio/player-6e87e42fbc22.mp3",
+      "placeholder": true
+    },
+    {
+      "name": "小尾猫猫",
+      "gender": "未公开",
+      "level": "资料待补充",
+      "tone": "声音样片",
+      "service": "声音陪伴",
+      "groups": [
+        "voice"
+      ],
+      "avatar": "images/brand/female-avatar-3857d93d2250.webp",
+      "audio": "media/companions/audio/player-c5fd973c798b.mp3",
+      "placeholder": true
+    },
+    {
+      "name": "小怜",
+      "gender": "未公开",
+      "level": "资料待补充",
+      "tone": "声音样片",
+      "service": "声音陪伴",
+      "groups": [
+        "voice"
+      ],
+      "avatar": "images/brand/female-avatar-3857d93d2250.webp",
+      "audio": "media/companions/audio/player-47c30b8580cd.mp3",
+      "placeholder": true
+    },
+    {
+      "name": "小瑜",
+      "gender": "未公开",
+      "level": "资料待补充",
+      "tone": "声音样片",
+      "service": "声音陪伴",
+      "groups": [
+        "voice"
+      ],
+      "avatar": "images/brand/female-avatar-3857d93d2250.webp",
+      "audio": "media/companions/audio/player-6b351df2a25b.mp3",
+      "placeholder": true
+    },
+    {
+      "name": "小思绪",
+      "gender": "未公开",
+      "level": "资料待补充",
+      "tone": "声音样片",
+      "service": "声音陪伴",
+      "groups": [
+        "voice"
+      ],
+      "avatar": "images/brand/female-avatar-3857d93d2250.webp",
+      "audio": "media/companions/audio/player-1e19dc95bda3.mp3",
+      "placeholder": true
+    },
+    {
+      "name": "华莱士",
+      "gender": "男",
+      "level": "魔王",
+      "tone": "资料待补充",
+      "service": "端游技术",
+      "groups": [
+        "technical",
+        "appearance",
+        "demon"
+      ],
+      "avatar": "images/brand/male-avatar-807aa04e4358.webp",
+      "placeholder": true
+    },
+    {
+      "name": "拾玖",
+      "gender": "男",
+      "level": "魔王",
+      "tone": "资料待补充",
+      "service": "端游技术",
+      "groups": [
+        "technical",
+        "appearance",
+        "demon"
+      ],
+      "avatar": "images/companions/player-0a2013eafa9b.webp"
+    },
+    {
+      "name": "dash",
+      "gender": "男",
+      "level": "顶尖",
+      "tone": "资料待补充",
+      "service": "端游技术",
+      "groups": [
+        "technical",
+        "appearance"
+      ],
+      "avatar": "images/brand/male-avatar-807aa04e4358.webp",
+      "placeholder": true
+    },
+    {
+      "name": "以南",
+      "gender": "男",
+      "level": "魔王",
+      "tone": "资料待补充",
+      "service": "端游技术",
+      "groups": [
+        "technical",
+        "appearance",
+        "demon"
+      ],
+      "avatar": "images/brand/male-avatar-807aa04e4358.webp",
+      "placeholder": true
+    },
+    {
+      "name": "天才大叔",
+      "gender": "男",
+      "level": "魔王",
+      "tone": "资料待补充",
+      "service": "端游技术",
+      "groups": [
+        "technical",
+        "appearance",
+        "demon"
+      ],
+      "avatar": "images/companions/player-6fd691a81973.webp"
+    },
+    {
+      "name": "云天明",
+      "gender": "男",
+      "level": "顶尖 · 瓦神话",
+      "tone": "资料待补充",
+      "service": "端游技术",
+      "groups": [
+        "technical",
+        "appearance"
+      ],
+      "avatar": "images/brand/male-avatar-807aa04e4358.webp",
+      "placeholder": true
+    },
+    {
+      "name": "佐素梨",
+      "gender": "女",
+      "level": "大S",
+      "tone": "资料待补充",
+      "service": "端游娱乐",
+      "groups": [
+        "appearance"
+      ],
+      "avatar": "images/companions/player-1122e04fe22a.webp"
+    },
+    {
+      "name": "肉包",
+      "gender": "女",
+      "level": "大S",
+      "tone": "资料待补充",
+      "service": "端游娱乐",
+      "groups": [
+        "appearance"
+      ],
+      "avatar": "images/companions/player-578b5be456f0.webp",
+      "video": "media/companions/video/player-578b5be456f0.mp4"
+    },
+    {
+      "name": "麻辣土豆",
+      "gender": "女",
+      "level": "大S",
+      "tone": "资料待补充",
+      "service": "端游娱乐",
+      "groups": [
+        "appearance"
+      ],
+      "avatar": "images/companions/player-b4973c58d2e7.webp",
+      "video": "media/companions/video/player-b4973c58d2e7.mp4"
+    },
+    {
+      "name": "小梦宝",
+      "gender": "女",
+      "level": "大S",
+      "tone": "资料待补充",
+      "service": "端游娱乐",
+      "groups": [
+        "appearance"
+      ],
+      "avatar": "images/companions/player-9f6360299d09.webp",
+      "video": "media/companions/video/player-9f6360299d09.mp4"
+    },
+    {
+      "name": "荔枝",
+      "gender": "女",
+      "level": "大S",
+      "tone": "资料待补充",
+      "service": "端游娱乐",
+      "groups": [
+        "appearance"
+      ],
+      "avatar": "images/brand/female-avatar-3857d93d2250.webp",
+      "placeholder": true
+    },
+    {
+      "name": "鱼丸",
+      "gender": "女",
+      "level": "大S",
+      "tone": "御姐音",
+      "service": "端游娱乐",
+      "groups": [
+        "appearance"
+      ],
+      "avatar": "images/brand/female-avatar-3857d93d2250.webp",
+      "placeholder": true
+    },
+    {
+      "name": "格调",
+      "gender": "女",
+      "level": "大S",
+      "tone": "资料待补充",
+      "service": "端游娱乐",
+      "groups": [
+        "appearance"
+      ],
+      "avatar": "images/companions/player-77525e3eac19.webp",
+      "video": "media/companions/video/player-77525e3eac19.mp4"
+    },
+    {
+      "name": "小琪",
+      "gender": "女",
+      "level": "大S",
+      "tone": "资料待补充",
+      "service": "端游娱乐",
+      "groups": [
+        "appearance"
+      ],
+      "avatar": "images/brand/female-avatar-3857d93d2250.webp",
+      "placeholder": true
+    },
+    {
+      "name": "懒羊羊",
+      "gender": "女",
+      "level": "大S",
+      "tone": "少御音",
+      "service": "端游娱乐",
+      "groups": [
+        "appearance"
+      ],
+      "avatar": "images/companions/player-a5aadda033bf.webp"
+    },
+    {
+      "name": "糖墨",
+      "gender": "女",
+      "level": "大S",
+      "tone": "资料待补充",
+      "service": "端游娱乐",
+      "groups": [
+        "appearance"
+      ],
+      "avatar": "images/companions/player-7c51a8842fb2.webp"
+    },
+    {
+      "name": "婉婉",
+      "gender": "女",
+      "level": "大S",
+      "tone": "少女音",
+      "service": "端游娱乐",
+      "groups": [
+        "appearance"
+      ],
+      "avatar": "images/companions/player-91dccc3e986f.webp",
+      "video": "media/companions/video/player-91dccc3e986f.mp4"
+    },
+    {
+      "name": "石开",
+      "gender": "女",
+      "level": "大S",
+      "tone": "资料待补充",
+      "service": "端游娱乐",
+      "groups": [
+        "appearance"
+      ],
+      "avatar": "images/brand/female-avatar-3857d93d2250.webp",
+      "placeholder": true
+    }
+  ]
+}

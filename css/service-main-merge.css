@@ -1,0 +1,5 @@
+/* Keep current business markup and content; hide only decorative labels. */
+.impeccable-public .recruit-card-number,
+.impeccable-public .menu-intro-kicker,
+.impeccable-public .poster-feature-eyebrow,
+.impeccable-public .forum-page-head>div>p { display:none; }

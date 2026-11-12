@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /join-admin.html
+Disallow: /api/
+Disallow: /_本地工作记录/
+Disallow: /account.html
+Disallow: /profile.html
+Disallow: /companion-center.html
+Disallow: /change-password.html
+Disallow: /forgot-password.html
+Disallow: /publish.html
+
+Disallow: /assessment.html
+Disallow: /assessment-admin.html

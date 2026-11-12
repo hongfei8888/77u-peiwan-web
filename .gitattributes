@@ -1,0 +1,20 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.mp3 binary
+*.m4a binary
+*.wav binary
+*.mp4 binary
+*.webm binary
+
+# Preserve upstream vendor code and font license text verbatim.
+js/vendor/** -whitespace
+fonts/** -whitespace

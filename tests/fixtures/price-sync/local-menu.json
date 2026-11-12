@@ -1,0 +1,928 @@
+{
+  "home": [
+    {
+      "id": "run",
+      "kind": "item"
+    },
+    {
+      "id": "pc",
+      "kind": "category",
+      "name": "三角洲端游",
+      "icon": {
+        "src": "images/poster-menu/icon-dc35e65f7e2a.png",
+        "width": 200,
+        "height": 200,
+        "alt": "三角洲端游头像"
+      }
+    },
+    {
+      "id": "mobile",
+      "kind": "category",
+      "name": "三角洲手游",
+      "icon": {
+        "src": "images/poster-menu/icon-d8563c936ef7.png",
+        "width": 200,
+        "height": 200,
+        "alt": "三角洲手游头像"
+      }
+    },
+    {
+      "id": "sweet-day",
+      "kind": "item"
+    },
+    {
+      "id": "assault-day",
+      "kind": "item"
+    },
+    {
+      "id": "season-3x3",
+      "kind": "item"
+    },
+    {
+      "id": "other-games",
+      "kind": "item"
+    },
+    {
+      "id": "gifts",
+      "kind": "item"
+    },
+    {
+      "id": "prepaid",
+      "kind": "item"
+    }
+  ],
+  "utilities": [
+    "guarantees",
+    "benefits"
+  ],
+  "categories": [
+    {
+      "id": "pc",
+      "name": "三角洲端游",
+      "entries": [
+        "pc-01",
+        "pc-02",
+        "pc-03",
+        "pc-04",
+        "pc-05",
+        "pc-06",
+        "pc-07",
+        "pc-08",
+        "pc-09",
+        "pc-10",
+        "pc-11",
+        "pc-12",
+        "pc-13",
+        "pc-14",
+        "pc-15"
+      ]
+    },
+    {
+      "id": "mobile",
+      "name": "三角洲手游",
+      "entries": [
+        "mobile-01",
+        "mobile-02",
+        "mobile-03",
+        "mobile-04",
+        "mobile-05",
+        "mobile-06"
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "id": "run",
+      "name": "跑刀/陪跑",
+      "parent": "home",
+      "icon": {
+        "src": "images/poster-menu/icon-dcfc18707970.png",
+        "width": 90,
+        "height": 90,
+        "alt": "跑刀/陪跑头像"
+      },
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-0",
+          "label": "跑刀/陪跑"
+        }
+      ]
+    },
+    {
+      "id": "pc-01",
+      "name": "体验单",
+      "parent": "pc",
+      "icon": {
+        "src": "images/poster-menu/icon-3149c3463e85.png",
+        "width": 90,
+        "height": 90,
+        "alt": "体验单头像"
+      },
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-12",
+          "label": "体验单"
+        }
+      ]
+    },
+    {
+      "id": "pc-02",
+      "name": "陪玩单",
+      "parent": "pc",
+      "icon": {
+        "src": "images/poster-menu/icon-920d7c9838ed.png",
+        "width": 90,
+        "height": 90,
+        "alt": "陪玩单头像"
+      },
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-13",
+          "label": "陪玩单"
+        }
+      ]
+    },
+    {
+      "id": "pc-03",
+      "name": "烽火陪·勇敢者行动",
+      "parent": "pc",
+      "icon": {
+        "src": "images/poster-menu/icon-131212b3a905.jpg",
+        "width": 360,
+        "height": 360,
+        "alt": "烽火陪·勇敢者行动头像"
+      },
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-14",
+          "label": "烽火陪·勇敢者行动"
+        }
+      ]
+    },
+    {
+      "id": "pc-04",
+      "name": "纯保底单",
+      "parent": "pc",
+      "icon": {
+        "src": "images/poster-menu/icon-37a9de5b19ff.png",
+        "width": 90,
+        "height": 90,
+        "alt": "纯保底单头像"
+      },
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-15",
+          "label": "纯保底单"
+        }
+      ]
+    },
+    {
+      "id": "pc-05",
+      "name": "猛攻单",
+      "parent": "pc",
+      "icon": {
+        "src": "images/poster-menu/icon-e324c00bbf27.png",
+        "width": 90,
+        "height": 90,
+        "alt": "猛攻单头像"
+      },
+      "kind": "gallery",
+      "posters": [
+        {
+          "id": "poster-27",
+          "label": "猛攻单①"
+        },
+        {
+          "id": "poster-28",
+          "label": "猛攻单②"
+        },
+        {
+          "id": "poster-29",
+          "label": "猛攻单③"
+        }
+      ]
+    },
+    {
+      "id": "pc-06",
+      "name": "武将战场",
+      "parent": "pc",
+      "icon": {
+        "src": "images/poster-menu/icon-426eecd02626.png",
+        "width": 90,
+        "height": 90,
+        "alt": "武将战场头像"
+      },
+      "kind": "gallery",
+      "posters": [
+        {
+          "id": "poster-30",
+          "label": "武将战场①"
+        },
+        {
+          "id": "poster-31",
+          "label": "武将战场②"
+        },
+        {
+          "id": "poster-32",
+          "label": "武将战场③"
+        }
+      ]
+    },
+    {
+      "id": "pc-07",
+      "name": "趣味单",
+      "parent": "pc",
+      "icon": {
+        "src": "images/poster-menu/icon-66231b27e9fe.png",
+        "width": 90,
+        "height": 90,
+        "alt": "趣味单头像"
+      },
+      "kind": "gallery",
+      "posters": [
+        {
+          "id": "poster-33",
+          "label": "趣味单①"
+        },
+        {
+          "id": "poster-34",
+          "label": "趣味单②"
+        }
+      ]
+    },
+    {
+      "id": "pc-08",
+      "name": "物资单",
+      "parent": "pc",
+      "icon": {
+        "src": "images/poster-menu/icon-6937f0fdfa38.png",
+        "width": 90,
+        "height": 90,
+        "alt": "物资单头像"
+      },
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-16",
+          "label": "物资单"
+        }
+      ]
+    },
+    {
+      "id": "pc-09",
+      "name": "保险单",
+      "parent": "pc",
+      "icon": {
+        "src": "images/poster-menu/icon-257a61273dd3.png",
+        "width": 90,
+        "height": 90,
+        "alt": "保险单头像"
+      },
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-17",
+          "label": "保险单"
+        }
+      ]
+    },
+    {
+      "id": "pc-10",
+      "name": "出红单",
+      "parent": "pc",
+      "icon": {
+        "src": "images/poster-menu/icon-dcfc18707970.png",
+        "width": 90,
+        "height": 90,
+        "alt": "出红单头像"
+      },
+      "kind": "gallery",
+      "posters": [
+        {
+          "id": "poster-35",
+          "label": "出红单①"
+        },
+        {
+          "id": "poster-36",
+          "label": "出红单②"
+        },
+        {
+          "id": "poster-37",
+          "label": "出红单③"
+        }
+      ]
+    },
+    {
+      "id": "pc-11",
+      "name": "折磨单",
+      "parent": "pc",
+      "icon": {
+        "src": "images/poster-menu/icon-5b6525236ada.png",
+        "width": 90,
+        "height": 90,
+        "alt": "折磨单头像"
+      },
+      "kind": "gallery",
+      "posters": [
+        {
+          "id": "poster-38",
+          "label": "折磨单①"
+        },
+        {
+          "id": "poster-39",
+          "label": "折磨单②"
+        },
+        {
+          "id": "poster-40",
+          "label": "折磨单③"
+        },
+        {
+          "id": "poster-41",
+          "label": "折磨单④"
+        }
+      ]
+    },
+    {
+      "id": "pc-12",
+      "name": "节日活动单",
+      "parent": "pc",
+      "icon": {
+        "src": "images/poster-menu/icon-7a6e81d34069.png",
+        "width": 90,
+        "height": 90,
+        "alt": "节日活动单头像"
+      },
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-18",
+          "label": "节日活动单"
+        }
+      ]
+    },
+    {
+      "id": "pc-13",
+      "name": "连连看",
+      "parent": "pc",
+      "icon": {
+        "src": "images/poster-menu/icon-68f520381f5b.png",
+        "width": 90,
+        "height": 90,
+        "alt": "连连看头像"
+      },
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-19",
+          "label": "连连看"
+        }
+      ]
+    },
+    {
+      "id": "pc-14",
+      "name": "填填乐",
+      "parent": "pc",
+      "icon": {
+        "src": "images/poster-menu/icon-8164844f2e4c.jpg",
+        "width": 320,
+        "height": 320,
+        "alt": "填填乐头像"
+      },
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-20",
+          "label": "填填乐"
+        }
+      ]
+    },
+    {
+      "id": "pc-15",
+      "name": "独家玩法",
+      "parent": "pc",
+      "icon": {
+        "src": "images/poster-menu/icon-20322572385f.jpg",
+        "width": 220,
+        "height": 220,
+        "alt": "独家玩法头像"
+      },
+      "kind": "gallery",
+      "posters": [
+        {
+          "id": "poster-23",
+          "label": "阿萨拉扑克牌"
+        },
+        {
+          "id": "poster-24",
+          "label": "十二生肖"
+        }
+      ]
+    },
+    {
+      "id": "mobile-01",
+      "name": "体验单",
+      "parent": "mobile",
+      "icon": {
+        "src": "images/poster-menu/icon-3149c3463e85.png",
+        "width": 90,
+        "height": 90,
+        "alt": "体验单头像"
+      },
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-7",
+          "label": "体验单"
+        }
+      ]
+    },
+    {
+      "id": "mobile-02",
+      "name": "陪玩单",
+      "parent": "mobile",
+      "icon": {
+        "src": "images/poster-menu/icon-920d7c9838ed.png",
+        "width": 90,
+        "height": 90,
+        "alt": "陪玩单头像"
+      },
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-8",
+          "label": "陪玩单"
+        }
+      ]
+    },
+    {
+      "id": "mobile-03",
+      "name": "趣味单",
+      "parent": "mobile",
+      "icon": {
+        "src": "images/poster-menu/icon-37a9de5b19ff.png",
+        "width": 90,
+        "height": 90,
+        "alt": "趣味单头像"
+      },
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-9",
+          "label": "趣味单"
+        }
+      ]
+    },
+    {
+      "id": "mobile-04",
+      "name": "猛攻单",
+      "parent": "mobile",
+      "icon": {
+        "src": "images/poster-menu/icon-e324c00bbf27.png",
+        "width": 90,
+        "height": 90,
+        "alt": "猛攻单头像"
+      },
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-10",
+          "label": "猛攻单"
+        }
+      ]
+    },
+    {
+      "id": "mobile-05",
+      "name": "出红单",
+      "parent": "mobile",
+      "icon": {
+        "src": "images/poster-menu/icon-426eecd02626.png",
+        "width": 90,
+        "height": 90,
+        "alt": "出红单头像"
+      },
+      "kind": "gallery",
+      "posters": [
+        {
+          "id": "poster-25",
+          "label": "出红单①"
+        },
+        {
+          "id": "poster-26",
+          "label": "出红单②"
+        }
+      ]
+    },
+    {
+      "id": "mobile-06",
+      "name": "折磨单",
+      "parent": "mobile",
+      "icon": {
+        "src": "images/poster-menu/icon-66231b27e9fe.png",
+        "width": 90,
+        "height": 90,
+        "alt": "折磨单头像"
+      },
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-11",
+          "label": "折磨单"
+        }
+      ]
+    },
+    {
+      "id": "sweet-day",
+      "name": "甜蜜包天(娱乐)",
+      "parent": "home",
+      "icon": {
+        "src": "images/poster-menu/icon-5b6525236ada.png",
+        "width": 90,
+        "height": 90,
+        "alt": "甜蜜包天(娱乐)头像"
+      },
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-1",
+          "label": "甜蜜包天(娱乐)"
+        }
+      ]
+    },
+    {
+      "id": "assault-day",
+      "name": "包天猛攻(技术)",
+      "parent": "home",
+      "icon": {
+        "src": "images/poster-menu/icon-9ab32797dcd7.png",
+        "width": 200,
+        "height": 200,
+        "alt": "包天猛攻(技术)头像"
+      },
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-2",
+          "label": "包天猛攻(技术)"
+        }
+      ]
+    },
+    {
+      "id": "season-3x3",
+      "name": "赛季3×3代肝",
+      "parent": "home",
+      "icon": {
+        "src": "images/poster-menu/icon-f06353bf327f.png",
+        "width": 90,
+        "height": 90,
+        "alt": "赛季3×3代肝头像"
+      },
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-3",
+          "label": "赛季3×3代肝"
+        }
+      ]
+    },
+    {
+      "id": "other-games",
+      "name": "其他游戏陪玩",
+      "parent": "home",
+      "icon": {
+        "src": "images/poster-menu/icon-66231b27e9fe.png",
+        "width": 90,
+        "height": 90,
+        "alt": "其他游戏陪玩头像"
+      },
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-4",
+          "label": "其他游戏陪玩"
+        }
+      ]
+    },
+    {
+      "id": "gifts",
+      "name": "礼物打赏单",
+      "parent": "home",
+      "icon": {
+        "src": "images/poster-menu/icon-3149c3463e85.png",
+        "width": 90,
+        "height": 90,
+        "alt": "礼物打赏单头像"
+      },
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-5",
+          "label": "礼物打赏单"
+        }
+      ]
+    },
+    {
+      "id": "prepaid",
+      "name": "充值预存",
+      "parent": "home",
+      "icon": {
+        "src": "images/poster-menu/icon-6dcbc3463368.jpg",
+        "width": 512,
+        "height": 512,
+        "alt": "充值预存头像"
+      },
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-6",
+          "label": "充值预存"
+        }
+      ]
+    },
+    {
+      "id": "guarantees",
+      "name": "柒大保障",
+      "parent": "home",
+      "icon": null,
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-21",
+          "label": "柒大保障"
+        }
+      ]
+    },
+    {
+      "id": "benefits",
+      "name": "老板权益",
+      "parent": "home",
+      "icon": null,
+      "kind": "single",
+      "posters": [
+        {
+          "id": "poster-22",
+          "label": "老板权益"
+        }
+      ]
+    }
+  ],
+  "posters": [
+    {
+      "id": "poster-21",
+      "src": "images/catalog/poster-21-00d781266f0f.jpg",
+      "width": 2362,
+      "height": 2213
+    },
+    {
+      "id": "poster-22",
+      "src": "images/catalog/poster-22-258c5af439e5.jpg",
+      "width": 1200,
+      "height": 2147
+    },
+    {
+      "id": "poster-0",
+      "src": "images/catalog/poster-00-35b10c36d040.jpg",
+      "width": 1200,
+      "height": 2208
+    },
+    {
+      "id": "poster-1",
+      "src": "images/poster-menu/poster-01-f8772535e414.jpg",
+      "width": 1063,
+      "height": 3543
+    },
+    {
+      "id": "poster-2",
+      "src": "images/catalog/poster-02-347d286248e6.jpg",
+      "width": 1200,
+      "height": 2939
+    },
+    {
+      "id": "poster-3",
+      "src": "images/catalog/poster-03-d529b9d84c9f.jpg",
+      "width": 1200,
+      "height": 2134
+    },
+    {
+      "id": "poster-4",
+      "src": "images/catalog/poster-04-84cc50d869a5.jpg",
+      "width": 1200,
+      "height": 2580
+    },
+    {
+      "id": "poster-5",
+      "src": "images/catalog/poster-05-0f5e832dc252.jpg",
+      "width": 1181,
+      "height": 2244,
+      "displaySrc": "images/poster-menu/gifts-brand-v2-60374cd9a043.webp"
+    },
+    {
+      "id": "poster-6",
+      "src": "images/catalog/poster-06-1b46e6fcc6e3.jpg",
+      "width": 1200,
+      "height": 3419
+    },
+    {
+      "id": "poster-7",
+      "src": "images/catalog/poster-07-99d417cb5191.jpg",
+      "width": 1200,
+      "height": 4379
+    },
+    {
+      "id": "poster-8",
+      "src": "images/catalog/poster-08-98433aff735b.jpg",
+      "width": 1181,
+      "height": 4925
+    },
+    {
+      "id": "poster-9",
+      "src": "images/catalog/poster-09-2f645e7fb4d1.jpg",
+      "width": 1181,
+      "height": 5740
+    },
+    {
+      "id": "poster-10",
+      "src": "images/catalog/poster-10-72ee58bdee3d.jpg",
+      "width": 1200,
+      "height": 3828
+    },
+    {
+      "id": "poster-25",
+      "src": "images/catalog/poster-25-d98ffd4bc234.jpg",
+      "width": 1200,
+      "height": 5999
+    },
+    {
+      "id": "poster-26",
+      "src": "images/catalog/poster-26-a7a559ac9bcc.jpg",
+      "width": 1100,
+      "height": 4400
+    },
+    {
+      "id": "poster-11",
+      "src": "images/catalog/poster-11-b97b15bbb169.jpg",
+      "width": 1200,
+      "height": 2190
+    },
+    {
+      "id": "poster-12",
+      "src": "images/catalog/poster-12-2ada686616ef.jpg",
+      "width": 1200,
+      "height": 4379
+    },
+    {
+      "id": "poster-13",
+      "src": "images/catalog/poster-13-e456797047d2.jpg",
+      "width": 1200,
+      "height": 5279
+    },
+    {
+      "id": "poster-14",
+      "src": "images/catalog/poster-14-8fd36325fe76.jpg",
+      "width": 1200,
+      "height": 4920
+    },
+    {
+      "id": "poster-15",
+      "src": "images/catalog/poster-15-7a201f067fd6.jpg",
+      "width": 1000,
+      "height": 1920
+    },
+    {
+      "id": "poster-27",
+      "src": "images/catalog/poster-27-c44cedec3b34.jpg",
+      "width": 1200,
+      "height": 4152
+    },
+    {
+      "id": "poster-28",
+      "src": "images/catalog/poster-28-45e2da9ece30.jpg",
+      "width": 1200,
+      "height": 3828
+    },
+    {
+      "id": "poster-29",
+      "src": "images/catalog/poster-29-9cf6923263cc.jpg",
+      "width": 1200,
+      "height": 3359
+    },
+    {
+      "id": "poster-30",
+      "src": "images/catalog/poster-30-88f5ddbfc78c.jpg",
+      "width": 1200,
+      "height": 3071
+    },
+    {
+      "id": "poster-31",
+      "src": "images/catalog/poster-31-52820ea492c5.jpg",
+      "width": 1200,
+      "height": 4139
+    },
+    {
+      "id": "poster-32",
+      "src": "images/catalog/poster-32-fbbde3e0feb2.jpg",
+      "width": 1200,
+      "height": 4139
+    },
+    {
+      "id": "poster-33",
+      "src": "images/catalog/poster-33-63c3584bbf06.jpg",
+      "width": 1181,
+      "height": 5740
+    },
+    {
+      "id": "poster-34",
+      "src": "images/catalog/poster-34-eec07f82d003.jpg",
+      "width": 1200,
+      "height": 5801
+    },
+    {
+      "id": "poster-16",
+      "src": "images/catalog/poster-16-471a464cfc42.jpg",
+      "width": 1200,
+      "height": 4104
+    },
+    {
+      "id": "poster-17",
+      "src": "images/catalog/poster-17-311bbd461861.jpg",
+      "width": 1200,
+      "height": 3240
+    },
+    {
+      "id": "poster-35",
+      "src": "images/catalog/poster-35-569322283f16.jpg",
+      "width": 1000,
+      "height": 2999
+    },
+    {
+      "id": "poster-36",
+      "src": "images/catalog/poster-36-36fbadc64c6d.jpg",
+      "width": 1200,
+      "height": 5999
+    },
+    {
+      "id": "poster-37",
+      "src": "images/catalog/poster-37-90bac8bfb47d.jpg",
+      "width": 1200,
+      "height": 4799
+    },
+    {
+      "id": "poster-38",
+      "src": "images/catalog/poster-38-e2bb96e1434f.jpg",
+      "width": 1200,
+      "height": 2190
+    },
+    {
+      "id": "poster-39",
+      "src": "images/catalog/poster-39-53844958d455.jpg",
+      "width": 853,
+      "height": 2559
+    },
+    {
+      "id": "poster-40",
+      "src": "images/catalog/poster-40-41ed529047ff.jpg",
+      "width": 1200,
+      "height": 2760
+    },
+    {
+      "id": "poster-41",
+      "src": "images/catalog/poster-41-9436b693a282.jpg",
+      "width": 739,
+      "height": 2559
+    },
+    {
+      "id": "poster-18",
+      "src": "images/poster-menu/poster-18-f1072352a82b.jpg",
+      "width": 1200,
+      "height": 2400
+    },
+    {
+      "id": "poster-19",
+      "src": "images/catalog/poster-19-54cfee15f6d8.jpg",
+      "width": 1200,
+      "height": 4799
+    },
+    {
+      "id": "poster-20",
+      "src": "images/catalog/poster-20-e7bfe5cb6dea.jpg",
+      "width": 1200,
+      "height": 3179
+    },
+    {
+      "id": "poster-23",
+      "src": "images/catalog/poster-23-c43adb05c359.jpg",
+      "width": 1100,
+      "height": 2200
+    },
+    {
+      "id": "poster-24",
+      "src": "images/catalog/poster-24-1369779faacd.jpg",
+      "width": 1200,
+      "height": 5565
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+/* Approved mature A concept: graphite outlines with restrained color fills. */
+.impeccable-public .nav {
+  --sidebar-icon-stroke: #c4cedb;
+  --sidebar-icon-muted: #8090a4;
+  --sidebar-icon-blue: #7da6d5;
+  --sidebar-icon-teal: #68b4aa;
+  --sidebar-icon-gold: #d4ad64;
+}
+html[data-theme="light"] .impeccable-public .nav {
+  --sidebar-icon-stroke: #313b4b;
+  --sidebar-icon-muted: #87919e;
+  --sidebar-icon-blue: #4777aa;
+  --sidebar-icon-teal: #3f8c88;
+  --sidebar-icon-gold: #ac8a45;
+}
+/* The expanded mobile navigation must use the same light surface as its
+   text and icon palette; the shared shell otherwise keeps a dark panel. */
+html[data-theme="light"] .impeccable-public .nav .nav-links {
+  background: #fff;
+  border-color: #e0e0e7;
+}
+.impeccable-public .nav-links .sidebar-icon {
+  display: block;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  overflow: visible;
+}

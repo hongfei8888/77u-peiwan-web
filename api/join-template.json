@@ -1,0 +1,982 @@
+[
+  {
+    "key": "pc.1",
+    "section": "端游考核",
+    "label": "考核标准",
+    "value": "考核标准",
+    "multiline": false
+  },
+  {
+    "key": "pc.2",
+    "section": "端游考核",
+    "label": "三角洲端游",
+    "value": "三角洲端游",
+    "multiline": false
+  },
+  {
+    "key": "pc.3",
+    "section": "端游考核",
+    "label": "单考 · 考核说明",
+    "value": "单考 · 共考核3局，全程考官自杀",
+    "multiline": false
+  },
+  {
+    "key": "pc.4",
+    "section": "端游考核",
+    "label": "单考 · 表头 · 档位列标题",
+    "value": "档位",
+    "multiline": false
+  },
+  {
+    "key": "pc.5",
+    "section": "端游考核",
+    "label": "单考 · 表头 · 击杀列标题",
+    "value": "累计击杀",
+    "multiline": false
+  },
+  {
+    "key": "pc.6",
+    "section": "端游考核",
+    "label": "单考 · 表头 · 物资列标题",
+    "value": "物资价值（去金红）",
+    "multiline": false
+  },
+  {
+    "key": "pc.7",
+    "section": "端游考核",
+    "label": "单考 · 表头 · 装备列标题",
+    "value": "装备",
+    "multiline": false
+  },
+  {
+    "key": "pc.8",
+    "section": "端游考核",
+    "label": "单考 · PRO · 档位名称",
+    "value": "PRO",
+    "multiline": false
+  },
+  {
+    "key": "pc.9",
+    "section": "端游考核",
+    "label": "单考 · PRO · 累计击杀（≥ 数值）",
+    "value": "≥ 20",
+    "multiline": false
+  },
+  {
+    "key": "pc.10",
+    "section": "端游考核",
+    "label": "单考 · PRO · 物资价值",
+    "value": "≥ 800W",
+    "multiline": false
+  },
+  {
+    "key": "pc.11",
+    "section": "端游考核",
+    "label": "单考 · PRO · 装备要求",
+    "value": "6套 + AW",
+    "multiline": false
+  },
+  {
+    "key": "pc.12",
+    "section": "端游考核",
+    "label": "单考 · 顶尖 · 档位名称",
+    "value": "顶尖",
+    "multiline": false
+  },
+  {
+    "key": "pc.13",
+    "section": "端游考核",
+    "label": "单考 · 顶尖 · 累计击杀（≥ 数值）",
+    "value": "≥ 24",
+    "multiline": false
+  },
+  {
+    "key": "pc.14",
+    "section": "端游考核",
+    "label": "单考 · 顶尖 · 物资价值",
+    "value": "≥ 800W",
+    "multiline": false
+  },
+  {
+    "key": "pc.15",
+    "section": "端游考核",
+    "label": "单考 · 顶尖 · 装备要求",
+    "value": "6套 + AW",
+    "multiline": false
+  },
+  {
+    "key": "pc.16",
+    "section": "端游考核",
+    "label": "单考 · 魔王 · 档位名称",
+    "value": "魔王",
+    "multiline": false
+  },
+  {
+    "key": "pc.17",
+    "section": "端游考核",
+    "label": "单考 · 魔王 · 累计击杀（≥ 数值）",
+    "value": "≥ 27",
+    "multiline": false
+  },
+  {
+    "key": "pc.18",
+    "section": "端游考核",
+    "label": "单考 · 魔王 · 物资价值",
+    "value": "≥ 800W",
+    "multiline": false
+  },
+  {
+    "key": "pc.19",
+    "section": "端游考核",
+    "label": "单考 · 魔王 · 装备要求",
+    "value": "6套 + AW",
+    "multiline": false
+  },
+  {
+    "key": "pc.20",
+    "section": "端游考核",
+    "label": "3局内成功撤离1局。可以养猪（不能扒装备），禁止携带备头备甲，禁",
+    "value": "3局内成功撤离1局。可以养猪（不能扒装备），禁止携带备头备甲，禁止使用步枪连狙红弹。",
+    "multiline": false
+  },
+  {
+    "key": "pc.21",
+    "section": "端游考核",
+    "label": "双考 · 考核说明",
+    "value": "双考 · 共考核3局，全程考官自杀",
+    "multiline": false
+  },
+  {
+    "key": "pc.22",
+    "section": "端游考核",
+    "label": "双考 · 表头 · 档位列标题",
+    "value": "档位",
+    "multiline": false
+  },
+  {
+    "key": "pc.23",
+    "section": "端游考核",
+    "label": "双考 · 表头 · 击杀列标题",
+    "value": "累计击杀",
+    "multiline": false
+  },
+  {
+    "key": "pc.24",
+    "section": "端游考核",
+    "label": "双考 · 表头 · 物资列标题",
+    "value": "物资价值（去金红）",
+    "multiline": false
+  },
+  {
+    "key": "pc.25",
+    "section": "端游考核",
+    "label": "双考 · 表头 · 装备列标题",
+    "value": "装备",
+    "multiline": false
+  },
+  {
+    "key": "pc.26",
+    "section": "端游考核",
+    "label": "双考 · PRO · 档位名称",
+    "value": "PRO",
+    "multiline": false
+  },
+  {
+    "key": "pc.27",
+    "section": "端游考核",
+    "label": "双考 · PRO · 累计击杀（≥ 数值）",
+    "value": "≥ 24",
+    "multiline": false
+  },
+  {
+    "key": "pc.28",
+    "section": "端游考核",
+    "label": "双考 · PRO · 物资价值",
+    "value": "≥ 800W",
+    "multiline": false
+  },
+  {
+    "key": "pc.29",
+    "section": "端游考核",
+    "label": "双考 · PRO · 装备要求",
+    "value": "6套 / AW 二选一",
+    "multiline": false
+  },
+  {
+    "key": "pc.30",
+    "section": "端游考核",
+    "label": "双考 · 顶尖 · 档位名称",
+    "value": "顶尖",
+    "multiline": false
+  },
+  {
+    "key": "pc.31",
+    "section": "端游考核",
+    "label": "双考 · 顶尖 · 累计击杀（≥ 数值）",
+    "value": "≥ 28",
+    "multiline": false
+  },
+  {
+    "key": "pc.32",
+    "section": "端游考核",
+    "label": "双考 · 顶尖 · 物资价值",
+    "value": "≥ 800W",
+    "multiline": false
+  },
+  {
+    "key": "pc.33",
+    "section": "端游考核",
+    "label": "双考 · 顶尖 · 装备要求",
+    "value": "6套 / AW 二选一",
+    "multiline": false
+  },
+  {
+    "key": "pc.34",
+    "section": "端游考核",
+    "label": "双考 · 魔王 · 档位名称",
+    "value": "魔王",
+    "multiline": false
+  },
+  {
+    "key": "pc.35",
+    "section": "端游考核",
+    "label": "双考 · 魔王 · 累计击杀（≥ 数值）",
+    "value": "≥ 33",
+    "multiline": false
+  },
+  {
+    "key": "pc.36",
+    "section": "端游考核",
+    "label": "双考 · 魔王 · 物资价值",
+    "value": "≥ 800W",
+    "multiline": false
+  },
+  {
+    "key": "pc.37",
+    "section": "端游考核",
+    "label": "双考 · 魔王 · 装备要求",
+    "value": "6套 / AW 二选一",
+    "multiline": false
+  },
+  {
+    "key": "pc.38",
+    "section": "端游考核",
+    "label": "3局内成功撤离1局；两人3局总击杀人头差≤5。禁止养猪（重复人头",
+    "value": "3局内成功撤离1局；两人3局总击杀人头差≤5。禁止养猪（重复人头需扣除）、禁止携带备头备甲、禁止使用步枪连狙红弹，禁止进图6套AW一人使用。",
+    "multiline": true
+  },
+  {
+    "key": "pc.39",
+    "section": "端游考核",
+    "label": "娱乐只能单考，二取一，第一把指定航天，只招女生。",
+    "value": "娱乐只能单考，二取一，第一把指定航天，只招女生。",
+    "multiline": false
+  },
+  {
+    "key": "pc.40",
+    "section": "端游考核",
+    "label": "小S",
+    "value": "小S",
+    "multiline": false
+  },
+  {
+    "key": "pc.41",
+    "section": "端游考核",
+    "label": "至少熟悉巴克什和航天两张地图，机密进图和考官双排两把，需要熟图且",
+    "value": "至少熟悉巴克什和航天两张地图，机密进图和考官双排两把，需要熟图且能够提供情绪价值。",
+    "multiline": false
+  },
+  {
+    "key": "pc.42",
+    "section": "端游考核",
+    "label": "大S",
+    "value": "大S",
+    "multiline": false
+  },
+  {
+    "key": "pc.43",
+    "section": "端游考核",
+    "label": "在小S要求的基础上，需击杀一人并成功让考官100W撤离，不限制撤",
+    "value": "在小S要求的基础上，需击杀一人并成功让考官100W撤离，不限制撤离方式。",
+    "multiline": false
+  },
+  {
+    "key": "pc.44",
+    "section": "端游考核",
+    "label": "考核费用",
+    "value": "考核费用",
+    "multiline": false
+  },
+  {
+    "key": "pc.45",
+    "section": "端游考核",
+    "label": "30元 / 人 / 次",
+    "value": "30元 / 人 / 次",
+    "multiline": false
+  },
+  {
+    "key": "pc.46",
+    "section": "端游考核",
+    "label": "文考10元 / 次 · 查挂55元（自费）",
+    "value": "文考10元 / 次 · 查挂55元（自费）",
+    "multiline": false
+  },
+  {
+    "key": "pc.47",
+    "section": "端游考核",
+    "label": "服务质量保证金 · 不可单抵",
+    "value": "服务质量保证金 · 不可单抵",
+    "multiline": false
+  },
+  {
+    "key": "pc.deposit.fun",
+    "section": "端游考核",
+    "label": "保证金 · 娱乐",
+    "value": "300元",
+    "multiline": false
+  },
+  {
+    "key": "pc.deposit.pro",
+    "section": "端游考核",
+    "label": "保证金 · PRO",
+    "value": "300元",
+    "multiline": false
+  },
+  {
+    "key": "pc.deposit.top",
+    "section": "端游考核",
+    "label": "保证金 · 顶尖",
+    "value": "500元",
+    "multiline": false
+  },
+  {
+    "key": "pc.deposit.demon",
+    "section": "端游考核",
+    "label": "保证金 · 魔王",
+    "value": "500元",
+    "multiline": false
+  },
+  {
+    "key": "pc.49",
+    "section": "端游考核",
+    "label": "年满18岁 · 自备钻石段位以上账号",
+    "value": "年满18岁 · 自备钻石段位以上账号",
+    "multiline": false
+  },
+  {
+    "key": "pc.50",
+    "section": "端游考核",
+    "label": "展开原文",
+    "value": "展开原文",
+    "multiline": false
+  },
+  {
+    "key": "pc.51",
+    "section": "端游考核",
+    "label": "请先阅读左侧考核注意事项，提前准备好设备、账号与考核资金。完整规",
+    "value": "请先阅读左侧考核注意事项，提前准备好设备、账号与考核资金。完整规则以对应平台在线原文为准。",
+    "multiline": false
+  },
+  {
+    "key": "mobile.1",
+    "section": "手游考核",
+    "label": "考核标准",
+    "value": "考核标准",
+    "multiline": false
+  },
+  {
+    "key": "mobile.2",
+    "section": "手游考核",
+    "label": "三角洲手游",
+    "value": "三角洲手游",
+    "multiline": false
+  },
+  {
+    "key": "mobile.3",
+    "section": "手游考核",
+    "label": "单考 · 考核说明",
+    "value": "单考 · 共考核3局，全程考官自杀",
+    "multiline": false
+  },
+  {
+    "key": "mobile.4",
+    "section": "手游考核",
+    "label": "单考 · 表头 · 档位列标题",
+    "value": "档位",
+    "multiline": false
+  },
+  {
+    "key": "mobile.5",
+    "section": "手游考核",
+    "label": "单考 · 表头 · 击杀列标题",
+    "value": "累计击杀",
+    "multiline": false
+  },
+  {
+    "key": "mobile.6",
+    "section": "手游考核",
+    "label": "单考 · 表头 · 物资列标题",
+    "value": "物资价值（去金红）",
+    "multiline": false
+  },
+  {
+    "key": "mobile.7",
+    "section": "手游考核",
+    "label": "单考 · 表头 · 装备列标题",
+    "value": "装备",
+    "multiline": false
+  },
+  {
+    "key": "mobile.8",
+    "section": "手游考核",
+    "label": "单考 · PRO · 档位名称",
+    "value": "PRO",
+    "multiline": false
+  },
+  {
+    "key": "mobile.9",
+    "section": "手游考核",
+    "label": "单考 · PRO · 累计击杀（≥ 数值）",
+    "value": "≥ 18",
+    "multiline": false
+  },
+  {
+    "key": "mobile.10",
+    "section": "手游考核",
+    "label": "单考 · PRO · 物资价值",
+    "value": "≥ 600W",
+    "multiline": false
+  },
+  {
+    "key": "mobile.11",
+    "section": "手游考核",
+    "label": "单考 · PRO · 装备要求",
+    "value": "6套 + AW",
+    "multiline": false
+  },
+  {
+    "key": "mobile.12",
+    "section": "手游考核",
+    "label": "单考 · 顶尖 · 档位名称",
+    "value": "顶尖",
+    "multiline": false
+  },
+  {
+    "key": "mobile.13",
+    "section": "手游考核",
+    "label": "单考 · 顶尖 · 累计击杀（≥ 数值）",
+    "value": "≥ 24",
+    "multiline": false
+  },
+  {
+    "key": "mobile.14",
+    "section": "手游考核",
+    "label": "单考 · 顶尖 · 物资价值",
+    "value": "≥ 700W",
+    "multiline": false
+  },
+  {
+    "key": "mobile.15",
+    "section": "手游考核",
+    "label": "单考 · 顶尖 · 装备要求",
+    "value": "6套 + AW",
+    "multiline": false
+  },
+  {
+    "key": "mobile.16",
+    "section": "手游考核",
+    "label": "单考 · 魔王 · 档位名称",
+    "value": "魔王",
+    "multiline": false
+  },
+  {
+    "key": "mobile.17",
+    "section": "手游考核",
+    "label": "单考 · 魔王 · 累计击杀（≥ 数值）",
+    "value": "≥ 27",
+    "multiline": false
+  },
+  {
+    "key": "mobile.18",
+    "section": "手游考核",
+    "label": "单考 · 魔王 · 物资价值",
+    "value": "≥ 800W",
+    "multiline": false
+  },
+  {
+    "key": "mobile.19",
+    "section": "手游考核",
+    "label": "单考 · 魔王 · 装备要求",
+    "value": "6套 + AW",
+    "multiline": false
+  },
+  {
+    "key": "mobile.20",
+    "section": "手游考核",
+    "label": "3局内成功撤离1局。可以养猪（不能扒装备），禁止携带备头备甲，禁",
+    "value": "3局内成功撤离1局。可以养猪（不能扒装备），禁止携带备头备甲，禁止使用步枪连狙红弹。",
+    "multiline": false
+  },
+  {
+    "key": "mobile.21",
+    "section": "手游考核",
+    "label": "双考 · 考核说明",
+    "value": "双考 · 共考核3局，全程考官自杀",
+    "multiline": false
+  },
+  {
+    "key": "mobile.22",
+    "section": "手游考核",
+    "label": "双考 · 表头 · 档位列标题",
+    "value": "档位",
+    "multiline": false
+  },
+  {
+    "key": "mobile.23",
+    "section": "手游考核",
+    "label": "双考 · 表头 · 击杀列标题",
+    "value": "累计击杀",
+    "multiline": false
+  },
+  {
+    "key": "mobile.24",
+    "section": "手游考核",
+    "label": "双考 · 表头 · 物资列标题",
+    "value": "物资价值（去金红）",
+    "multiline": false
+  },
+  {
+    "key": "mobile.25",
+    "section": "手游考核",
+    "label": "双考 · 表头 · 装备列标题",
+    "value": "装备",
+    "multiline": false
+  },
+  {
+    "key": "mobile.26",
+    "section": "手游考核",
+    "label": "双考 · PRO · 档位名称",
+    "value": "PRO",
+    "multiline": false
+  },
+  {
+    "key": "mobile.27",
+    "section": "手游考核",
+    "label": "双考 · PRO · 累计击杀（≥ 数值）",
+    "value": "≥ 24",
+    "multiline": false
+  },
+  {
+    "key": "mobile.28",
+    "section": "手游考核",
+    "label": "双考 · PRO · 物资价值",
+    "value": "≥ 1400W",
+    "multiline": false
+  },
+  {
+    "key": "mobile.29",
+    "section": "手游考核",
+    "label": "双考 · PRO · 装备要求",
+    "value": "6套 / AW 二选一",
+    "multiline": false
+  },
+  {
+    "key": "mobile.30",
+    "section": "手游考核",
+    "label": "双考 · 顶尖 · 档位名称",
+    "value": "顶尖",
+    "multiline": false
+  },
+  {
+    "key": "mobile.31",
+    "section": "手游考核",
+    "label": "双考 · 顶尖 · 累计击杀（≥ 数值）",
+    "value": "≥ 29",
+    "multiline": false
+  },
+  {
+    "key": "mobile.32",
+    "section": "手游考核",
+    "label": "双考 · 顶尖 · 物资价值",
+    "value": "≥ 1600W",
+    "multiline": false
+  },
+  {
+    "key": "mobile.33",
+    "section": "手游考核",
+    "label": "双考 · 顶尖 · 装备要求",
+    "value": "6套 / AW 二选一",
+    "multiline": false
+  },
+  {
+    "key": "mobile.34",
+    "section": "手游考核",
+    "label": "双考 · 魔王 · 档位名称",
+    "value": "魔王",
+    "multiline": false
+  },
+  {
+    "key": "mobile.35",
+    "section": "手游考核",
+    "label": "双考 · 魔王 · 累计击杀（≥ 数值）",
+    "value": "≥ 33",
+    "multiline": false
+  },
+  {
+    "key": "mobile.36",
+    "section": "手游考核",
+    "label": "双考 · 魔王 · 物资价值",
+    "value": "≥ 1800W",
+    "multiline": false
+  },
+  {
+    "key": "mobile.37",
+    "section": "手游考核",
+    "label": "双考 · 魔王 · 装备要求",
+    "value": "6套 / AW 二选一",
+    "multiline": false
+  },
+  {
+    "key": "mobile.38",
+    "section": "手游考核",
+    "label": "3局内成功撤离2局；两人3局总击杀人头差≤6。禁止养猪（重复人头",
+    "value": "3局内成功撤离2局；两人3局总击杀人头差≤6。禁止养猪（重复人头需扣除）、禁止携带备头备甲、禁止使用步枪连狙红弹，禁止进图6套AW一人使用。物资计算撤离物资总和（跟队一局计算三人总和）。",
+    "multiline": true
+  },
+  {
+    "key": "mobile.39",
+    "section": "手游考核",
+    "label": "娱乐只能单考，二取一，第一把指定航天，只招女生。",
+    "value": "娱乐只能单考，二取一，第一把指定航天，只招女生。",
+    "multiline": false
+  },
+  {
+    "key": "mobile.40",
+    "section": "手游考核",
+    "label": "小S",
+    "value": "小S",
+    "multiline": false
+  },
+  {
+    "key": "mobile.41",
+    "section": "手游考核",
+    "label": "至少熟悉巴克什和航天两张地图，机密进图和考官双排两把，需要熟图且",
+    "value": "至少熟悉巴克什和航天两张地图，机密进图和考官双排两把，需要熟图且能够提供情绪价值。",
+    "multiline": false
+  },
+  {
+    "key": "mobile.42",
+    "section": "手游考核",
+    "label": "大S",
+    "value": "大S",
+    "multiline": false
+  },
+  {
+    "key": "mobile.43",
+    "section": "手游考核",
+    "label": "在小S要求的基础上，需击杀一人并成功100W撤离，不限制撤离方式",
+    "value": "在小S要求的基础上，需击杀一人并成功100W撤离，不限制撤离方式。",
+    "multiline": false
+  },
+  {
+    "key": "mobile.44",
+    "section": "手游考核",
+    "label": "考核费用",
+    "value": "考核费用",
+    "multiline": false
+  },
+  {
+    "key": "mobile.45",
+    "section": "手游考核",
+    "label": "30元 / 人 / 次",
+    "value": "30元 / 人 / 次",
+    "multiline": false
+  },
+  {
+    "key": "mobile.46",
+    "section": "手游考核",
+    "label": "文考10元 / 次",
+    "value": "文考10元 / 次",
+    "multiline": false
+  },
+  {
+    "key": "mobile.47",
+    "section": "手游考核",
+    "label": "服务质量保证金 · 不可单抵",
+    "value": "服务质量保证金 · 不可单抵",
+    "multiline": false
+  },
+  {
+    "key": "mobile.deposit.fun",
+    "section": "手游考核",
+    "label": "保证金 · 娱乐",
+    "value": "100元",
+    "multiline": false
+  },
+  {
+    "key": "mobile.deposit.pro",
+    "section": "手游考核",
+    "label": "保证金 · PRO",
+    "value": "200元",
+    "multiline": false
+  },
+  {
+    "key": "mobile.deposit.top",
+    "section": "手游考核",
+    "label": "保证金 · 顶尖",
+    "value": "300元",
+    "multiline": false
+  },
+  {
+    "key": "mobile.deposit.demon",
+    "section": "手游考核",
+    "label": "保证金 · 魔王",
+    "value": "500元",
+    "multiline": false
+  },
+  {
+    "key": "mobile.49",
+    "section": "手游考核",
+    "label": "双端设备视频露手考核 · 技术不接受平移",
+    "value": "双端设备视频露手考核 · 技术不接受平移",
+    "multiline": false
+  },
+  {
+    "key": "mobile.50",
+    "section": "手游考核",
+    "label": "展开原文",
+    "value": "展开原文",
+    "multiline": false
+  },
+  {
+    "key": "mobile.51",
+    "section": "手游考核",
+    "label": "请先阅读左侧考核注意事项，提前准备好设备、账号与考核资金。完整规",
+    "value": "请先阅读左侧考核注意事项，提前准备好设备、账号与考核资金。完整规则以对应平台在线原文为准。",
+    "multiline": false
+  },
+  {
+    "key": "process.1",
+    "section": "报名流程",
+    "label": "从报名，到正式加入",
+    "value": "从报名，到正式加入",
+    "multiline": false
+  },
+  {
+    "key": "process.2",
+    "section": "报名流程",
+    "label": "01",
+    "value": "01",
+    "multiline": false
+  },
+  {
+    "key": "process.3",
+    "section": "报名流程",
+    "label": "加入考核群",
+    "value": "加入考核群",
+    "multiline": false
+  },
+  {
+    "key": "process.4",
+    "section": "报名流程",
+    "label": "联系考核分配员",
+    "value": "联系考核分配员",
+    "multiline": false
+  },
+  {
+    "key": "process.5",
+    "section": "报名流程",
+    "label": "02",
+    "value": "02",
+    "multiline": false
+  },
+  {
+    "key": "process.6",
+    "section": "报名流程",
+    "label": "缴纳考费",
+    "value": "缴纳考费",
+    "multiline": false
+  },
+  {
+    "key": "process.7",
+    "section": "报名流程",
+    "label": "由分配员拉考核小群",
+    "value": "由分配员拉考核小群",
+    "multiline": false
+  },
+  {
+    "key": "process.8",
+    "section": "报名流程",
+    "label": "03",
+    "value": "03",
+    "multiline": false
+  },
+  {
+    "key": "process.9",
+    "section": "报名流程",
+    "label": "参加考核",
+    "value": "参加考核",
+    "multiline": false
+  },
+  {
+    "key": "process.10",
+    "section": "报名流程",
+    "label": "按对应平台标准进行",
+    "value": "按对应平台标准进行",
+    "multiline": false
+  },
+  {
+    "key": "process.11",
+    "section": "报名流程",
+    "label": "04",
+    "value": "04",
+    "multiline": false
+  },
+  {
+    "key": "process.12",
+    "section": "报名流程",
+    "label": "完成入店流程",
+    "value": "完成入店流程",
+    "multiline": false
+  },
+  {
+    "key": "process.13",
+    "section": "报名流程",
+    "label": "通过后继续培训与文考",
+    "value": "通过后继续培训与文考",
+    "multiline": false
+  },
+  {
+    "key": "process.14",
+    "section": "报名流程",
+    "label": "进店流程原文：考官考核 → 查挂 → 考官培训 → 文考 → 入",
+    "value": "进店流程原文：考官考核 → 查挂 → 考官培训 → 文考 → 入职审批 → 拉群",
+    "multiline": false
+  },
+  {
+    "key": "process.15",
+    "section": "报名流程",
+    "label": "考核通过三天内需文考通过，逾期则当轮考核作废，重新参加技术考核。",
+    "value": "考核通过三天内需文考通过，逾期则当轮考核作废，重新参加技术考核。",
+    "multiline": false
+  },
+  {
+    "key": "notices.1",
+    "section": "考核注意事项",
+    "label": "栏目标签",
+    "value": "考前必读",
+    "multiline": false
+  },
+  {
+    "key": "notices.2",
+    "section": "考核注意事项",
+    "label": "栏目标题",
+    "value": "考核注意事项",
+    "multiline": false
+  },
+  {
+    "key": "notices.3",
+    "section": "考核注意事项",
+    "label": "准备提示",
+    "value": "请提前准备好设备、账号与资金",
+    "multiline": false
+  },
+  {
+    "key": "notices.4",
+    "section": "考核注意事项",
+    "label": "注意事项 1",
+    "value": "任何等级均不得携带除规定以外的所有红弹（偷带红弹一律取消考核成绩）",
+    "multiline": true
+  },
+  {
+    "key": "notices.5",
+    "section": "考核注意事项",
+    "label": "注意事项 2",
+    "value": "不能带备头备甲（四听也不能，偷带一律取消考核成绩）",
+    "multiline": true
+  },
+  {
+    "key": "notices.6",
+    "section": "考核注意事项",
+    "label": "注意事项 3",
+    "value": "捡到的aw可以用，不能找队友要aw子弹",
+    "multiline": true
+  },
+  {
+    "key": "notices.7",
+    "section": "考核注意事项",
+    "label": "注意事项 4",
+    "value": "其中一人死亡，单人物资达到物资要求也算撤离成功1局",
+    "multiline": true
+  },
+  {
+    "key": "notices.8",
+    "section": "考核注意事项",
+    "label": "注意事项 5",
+    "value": "只能拉闸、飞升撤离，丢包撤离不算（最后一队不出来，可以拉极限飞升卡闸）",
+    "multiline": true
+  },
+  {
+    "key": "notices.9",
+    "section": "考核注意事项",
+    "label": "注意事项 6",
+    "value": "烂崽局、挂局（由考官判断对局强度）一律流局。对局起码三队五套，9把满改枪！！！",
+    "multiline": true
+  },
+  {
+    "key": "notices.10",
+    "section": "考核注意事项",
+    "label": "注意事项 7",
+    "value": "对局中出现掉线 / 封号 / 其他个人问题，一律视为失败（务必提前自测账号）",
+    "multiline": true
+  },
+  {
+    "key": "notices.11",
+    "section": "考核注意事项",
+    "label": "注意事项 8",
+    "value": "中途禁止更换账号；提前准备好资金充足的账号",
+    "multiline": true
+  },
+  {
+    "key": "supervision.1",
+    "section": "考核监督",
+    "label": "公开考核，认真对待",
+    "value": "公开考核，认真对待",
+    "multiline": false
+  },
+  {
+    "key": "supervision.2",
+    "section": "考核监督",
+    "label": "考官考核必须全程开播，抖音号：柒柒游电竞考官xxx。",
+    "value": "考官考核必须全程开播，抖音号：柒柒游电竞考官xxx。",
+    "multiline": false
+  },
+  {
+    "key": "supervision.3",
+    "section": "考核监督",
+    "label": "认准唯一收款渠道",
+    "value": "认准唯一收款渠道",
+    "multiline": false
+  },
+  {
+    "key": "supervision.4",
+    "section": "考核监督",
+    "label": "柒柒游电竞考核分配员，其余一律为私收费。",
+    "value": "柒柒游电竞考核分配员，其余一律为私收费。",
+    "multiline": false
+  },
+  {
+    "key": "supervision.5",
+    "section": "考核监督",
+    "label": "考官违规举报",
+    "value": "考官违规举报",
+    "multiline": false
+  },
+  {
+    "key": "supervision.6",
+    "section": "考核监督",
+    "label": "统一找总考官钱多多。未开直播、私收费、恶意刁难等，追究并核实成功",
+    "value": "统一找总考官钱多多。未开直播、私收费、恶意刁难等，追究并核实成功会有举报奖励。",
+    "multiline": false
+  }
+]

@@ -1,0 +1,75 @@
+/* Price entries use explicit variants so newly added cards do not inherit
+   layout rules based on their position in the old nine-card menu. */
+.impeccable-public .poster-menu .price-menu-grid,
+.impeccable-public .platform-games .price-menu-grid {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+.impeccable-public .price-menu-grid .poster-menu-card--compact,
+.impeccable-public .platform-games .price-menu-grid .poster-menu-card--compact {
+  grid-column: span 4;
+  min-width: 0;
+}
+.impeccable-public .platform-games .price-menu-grid .poster-menu-card--feature {
+  grid-column: span 6;
+}
+.impeccable-public .platform-games .price-menu-grid .poster-menu-card--compact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  min-height: 110px;
+  padding: 18px;
+}
+.impeccable-public .platform-games .price-menu-grid .poster-menu-card--secondary {
+  grid-column: span 4;
+  min-height: 70px;
+  flex-direction: row;
+  align-items: center;
+}
+.impeccable-public .platform-games .price-menu-grid .poster-menu-card--compact .poster-menu-name { font-size: 17px; }
+.impeccable-public .platform-games .price-menu-grid .poster-menu-card--compact .poster-menu-summary { font-size: 11px; }
+.impeccable-public .platform-games .price-menu-grid .poster-menu-card--compact .poster-menu-symbol {
+  width: 38px;
+  height: 38px;
+  margin: 0;
+}
+.price-service-icon { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
+/* The approved illustrated icons include their own pastel tile; theme colors
+   must not add a second gray square behind the transparent rounded corners. */
+.impeccable-public .price-menu-grid .poster-menu-card .poster-menu-symbol.game-item-symbol {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  flex: 0 0 48px;
+  margin: 0;
+  border: 0;
+  border-radius: 12px;
+  background: transparent !important;
+}
+.game-item-icon { display: block; width: 100%; height: 100%; object-fit: contain; }
+@media (max-width: 768px) {
+  .impeccable-public .price-menu-grid .poster-menu-card .poster-menu-symbol.game-item-symbol {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    min-height: 38px;
+    flex-basis: 38px;
+    border-radius: 9px;
+  }
+  .impeccable-public .poster-menu .price-menu-grid,
+  .impeccable-public .platform-games .price-menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .impeccable-public .price-menu-grid .poster-menu-card--compact,
+  .impeccable-public .platform-games .price-menu-grid .poster-menu-card--compact { grid-column: span 1; }
+  .impeccable-public .platform-games .price-menu-grid .poster-menu-card--feature { grid-column: span 2; }
+  .impeccable-public .platform-games .price-menu-grid .poster-menu-card--compact {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    min-height: 128px;
+    padding: 15px;
+  }
+  .impeccable-public .platform-games .price-menu-grid .poster-menu-card--compact .poster-menu-name { font-size: 15px; }
+  .impeccable-public .platform-games .price-menu-grid .poster-menu-card--secondary { grid-column: span 2; }
+}

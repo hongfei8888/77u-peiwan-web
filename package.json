@@ -1,0 +1,17 @@
+{
+  "name": "qiqiyou-static-site-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "probe:price": "node scripts/probe-price.mjs",
+    "sync:price": "node scripts/sync-price-snapshot.mjs",
+    "build:icons": "node scripts/build-service-icons.mjs",
+    "test:icons": "node scripts/test-service-icons.mjs",
+    "build:sidebar-icons": "node scripts/build-sidebar-icons.mjs",
+    "test:sidebar-icons": "node scripts/test-sidebar-icons.mjs",
+    "test:price": "node scripts/test-price.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0"
+  }
+}

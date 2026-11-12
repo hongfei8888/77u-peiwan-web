@@ -1,0 +1,204 @@
+/* Menu-only additions. The original homepage and shared game details retain their layout. */
+.page-menu .page-intro { overflow: hidden; background: linear-gradient(115deg, #f9fcff 48%, #edf5fc 75%, #fdf3e8); }
+.page-menu .page-intro-row { position: relative; padding-right: 430px; }
+.page-menu .menu-intro-kicker { display: block; margin-bottom: 10px; color: #6b86a6; font-size: 11px; font-weight: 700; letter-spacing: .12em; }
+.page-menu .menu-genre-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.page-menu .menu-genre-tags span { padding: 5px 11px; border: 1px solid #dbe7f0; border-radius: 5px; background: #ffffff9c; color: #657c95; font-size: 11px; line-height: 1.5; }
+.page-menu .menu-genre-tags span:nth-child(2) { color: #72968b; border-color: #d5e8e1; }
+.page-menu .menu-genre-tags span:nth-child(3) { color: #b38b61; border-color: #eedfcf; }
+.page-menu .menu-universe { position: absolute; width: 430px; right: 0; top: 50%; transform: translateY(-50%); pointer-events: none; }
+.page-menu .menu-universe svg { display: block; width: 100%; }
+.page-menu #menu-link-other-games { overflow: hidden; background: linear-gradient(135deg, #f3faf6, #f2f5ff); border-color: #d9e7e5; }
+.page-menu #menu-link-other-games .poster-menu-symbol { background: #e1eee7; color: #679483; }
+.page-menu #menu-link-other-games::after { content: ''; position: absolute; width: 53px; height: 53px; right: 38px; bottom: -23px; border: 6px solid #c7ddce; transform: rotate(26deg); opacity: .4; z-index: -1; }
+.page-menu .menu-lottery { position: relative; display: flex; align-items: center; gap: 25px; padding: 26px 32px; margin-top: 24px; border: 1px solid #ebd7bb; border-radius: 12px; color: #62442e; background: radial-gradient(circle at 88% 15%, #ffe6b880, transparent 38%), linear-gradient(115deg, #fff9ef, #fff0dd); text-decoration: none; overflow: hidden; transition: border-color .2s, box-shadow .2s; }
+.page-menu .menu-lottery-icon { display: grid; place-items: center; flex: none; width: 83px; height: 83px; border: 1px solid #ead1af; border-radius: 22px; background: #fffcf6; color: #c59252; transform: rotate(-7deg); box-shadow: 4px 5px 0 #efd8b44d; }
+.page-menu .menu-lottery-icon svg { width: 48px; height: 48px; transform: rotate(7deg); }
+.page-menu .menu-lottery-copy { flex: 1; min-width: 0; display: block; }
+.page-menu .menu-lottery-kicker { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 12px; color: #9d7e5f; }
+.page-menu .menu-lottery-kicker > span { display: inline-block; padding: 2px 8px; border-radius: 4px; color: #a66a39; background: #fbe5c9; font-weight: 700; }
+.page-menu .menu-lottery-copy > strong { display: block; margin-top: 5px; font: 900 clamp(21px, 2vw, 29px)/1.5 var(--display); color: #5d432e; }
+.page-menu .menu-lottery-copy b { color: #bd772e; font-size: 1.24em; }
+.page-menu .menu-lottery-prizes { display: block; margin-top: 6px; color: #886749; font-size: 13px; line-height: 1.8; }
+.page-menu .menu-lottery-prizes i { font-style: normal; padding: 0 7px; color: #c5a27d; }
+.page-menu .menu-lottery-copy small { display: block; margin-top: 5px; color: #967c63; font-size: 11px; line-height: 1.7; }
+.page-menu .menu-lottery-action { display: inline-flex; align-items: center; justify-content: center; gap: 19px; flex: none; min-height: 46px; padding: 10px 22px; border: 1px solid #d6ae7c; border-radius: 8px; background: #fffaf1; color: #80522a; font-size: 14px; font-weight: 700; }
+.page-menu .menu-lottery-action svg { width: 20px; height: 20px; }
+.page-menu .menu-assurance { margin-top: 43px; }
+.page-menu .menu-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 19px; }
+.page-menu .menu-section-kicker { display: block; color: #8a9eb4; font-size: 10px; font-weight: 700; letter-spacing: .18em; margin-bottom: 7px; }
+.page-menu .menu-section-heading h2 { display: flex; align-items: center; gap: 10px; margin: 0; color: #284468; font: 900 27px/1.4 var(--display); }
+.page-menu .menu-section-heading h2 svg { width: 27px; height: 27px; color: #6a8eb7; flex: none; }
+.page-menu .menu-section-heading > p { margin: 0 0 4px; font-size: 12px; color: #7990a8; }
+.page-menu .menu-guarantees { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; }
+.page-menu .menu-guarantees li { display: flex; gap: 13px; padding: 20px 18px; border: 1px solid #dce6f0; background: #fbfdff; border-radius: 10px; min-width: 0; }
+.page-menu .menu-guarantees li:last-child { grid-column: span 2; background: #eef5fc; }
+.page-menu .menu-rule-number { display: block; flex: none; color: #81a2c3; font: 700 12px/1.9 var(--display); letter-spacing: .05em; }
+.page-menu .menu-guarantees h3 { margin: 0 0 7px; color: #324e6f; font-size: 15px; line-height: 1.6; }
+.page-menu .menu-guarantees p { margin: 0; color: #6d8197; font-size: 12px; line-height: 1.85; }
+.page-menu .menu-owner-rights { margin-top: 35px; padding: 28px 30px 0; border: 1px solid #dde6ee; border-radius: 12px; background: #fff; }
+.page-menu .menu-owner-rights .menu-section-heading { margin-bottom: 12px; }
+.page-menu .menu-rules-label { font-size: 11px; color: #9d8465; padding: 5px 10px; border-radius: 5px; background: #fcf5eb; white-space: nowrap; }
+.page-menu .menu-rights-intro { margin: 0 0 22px; font-size: 12px; line-height: 1.8; color: #7e8fa2; }
+.page-menu .menu-rights-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 36px; }
+.page-menu .menu-rights-list li { display: flex; gap: 13px; align-items: start; min-width: 0; padding: 18px 0; border-top: 1px solid #edf1f5; }
+.page-menu .menu-rights-list h3 { margin: 0 0 6px; color: #425b76; font-size: 14px; line-height: 1.65; }
+.page-menu .menu-rights-list p { margin: 0; color: #728398; font-size: 12px; line-height: 1.95; overflow-wrap: anywhere; }
+.page-menu .menu-rights-footer { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; padding: 19px 0; margin: 5px 0 0; border-top: 1px solid #e5edf4; font-size: 12px; color: #879aaf; }
+.page-menu .menu-rights-footer a { display: inline-flex; align-items: center; gap: 15px; color: #4e78ac; min-height: 32px; }
+.page-menu .menu-lottery:focus-visible, .page-menu .menu-rights-footer a:focus-visible { outline: 3px solid #6f98cc; outline-offset: 4px; }
+@media (hover: hover) { .page-menu .menu-lottery:hover { border-color: #d6ae7c; box-shadow: 0 7px 22px #b3874612; } .page-menu .menu-lottery:hover .menu-lottery-action { background: #ffe8c5; } }
+@media (max-width: 1100px) {
+  .page-menu .page-intro-row { padding-right: 300px; }
+  .page-menu .menu-universe { width: 300px; }
+  .page-menu .menu-guarantees { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .page-menu .menu-lottery { gap: 20px; padding: 24px; }
+  .page-menu .menu-lottery-icon { width: 67px; height: 67px; }
+  .page-menu .menu-lottery-action { padding-inline: 16px; gap: 12px; }
+}
+@media (max-width: 768px) {
+  .page-menu .page-intro-row { padding-right: 0; }
+  .page-menu .menu-intro-kicker { font-size: 9px; letter-spacing: .07em; }
+  .page-menu .menu-universe { width: 162px; right: -16px; top: 48px; opacity: .5; transform: none; }
+  .page-menu .page-intro h1, .page-menu .page-intro-row > p, .page-menu .menu-genre-tags, .page-menu .menu-intro-kicker { position: relative; z-index: 1; }
+  .page-menu .page-intro h1 { font-size: clamp(30px, 6.4vw, 42px); }
+  .page-menu .page-intro-row > p { max-width: 240px; font-size: 12px; }
+  .page-menu .menu-genre-tags { gap: 6px; margin-top: 13px; }
+  .page-menu .menu-genre-tags span { padding: 4px 8px; font-size: 10px; }
+  .page-menu .menu-lottery { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 14px; padding: 21px 17px; margin-top: 18px; }
+  .page-menu .menu-lottery-icon { width: 44px; height: 48px; border-radius: 12px; align-self: start; margin-top: 9px; }
+  .page-menu .menu-lottery-icon svg { width: 32px; height: 32px; }
+  .page-menu .menu-lottery-kicker { gap: 6px; font-size: 10px; }
+  .page-menu .menu-lottery-copy > strong { font-size: 20px; line-height: 1.5; }
+  .page-menu .menu-lottery-prizes { font-size: 11px; }
+  .page-menu .menu-lottery-prizes i { padding-inline: 3px; }
+  .page-menu .menu-lottery-copy small { font-size: 10px; }
+  .page-menu .menu-lottery-action { grid-column: 2; justify-content: space-between; min-height: 44px; font-size: 12px; padding: 10px 15px; }
+  .page-menu .menu-assurance { margin-top: 30px; }
+  .page-menu .menu-section-heading { gap: 10px; margin-bottom: 15px; }
+  .page-menu .menu-section-heading h2 { font-size: 23px; gap: 8px; }
+  .page-menu .menu-section-heading h2 svg { width: 23px; height: 23px; }
+  .page-menu .menu-section-heading > p { font-size: 10px; }
+  .page-menu .menu-section-kicker { font-size: 9px; }
+  .page-menu .menu-guarantees { gap: 9px; }
+  .page-menu .menu-guarantees li { padding: 15px 12px; gap: 8px; }
+  .page-menu .menu-guarantees h3 { font-size: 13px; }
+  .page-menu .menu-guarantees p { font-size: 11px; }
+  .page-menu .menu-rule-number { font-size: 10px; }
+  .page-menu .menu-owner-rights { margin-top: 24px; padding: 22px 17px 0; }
+  .page-menu .menu-owner-rights .menu-section-heading { flex-wrap: wrap; }
+  .page-menu .menu-owner-rights h2 { font-size: 21px; }
+  .page-menu .menu-rules-label { font-size: 10px; }
+  .page-menu .menu-rights-intro { font-size: 11px; margin-bottom: 14px; }
+  .page-menu .menu-rights-list { grid-template-columns: minmax(0, 1fr); }
+  .page-menu .menu-rights-list li { gap: 10px; padding: 16px 0; }
+  .page-menu .menu-rights-list h3 { font-size: 13px; }
+  .page-menu .menu-rights-list p { font-size: 11px; }
+  .page-menu .menu-rights-footer { gap: 5px; font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) { .page-menu .menu-lottery { transition: none; } }
+
+/* The intro supports the game artwork rather than competing with it. */
+.page-menu .page-intro { padding: 26px 0 24px; background: #f4f7fa; }
+.page-menu .page-intro-row { display: grid; grid-template-columns: 320px minmax(0, 1fr); column-gap: 40px; align-items: center; padding: 0; min-height: 0; }
+.page-menu .menu-intro-copy { position: relative; z-index: 1; padding: 0 0 28px; }
+.page-menu .menu-intro-kicker { display: none; }
+.page-menu .menu-intro-copy h1 { font-size: 40px; line-height: 1.35; white-space: nowrap; }
+.page-menu .menu-intro-copy > p { margin: 12px 0 0; color: #6d8196; font-size: 12px; line-height: 1.8; }
+.page-menu .menu-intro-copy > p br { display: none; }
+.page-menu .menu-genre-tags { gap: 6px; margin-top: 12px; }
+.page-menu .menu-genre-tags span { padding: 3px 7px; font-size: 10px; background: transparent; border-color: #dce5ee; }
+.page-menu .menu-universe { left: 105px; right: auto; top: auto; bottom: -15px; width: 175px; transform: none; opacity: .42; }
+.page-menu .menu-assurance { display: block; margin: 0; padding: 0 0 0 28px; border: 0; border-left: 1px solid #dce5ee; border-radius: 0; background: transparent; }
+.page-menu .menu-assurance .menu-section-heading { display: block; margin: 0 0 7px; padding: 0; border: 0; }
+.page-menu .menu-assurance .menu-section-kicker { display: none; }
+.page-menu .menu-assurance .menu-section-heading h2 { font-size: 21px; gap: 7px; color: #334c69; }
+.page-menu .menu-assurance .menu-section-heading h2 svg { width: 21px; height: 21px; color: #7897b5; }
+.page-menu .menu-assurance .menu-guarantees { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 22px; }
+.page-menu .menu-assurance .menu-guarantees li { align-items: start; gap: 8px; padding: 9px 0; border: 0; border-radius: 0; background: transparent; }
+.page-menu .menu-assurance .menu-guarantees li:last-child { grid-column: span 2; background: transparent; }
+.page-menu .menu-assurance .menu-rule-number { width: 17px; padding-top: 2px; color: #8aa3bb; }
+.page-menu .menu-assurance .menu-rule-number svg { display: block; width: 17px; height: 17px; }
+.page-menu .menu-assurance .menu-guarantees h3 { margin: 0 0 3px; color: #435a73; font-size: 12px; line-height: 1.6; font-weight: 700; }
+.page-menu .menu-assurance .menu-guarantees h3 em { font-style: normal; color: #aa7149; }
+.page-menu .menu-assurance .menu-guarantees p { margin: 0; color: #6b7f94; font-size: 10px; line-height: 1.7; }
+.page-menu .menu-guarantee-note { margin: 5px 0 0; color: #78899c; font-size: 10px; line-height: 1.7; }
+.page-menu .menu-guarantee-note strong { font-weight: 500; color: #63798f; }
+.page-menu .poster-menu--full .poster-menu-card--feature { min-height: 250px; }
+.page-menu .poster-menu--full .poster-menu-card--compact { min-height: 114px; }
+@media (min-width: 769px) and (max-width: 1199px) {
+  .page-menu .page-intro-row { grid-template-columns: 280px minmax(0, 1fr); column-gap: 24px; }
+  .page-menu .menu-intro-copy h1 { font-size: 36px; }
+  .page-menu .menu-assurance { padding-left: 22px; }
+  .page-menu .menu-assurance .menu-guarantees { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 15px; }
+  .page-menu .menu-assurance .menu-guarantees li:last-child { grid-column: span 3; }
+  .page-menu .poster-menu--full .poster-menu-card--feature { min-height: 220px; }
+}
+@media (max-width: 768px) {
+  .page-menu .page-intro { padding: 20px 0 16px; }
+  .page-menu .page-intro-row { display: block; }
+  .page-menu .menu-intro-copy { padding: 0 0 16px; }
+  .page-menu .menu-intro-copy h1 { font-size: 30px; }
+  .page-menu .menu-intro-copy > p { max-width: 260px; margin-top: 7px; font-size: 11px; }
+  .page-menu .menu-genre-tags { display: none; }
+  .page-menu .menu-universe { left: auto; right: -6px; top: 15px; bottom: auto; width: 118px; opacity: .28; }
+  .page-menu .menu-assurance { padding: 13px 0 0; border-left: 0; border-top: 1px solid #dce5ee; }
+  .page-menu .menu-assurance .menu-section-heading { margin-bottom: 5px; }
+  .page-menu .menu-assurance .menu-section-heading h2 { font-size: 18px; }
+  .page-menu .menu-assurance .menu-section-heading h2 svg { width: 18px; height: 18px; }
+  .page-menu .menu-assurance .menu-guarantees { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 18px; }
+  .page-menu .menu-assurance .menu-guarantees li { gap: 7px; padding-block: 7px; }
+  .page-menu .menu-assurance .menu-guarantees li:last-child { grid-column: span 2; }
+  .page-menu .menu-assurance .menu-guarantees h3 { font-size: 11px; margin-bottom: 2px; }
+  .page-menu .menu-assurance .menu-rule-number, .page-menu .menu-assurance .menu-rule-number svg { width: 15px; height: 15px; }
+  .page-menu .menu-guarantee-note { margin-top: 6px; font-size: 9px; line-height: 1.7; }
+  .page-menu .poster-menu--full .poster-menu-card--feature { min-height: 195px; }
+}
+@media (max-width: 360px) {
+  .page-menu .menu-assurance .menu-guarantees { column-gap: 10px; }
+  .page-menu .menu-assurance .menu-guarantees li { gap: 5px; }
+  .page-menu .menu-assurance .menu-guarantees h3 { font-size: 10px; }
+}
+
+/* Game selection leads; service promises sit after the complete menu grid. */
+.page-menu .poster-menu.poster-menu--full { padding-top: 24px; }
+.page-menu .page-intro.menu-after-games { margin-top: 26px; padding: 24px 0; border-top: 1px solid #dfe7ef; border-bottom: 1px solid #dfe7ef; overflow: visible; }
+.page-menu .poster-menu .poster-menu-card--feature .poster-menu-arrow { display: none; }
+.page-menu .poster-feature-hint { display: inline-flex; align-items: center; gap: 12px; margin-top: 18px; padding: 8px 12px; border: 1px solid #c8daee; border-radius: 6px; background: #ffffffd9; color: #416892; font-size: 12px; font-weight: 600; line-height: 1.5; }
+.page-menu .poster-feature-hint svg { width: 17px; height: 17px; transition: transform 180ms ease; }
+.page-menu .poster-menu-card--apricot .poster-feature-hint { border-color: #ead7c6; color: #9b714f; }
+@media (hover: hover) and (pointer: fine) {
+  .page-menu .poster-menu-card--feature:hover .poster-feature-hint { background: #fff; }
+  .page-menu .poster-menu-card--feature:hover .poster-feature-hint svg { transform: translateX(3px); }
+}
+@media (max-width: 768px) {
+  .page-menu .poster-menu.poster-menu--full { padding-top: 16px; }
+  .page-menu .page-intro.menu-after-games { margin-top: 20px; padding: 20px 0; }
+  .page-menu .poster-feature-hint { margin-top: 14px; padding: 7px 10px; gap: 9px; font-size: 11px; }
+  .page-menu .poster-feature-hint svg { width: 15px; height: 15px; }
+}
+@media (prefers-reduced-motion: reduce) { .page-menu .poster-feature-hint svg { transition: none; } }
+
+/* One timing curve for menu interactions; no repeating attention effects. */
+.page-menu { --menu-ease: cubic-bezier(.22,1,.36,1); }
+.page-menu .menu-ambient-points { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; opacity: .3; }
+.page-menu .poster-menu .poster-menu-card { transition: transform 240ms var(--menu-ease), border-color 240ms ease, box-shadow 240ms ease; }
+.page-menu .poster-menu .poster-feature-art { --pm-art-scale: 1.012; transition: transform 320ms var(--menu-ease); will-change: auto; }
+.page-menu .poster-feature-hint, .page-menu .menu-lottery, .page-menu .menu-lottery-action { transition: background-color 240ms ease, border-color 240ms ease, box-shadow 240ms ease, transform 240ms var(--menu-ease); }
+.page-menu .poster-feature-hint svg, .page-menu .poster-menu-arrow svg { transition: transform 240ms var(--menu-ease); }
+.page-menu .menu-lottery-icon, .page-menu .menu-lottery-icon svg { transition: transform 320ms var(--menu-ease); }
+.page-menu .poster-menu-card:focus-visible { outline: 2px solid #769ac7; outline-offset: 4px; }
+@media (hover: hover) and (pointer: fine) {
+  .page-menu .poster-menu .poster-menu-card:hover { transform: translateY(-2px); box-shadow: 0 8px 20px #314e7510; }
+  .page-menu .poster-menu .poster-menu-card--feature:hover .poster-feature-art { --pm-art-scale: 1.018; }
+  .page-menu .poster-menu-card--feature:hover .poster-feature-hint { transform: translateX(2px); }
+  .page-menu .menu-lottery:hover .menu-lottery-icon { transform: rotate(-3deg); }
+  .page-menu .menu-lottery:hover .menu-lottery-icon svg { transform: rotate(3deg); }
+}
+.page-menu .poster-menu .poster-menu-card:active, .page-menu .menu-lottery:active { transform: scale(.995); }
+@media (prefers-reduced-motion: reduce) {
+  .page-menu .menu-ambient-points { display: none; }
+  .page-menu .poster-menu .poster-feature-art { --pm-art-scale: 1; --pm-parallax-x: 0px !important; --pm-parallax-y: 0px !important; }
+  .page-menu .poster-menu .poster-menu-card:hover, .page-menu .poster-menu .poster-menu-card:active, .page-menu .menu-lottery:active, .page-menu .poster-menu-card--feature:hover .poster-feature-hint { transform: none; }
+  .page-menu .poster-menu .poster-menu-card--feature:hover .poster-feature-art { --pm-art-scale: 1; }
+}

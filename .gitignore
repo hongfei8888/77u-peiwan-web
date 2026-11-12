@@ -1,0 +1,30 @@
+node_modules/
+_本地工作记录/
+
+# Runtime accounts, password hashes and user uploads stay on the server.
+/api/_join-private/*
+!/api/_join-private/.htaccess
+!/api/_join-private/index.php
+
+# Machine-local configuration, logs and backups.
+.env
+.env.*
+!.env.example
+*.log
+*.pid
+*.bak
+*.old
+*.sqlite
+*.sqlite3
+*.db
+*.sql
+Thumbs.db
+.DS_Store
+
+# Existing operational notes and local planning documents.
+/30天方案-AI审查提示词.md
+/хКахЕецИСф╗мх╕Гх▒Аф╕ОшАГца╕чобчРЖцЫ┤цЦ░шп┤цШО.md
+/хКахЕецИСф╗мч▓╛чоАчЙИхНЗч║зшп┤цШО-20261012.md0000755
+/хоЭхбФф╕Кч║┐шп┤цШО.md
+/цКехРНф║Мч╗┤чаБхРОхП░щГич╜▓шп┤цШО.md
+/ч╗Яф╕АчобчРЖхРОхП░ф╕Кч║┐шп┤цШО.md

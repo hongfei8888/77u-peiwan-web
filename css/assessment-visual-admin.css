@@ -1,0 +1,43 @@
+/* Fixed page structure; administrators edit business content in native fields. */
+.content-editor-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px;border-bottom:1px solid #d7e2ef;flex-wrap:wrap}
+.content-editor-toolbar{position:sticky;top:0;z-index:6;background:#fff}
+.content-editor-toolbar p{font-size:14px;line-height:1.8;color:#536b88;margin:6px 0 0;max-width:65ch}
+.content-editor-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.content-editor-actions #qr-content-status{font-size:13px;line-height:1.6;color:#536b88}
+.content-editor-actions button.qr-primary{margin:0;min-height:42px}
+.content-editor-actions #qr-content-status.content-unsaved{color:#855410}
+.content-editor-scope{font-size:13px;line-height:1.8;color:#536b88;margin:0;padding:15px 24px;background:#f8faff}
+.content-editor-tabs{display:flex;align-items:stretch;gap:4px;padding:12px 20px 0;border-bottom:1px solid #d7e2ef;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#a5b6cd #f3f6fa}
+.qr-admin-shell .content-editor-tabs button{flex:none;border:0;border-bottom:2px solid transparent;border-radius:0;background:transparent;color:#536b88;padding:13px 12px;margin:0;white-space:nowrap;font:600 14px/1.5 'Microsoft YaHei','PingFang SC',sans-serif;cursor:pointer}
+.qr-admin-shell .content-editor-tabs button:hover{background:#f3f6fc;color:#234d91}
+.qr-admin-shell .content-editor-tabs button[aria-selected=true]{border-bottom-color:#285dce;color:#2156bc;background:#f6f9ff}
+.content-editor-panel{padding:0 24px 28px;min-width:0}
+.content-editor-block{margin-top:28px;min-width:0}
+.content-editor-block+.content-editor-block{padding-top:24px;border-top:1px solid #dce6f2}
+.management-page .content-editor-block h3{font-size:17px;line-height:1.6;margin:0 0 16px;color:#203c5e}
+.content-editor-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 22px;min-width:0}
+.content-editor-field{min-width:0;margin-bottom:18px}
+.content-editor-fields>.content-editor-field{margin:0}
+.content-editor-field:has(textarea),.content-editor-field:has(input[type=url]){grid-column:1/-1}
+.qr-admin-shell .content-editor-field label{margin:0 0 8px;font-size:14px;line-height:1.6;color:#29496f}
+.qr-admin-shell .content-editor-input{box-sizing:border-box;display:block;width:100%;min-width:0;margin:0;border:1px solid #becfe3;border-radius:5px;padding:11px 12px;background:#fff;color:#203c5e;font:400 15px/1.7 'Microsoft YaHei','PingFang SC',sans-serif;caret-color:#285dce;transition:border-color .15s ease}
+.qr-admin-shell textarea.content-editor-input{resize:vertical;min-height:98px;max-height:450px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#a5b6cd #f3f6fa}
+.qr-admin-shell .content-editor-input:hover{border-color:#8ba6cb}
+.qr-admin-shell .content-editor-input.is-changed{border-color:#b58435;background:#fffcf6}
+.qr-admin-shell .content-editor-input:focus{outline:2px solid #285dce;outline-offset:2px}
+.content-editor-tabs button:focus-visible,.content-editor-actions button:focus-visible{outline:2px solid #285dce;outline-offset:2px}
+.content-editor-table{width:100%;border-collapse:collapse;table-layout:fixed;margin:18px 0 22px}
+.content-editor-table .visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap}
+.content-editor-table th{font-size:13px;line-height:1.6;font-weight:600;color:#536b88;text-align:left;padding:10px 12px}
+.content-editor-table thead{background:#f4f7fb;border-bottom:1px solid #dce6f2}
+.content-editor-table th:first-child{width:80px}
+.content-editor-table td{padding:12px;border-bottom:1px solid #e7edf5;vertical-align:top}
+.content-editor-table tbody th{font-size:14px;color:#29496f;border-bottom:1px solid #e7edf5}
+.content-editor-table input{font-variant-numeric:tabular-nums}
+.content-editor-error{margin:24px;color:#91492e;font-size:14px;line-height:1.8}
+.content-editor-loading{padding:24px;margin:0;color:#536b88;font-size:14px}
+.content-editor-panel[hidden]{display:none!important}
+@media(max-width:1100px){.content-editor-toolbar,.content-editor-scope{padding-inline:20px}.content-editor-panel{padding-inline:20px}.content-editor-table th,.content-editor-table td{padding-inline:8px}.content-editor-table th:first-child{width:58px}}
+@media(max-width:700px){.content-editor-toolbar{padding:18px 16px;gap:16px}.content-editor-toolbar p{font-size:14px}.content-editor-actions{width:100%;justify-content:space-between;gap:10px}.content-editor-scope{padding:13px 16px}.content-editor-tabs{padding-inline:8px}.qr-admin-shell .content-editor-tabs button{font-size:14px;padding-inline:12px}.content-editor-panel{padding:0 16px 24px}.content-editor-fields{grid-template-columns:minmax(0,1fr);gap:18px}.qr-admin-shell .content-editor-input{font-size:16px}.content-editor-table,.content-editor-table tbody{display:block}.content-editor-table thead{display:none}.content-editor-table tr{display:block;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid #dce6f2}.content-editor-table tbody th{display:block;width:auto;padding:8px 0;border:0;font-size:15px}.content-editor-table td{display:grid;grid-template-columns:90px minmax(0,1fr);align-items:center;gap:12px;padding:7px 0;border:0}.content-editor-table td::before{content:attr(data-label);font-size:13px;line-height:1.7;color:#536b88}.content-editor-table td label.visually-hidden{position:absolute}.content-editor-block{margin-top:24px}}
+@media(prefers-reduced-motion:reduce){.qr-admin-shell .content-editor-input{transition:none}}
+@media(max-width:760px){.content-editor-toolbar{top:67px}}

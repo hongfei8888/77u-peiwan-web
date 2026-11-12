@@ -1,0 +1,27 @@
+/* Purple lounge: line masks, staged arrivals and one continuous page handoff. */
+.ent-line { display:block; overflow:clip; overflow-clip-margin:.12em; }
+.ent-line>span { display:block; white-space:pre; }
+.ent-feature-echo { position:absolute!important; inset:0 auto auto 0; z-index:3; pointer-events:none; user-select:none; }
+.ent-feature-echo .ent-echo-title { color:inherit; }
+/* The presentation layer owns section entrances; legacy CSS never conceals content. */
+.impeccable-public.ent-motion .motion-section { opacity:1; transform:none; filter:none; transition:none; }
+@view-transition { navigation:auto; }
+::view-transition { background:#101014; }
+.impeccable-public .nav { view-transition-name:lounge-navigation; }
+.impeccable-public .platform-topbar { view-transition-name:lounge-toolbar; }
+/* Keep the old viewport opaque underneath the new one. Fading both snapshots
+   and morphing the full main's dimensions caused dimming, ghosting and stretch. */
+::view-transition-group(root),::view-transition-group(lounge-navigation),
+::view-transition-group(lounge-toolbar) { animation:none; }
+::view-transition-image-pair(root) { isolation:normal; background:#101014; }
+::view-transition-old(root) { animation:none; opacity:1; mix-blend-mode:normal; }
+::view-transition-new(root) { animation:ent-viewport-in .2s cubic-bezier(.22,1,.36,1) both; mix-blend-mode:normal; }
+html.ent-navigation-pending::view-transition-new(root) { animation-play-state:paused; }
+::view-transition-old(lounge-navigation),::view-transition-old(lounge-toolbar) { display:none; }
+::view-transition-old(lounge-navigation),::view-transition-new(lounge-navigation),
+::view-transition-old(lounge-toolbar),::view-transition-new(lounge-toolbar) { animation:none; }
+@keyframes ent-viewport-in { from { opacity:0; } to { opacity:1; } }
+html:has(.fx-user-paused)::view-transition-new(root) { animation:none; }
+@media(prefers-reduced-motion:reduce) {
+ ::view-transition-group(*),::view-transition-old(*),::view-transition-new(*) { animation-duration:.001ms!important; animation-delay:0s!important; }
+}

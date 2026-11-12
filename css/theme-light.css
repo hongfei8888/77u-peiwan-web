@@ -1,0 +1,624 @@
+/* 浅色模式主题 · 柒柒游电竞
+   作用域：html[data-theme="light"]（由 js/theme-toggle.js 设置）
+   策略：token 换肤优先（body.impeccable-public 的深色令牌覆盖回浅色），
+        组件级修正仅处理 service-platform.css 中的硬编码深色结构。 */
+
+/* ---------- 根级 ---------- */
+:root[data-theme="light"]{
+  background:#f5f5f6;
+  color-scheme:light;
+  scrollbar-color:#c6c6ca #f5f5f6;
+}
+
+/* ---------- 令牌换肤（覆盖 body.impeccable-public 深色令牌） ---------- */
+html[data-theme="light"] body.impeccable-public{
+  --page:#f5f5f6;
+  --paper:#ffffff;
+  --ink:#242429;
+  --muted:#5e5e64;
+  --line:#e4e4e7;
+  --blue:#2a2a31;
+  --blue-deep:#1d1d23;
+  --ice:#f1f1f4;
+  --platform-purple:#2a2a31;
+  background:var(--page);
+  color:var(--ink);
+  color-scheme:light;
+  scrollbar-color:#c6c6ca #f5f5f6;
+  caret-color:#1d1d23;
+}
+/* 全局 UI 细节（原文件在深色令牌下硬编码） */
+html[data-theme="light"] body.impeccable-public ::selection{ color:#242429; background:#e2e2e6; }
+html[data-theme="light"] body.impeccable-public input::placeholder,
+html[data-theme="light"] body.impeccable-public textarea::placeholder{ color:#8a8a90; opacity:1; }
+html[data-theme="light"] body.impeccable-public ::-webkit-scrollbar-track{ background:#f5f5f6; }
+html[data-theme="light"] body.impeccable-public ::-webkit-scrollbar-thumb{ background:#c6c6ca; border-color:#f5f5f6; }
+html[data-theme="light"] body.impeccable-public :is(a,button,input,select,textarea,[tabindex]):focus-visible{ outline:2px solid #2a2a31; outline-offset:4px; }
+
+/* ---------- 菜单/海报卡片的深色上下文变量（menu-upgrade.css 覆盖了 pm-*） ---------- */
+:root[data-theme="light"],
+html[data-theme="light"] body.impeccable-public{
+  --pm-bg:#f5f5f6;
+  --pm-card:#ffffff;
+  --pm-border:#e4e4e7;
+  --pm-text:#242429;
+  --pm-muted:#5e5e64;
+  --pm-accent:#2a2a31;
+  --pm-ice:#f1f1f4;
+  --pm-apricot:#ffad7a;
+}
+
+/* ---------- 左侧导航 ---------- */
+html[data-theme="light"] .nav{
+  background:#ffffff;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid transparent;
+}
+html[data-theme="light"] .nav.scrolled{
+  background:rgba(255,255,255,.94);
+  border-color:var(--line,#e4e4e7);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+html[data-theme="light"] body.impeccable-public .nav .nav-link{ color:#4d4d54; }
+html[data-theme="light"] body.impeccable-public .nav .nav-link:hover{ color:#242429; background:#f1f1f3; }
+html[data-theme="light"] body.impeccable-public .nav .nav-link.active{
+  color:#1d1d23;
+  background:#f1f1f4;
+  box-shadow:inset 0 0 0 1px #e2e2e6;
+}
+html[data-theme="light"] .nav-toggle span{ background:#242429; }
+
+/* ---------- 品牌字标与 KOOK 栏 ---------- */
+html[data-theme="light"] .brand,
+html[data-theme="light"] .brand-cn{ color:#242429; }
+html[data-theme="light"] .brand-en{ color:#5e5e64; }
+html[data-theme="light"] .brand-wordmark .brand-cn{ color:#242429; }
+html[data-theme="light"] .nav-community{ color:#4d4d54; }
+html[data-theme="light"] .nav-community strong{ color:#242429; }
+html[data-theme="light"] .nav-community small{ color:#5e5e64; }
+html[data-theme="light"] .nav-community svg{ color:#5e5e64; }
+
+/* ---------- 顶栏 ---------- */
+html[data-theme="light"] .platform-topbar{
+  background:rgba(255,255,255,.88);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+html[data-theme="light"] .platform-search{
+  background:#ffffff;
+  border:1px solid var(--line);
+  color:#242429;
+  box-shadow:0 1px 2px rgba(33,30,46,.04);
+}
+html[data-theme="light"] .platform-search input{ color:#242429; }
+html[data-theme="light"] .platform-search button{
+  background:#f1f1f4; color:#1d1d23;
+}
+html[data-theme="light"] .platform-topbar-join{
+  border:1px solid var(--line);
+  color:#4d4d54;
+  background:#ffffff;
+}
+html[data-theme="light"] .platform-topbar-join:hover{ border-color:#d6d6da; color:#1d1d23; }
+
+/* ---------- 页脚 ---------- */
+html[data-theme="light"] .footer{
+  background:#ffffff;
+  border-top:1px solid var(--line);
+}
+html[data-theme="light"] .footer-copy{ color:#8a8a90; }
+html[data-theme="light"] .footer-line{ color:#5e5e64; }
+
+/* ---------- 菜单/海报卡片（service-platform.css 以 (0,3,0) 写死深色，用更强作用域覆盖） ---------- */
+html[data-theme="light"] body.impeccable-public .poster-menu-card:not(.poster-menu-card--feature),
+html[data-theme="light"] body.impeccable-public .platform-games .poster-menu-card:not(.poster-menu-card--feature){
+  background:#ffffff;
+  background-image:none;
+  border-color:#e4e4e7;
+  color:#242429;
+}
+/* ---------- hero 主视觉浅色化（深紫素材提亮为淡紫雾面） ---------- */
+html[data-theme="light"] body.impeccable-public .platform-feature{
+  background:linear-gradient(120deg,#ececee,#f4f4f5 55%,#f0f0f2);
+}
+html[data-theme="light"] body.impeccable-public .platform-feature::after{
+  background:linear-gradient(90deg, rgba(255,255,255,.85), rgba(255,255,255,.42) 48%, rgba(255,255,255,0) 80%);
+}
+html[data-theme="light"] body.impeccable-public .platform-feature-art{
+  filter:brightness(1.12) saturate(.95);
+}
+html[data-theme="light"] body.impeccable-public .platform-feature-panel h2{ color:#242429; }
+html[data-theme="light"] body.impeccable-public .platform-feature-panel p{ color:#4d4d54; }
+html[data-theme="light"] body.impeccable-public .platform-feature-tabs button{ color:#4d4d54; }
+html[data-theme="light"] body.impeccable-public .platform-feature-tabs button.is-active{ color:#1d1d23; }
+
+/* ---------- 特色海报卡（三角洲端游/手游）浅色化：浅卡底+立绘全亮+深色文字 ---------- */
+html[data-theme="light"] body.impeccable-public .poster-menu-card--feature{
+  background:linear-gradient(120deg,#f0f0f2,#ececee);
+  border-color:#e4e4e7;
+  color:#242429;
+}
+html[data-theme="light"] body.impeccable-public .poster-menu-card--feature .poster-feature-art{ opacity:1; }
+html[data-theme="light"] body.impeccable-public .poster-menu-card--feature .poster-menu-name{ color:#242429; }
+html[data-theme="light"] body.impeccable-public .poster-menu-card--feature .poster-menu-summary{ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .poster-menu-card--feature .poster-feature-eyebrow{ color:#2a2a31; }
+html[data-theme="light"] body.impeccable-public .poster-menu-card--feature .poster-feature-hint{ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .poster-menu-card--feature .poster-menu-arrow{ color:#8a8a90; }
+/* 手游卡与菜单页特色卡有更高特异性的独立深色规则，逐一对抗 */
+html[data-theme="light"] body.impeccable-public .platform-games .poster-menu-card--feature:nth-child(2),
+html[data-theme="light"] body.impeccable-public.page-menu .poster-menu-card--feature:nth-child(2){
+  background:linear-gradient(120deg,#fdf3e7,#f0eff1);
+  border-color:#e4e4e7;
+  color:#242429;
+}
+/* 特色卡的暗紫 ::before 渐变遮罩换为浅色 */
+html[data-theme="light"] body.impeccable-public:is(.page-menu,.page-home) .poster-menu-card--feature::before{
+  background:linear-gradient(90deg,#f5f6feb8,#f5f6fe42 48%,transparent 67%);
+}
+html[data-theme="light"] body.impeccable-public .poster-menu-card .poster-menu-name,
+html[data-theme="light"] body.impeccable-public .platform-games .poster-menu-card .poster-menu-name{ color:#242429; }
+html[data-theme="light"] body.impeccable-public .poster-menu-card .poster-menu-summary,
+html[data-theme="light"] body.impeccable-public .poster-menu-card .poster-menu-copy,
+html[data-theme="light"] body.impeccable-public .poster-menu-card .poster-menu-hint,
+html[data-theme="light"] body.impeccable-public .platform-games .poster-menu-card .poster-menu-summary{ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .poster-menu-card .poster-menu-symbol,
+html[data-theme="light"] body.impeccable-public .platform-games .poster-menu-card .poster-menu-symbol,
+html[data-theme="light"] body.impeccable-public .platform-games .poster-menu-card--apricot .poster-menu-symbol,
+html[data-theme="light"] body.impeccable-public .platform-games .poster-menu-card--ice .poster-menu-symbol{ background:#f1f1f4; color:#2a2a31; }
+html[data-theme="light"] body.impeccable-public .poster-menu-card .poster-menu-arrow,
+html[data-theme="light"] body.impeccable-public .platform-games .poster-menu-card .poster-menu-arrow,
+html[data-theme="light"] body.impeccable-public .platform-games .poster-menu-card--apricot .poster-menu-arrow,
+html[data-theme="light"] body.impeccable-public .platform-games .poster-menu-card--ice .poster-menu-arrow{ background:#f1f1f4; color:#2a2a31; }
+/* 两张卡在 service-platform.css 中以 ID 选择器写死深色，需同 ID 对抗 */
+html[data-theme="light"] body.impeccable-public #menu-link-other-games{
+  background:#ffffff; border-color:#e4e4e7; color:#242429;
+}
+html[data-theme="light"] body.impeccable-public #menu-link-other-games .poster-menu-name{ color:#242429; }
+html[data-theme="light"] body.impeccable-public #menu-link-other-games .poster-menu-summary{ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public #menu-link-sweet-day .poster-menu-symbol,
+html[data-theme="light"] body.impeccable-public #menu-link-other-games .poster-menu-symbol{ background:#f1f1f4; color:#2a2a31; }
+html[data-theme="light"] body.impeccable-public #menu-link-sweet-day .poster-menu-arrow,
+html[data-theme="light"] body.impeccable-public #menu-link-other-games .poster-menu-arrow{ background:#f1f1f4; color:#2a2a31; }
+
+/* ---------- 首页促销卡浅色化：柔和玫瑰/浅青渐变 + 深色文字 ---------- */
+html[data-theme="light"] body.impeccable-public .platform-promo--event{
+  background:linear-gradient(115deg,#fbe7ef,#f4d5e2);
+  border:1px solid #f0cbdb;
+}
+html[data-theme="light"] body.impeccable-public .platform-promo--event :is(h2,span,.platform-promo-link){ color:#79284a; }
+html[data-theme="light"] body.impeccable-public .platform-promo--join{
+  background:linear-gradient(120deg,#e3f1ee,#d5eae4);
+  border:1px solid #c6e1da;
+}
+html[data-theme="light"] body.impeccable-public .platform-promo--join :is(h2,span,.platform-promo-link){ color:#154b4e; }
+html[data-theme="light"] body.impeccable-public .platform-promo--event .platform-promo-link svg,
+html[data-theme="light"] body.impeccable-public .platform-promo--join .platform-promo-link svg{ color:inherit; }
+
+/* ---------- 首页欢迎区 / 分区 ---------- */
+html[data-theme="light"] .platform-welcome h1{ color:#242429; }
+html[data-theme="light"] .platform-welcome p{ color:#5e5e64; }
+html[data-theme="light"] .platform-welcome-link{ color:#1d1d23; }
+html[data-theme="light"] .platform-welcome-link svg{ color:#1d1d23; }
+/* hero 面板文字压在立绘上，保持白色（tabs 位于深色 hero 卡内部，同样保持浅色） */
+html[data-theme="light"] .platform-feature-panel h2{ color:#ffffff; }
+html[data-theme="light"] body.impeccable-public .platform-section-head h2,
+html[data-theme="light"] body.impeccable-public .platform-recommend h2,
+html[data-theme="light"] body.impeccable-public .platform-service-section h2{ color:#242429; }
+html[data-theme="light"] body.impeccable-public .platform-section-head p,
+html[data-theme="light"] body.impeccable-public .platform-recommend .platform-section-head p{ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .platform-section-head > a,
+html[data-theme="light"] body.impeccable-public .platform-recommend .platform-section-head > a{ color:#1d1d23; }
+html[data-theme="light"] body.impeccable-public .platform-recommend .platform-section-head .platform-disclaimer,
+html[data-theme="light"] body.impeccable-public .platform-disclaimer{ color:#8a8a90; }
+
+/* ---------- 主题切换按钮：顶栏内，与"特效"按钮同款芯片造型 ---------- */
+#theme-toggle{
+  display:inline-flex; align-items:center; justify-content:center; flex:none;
+  width:34px; height:34px; padding:0;
+  border:1px solid #59416d; border-radius:7px;
+  background:#2b2038; color:#e6d4ff;
+  font:inherit; cursor:pointer;
+  transition:color 160ms ease-out, border-color 160ms ease-out, transform 120ms ease-out;
+}
+#theme-toggle svg{ width:16px; height:16px; }
+#theme-toggle .theme-icon-moon{ display:none; }
+html[data-theme="light"] #theme-toggle .theme-icon-sun{ display:none; }
+html[data-theme="light"] #theme-toggle .theme-icon-moon{ display:block; }
+#theme-toggle:hover{ border-color:#7d5b9c; color:#ffffff; }
+#theme-toggle:active{ transform:scale(.95); }
+@media (prefers-reduced-motion: reduce){
+  #theme-toggle, #theme-toggle:active{ transition:none; transform:none; }
+}
+/* 管理后台顶栏：改用后台的浅色按钮风格 */
+.management-actions #theme-toggle{
+  border:1px solid #d6e1ee; background:#ffffff; color:#2866e8;
+  height:32px; width:32px;
+}
+.management-actions #theme-toggle:hover{ border-color:#b9cdE9; color:#1d4fc0; }
+/* 无顶栏页面的悬浮兜底 */
+.theme-toggle--float{
+  position:fixed; left:232px; bottom:16px; z-index:95;
+  width:40px; height:40px; border-radius:50%;
+  background:var(--paper,#fff); color:var(--ink,#242429);
+  border-color:var(--line,#e4e4e7);
+  box-shadow:0 2px 8px rgba(33,30,46,.10);
+}
+@media (max-width: 1100px){
+  .theme-toggle--float{ left:16px; }
+}
+
+/* ---------- 品牌熊猫 logo：浅色下改用深色墨紫渐变（银白渐变在白底上发灰发暗） ---------- */
+html[data-theme="light"] .site-emblem::before{
+  background:linear-gradient(140deg,#4a4160 0%,#2b2444 40%,#584a78 72%,#241f36 100%);
+  filter:drop-shadow(0 1px 0 rgba(255,255,255,.85)) drop-shadow(0 1px 1px rgba(33,30,46,.22));
+}
+html[data-theme="light"] img.site-logo{ filter:brightness(0)!important; opacity:.9; }
+
+/* ============================================================
+   全站深色组件浅色化 —— 镜像 service-platform.css 的分组深色规则
+   面板白卡 + 淡紫芯片 + 紫色强调，与首页已验证的浅色设计一致
+   ============================================================ */
+
+/* ---- 次级按钮/入驻按钮：白底幽灵按钮 ---- */
+html[data-theme="light"] body.impeccable-public :is(.button-secondary,.companion-join-button){ background:#ffffff; color:#4d4d54; border:1px solid #dadade; }
+html[data-theme="light"] body.impeccable-public .button-secondary:hover{ background:#f1f1f3; border-color:#c6c6cb; color:#1d1d23; }
+
+/* ---- 陪玩社区 CTA 卡 ---- */
+html[data-theme="light"] body.impeccable-public .companion-cta{ background:linear-gradient(120deg,#f0f0f2,#f6f6f7); border:1px solid #e4e4e7; }
+html[data-theme="light"] body.impeccable-public .companion-cta h2{ color:#242429; }
+html[data-theme="light"] body.impeccable-public .companion-cta p{ color:#5e5e64; }
+
+/* ---- 陪玩列表搜索框/筛选 ---- */
+html[data-theme="light"] body.impeccable-public .platform-roster-search label,
+html[data-theme="light"] body.impeccable-public .platform-roster-search select{ background:#ffffff; border-color:#dcdcdf; color:#242429; box-shadow:0 1px 2px rgba(33,30,46,.04); }
+html[data-theme="light"] body.impeccable-public .platform-roster-search input{ color:#242429; }
+html[data-theme="light"] body.impeccable-public .platform-roster-search svg{ color:#8a8a90; }
+html[data-theme="light"] body.impeccable-public .category-strip button,
+html[data-theme="light"] body.impeccable-public .platform-home-filters button{ background:#ffffff; border-color:#e0e0e4; color:#4d4d54; }
+html[data-theme="light"] body.impeccable-public .category-strip button.is-active,
+html[data-theme="light"] body.impeccable-public .platform-home-filters button.is-active{ background:#2a2a31; border-color:#2a2a31; color:#ffffff; }
+
+/* ---- 陪玩资料弹窗/音频/动态 ---- */
+html[data-theme="light"] body.impeccable-public :is(.companion-dialog,.companion-dialog-copy){ background:#ffffff; border-color:#e4e4e7; color:#242429; }
+html[data-theme="light"] body.impeccable-public .companion-dialog h2{ color:#242429; }
+html[data-theme="light"] body.impeccable-public :is(.dossier-bio,.companion-dialog-note,.companion-moments-empty){ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .companion-dialog-tags span{ background:#f1f1f4; border-color:#dfdfe3; color:#1d1d23; }
+html[data-theme="light"] body.impeccable-public :is(.companion-audio,.companion-moment,.companion-moments){ background:#f7f7f8; border-color:#e4e4e7; }
+html[data-theme="light"] body.impeccable-public :is(.dossier-header,.companion-moments-head){ border-color:#e4e4e7; color:#4d4d54; }
+html[data-theme="light"] body.impeccable-public .companion-moments-head strong{ color:#242429; }
+html[data-theme="light"] body.impeccable-public .companion-dialog-kicker,
+html[data-theme="light"] body.impeccable-public #companion-dialog-status{ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public :is(.companion-dialog-close,.support-close){ color:#1d1d23; background:#f1f1f4; }
+
+/* ---- 页面导语/分区标题文字 ---- */
+html[data-theme="light"] body.impeccable-public .page-intro h1{ color:#242429; }
+html[data-theme="light"] body.impeccable-public .page-intro p{ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public :is(.section-heading h2,.section-title h2,.minor-heading h2){ color:#242429; }
+html[data-theme="light"] body.impeccable-public :is(.section-heading>p,.section-title>span,.section-intro,.minor-heading>p){ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .companion-empty strong{ color:#242429; }
+
+/* ---- 活动页轮播卡 ---- */
+html[data-theme="light"] body.impeccable-public :is(.campaign,.carousel-slide){ border-color:#e4e4e7; background:#ffffff; }
+html[data-theme="light"] body.impeccable-public .campaign-copy{ background:linear-gradient(90deg,#ffffffed,rgba(255,255,255,0)); }
+html[data-theme="light"] body.impeccable-public .campaign-copy :is(h3,p){ color:#242429; }
+html[data-theme="light"] body.impeccable-public .campaign-copy>p:last-child{ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .page-activities-content .campaign-copy>p:not(.campaign-date):not(.campaign-lead){ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .carousel-controls{ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .carousel-dot{ background:#d6d6da; }
+html[data-theme="light"] body.impeccable-public .carousel-dot.active{ background:#2a2a31; }
+html[data-theme="light"] body.impeccable-public .carousel-pause{ color:#4d4d54; border-color:#dadade; background:#ffffff; }
+
+/* ---- 通用面板家族：白卡 ---- */
+html[data-theme="light"] body.impeccable-public :is(.contact-card,.contact-method,.contact-channel,.recruit-card,.recruit-step,.recruit-strip,.feedback-card,.review-card,.forum-post,.forum-sidebar,.forum-panel,.forum-empty,.community-panel,.auth-panel,.profile-card,.profile-panel,.center-card,.publish-panel,.post-panel){ color:#242429; background:#ffffff; border-color:#e4e4e7; box-shadow:0 1px 3px rgba(33,30,46,.05); }
+html[data-theme="light"] body.impeccable-public :is(.contact-card-name,.contact-welcome h1,.recruit-card h3,.recruit-strip h2,.feedback-copy h2,.forum-post h3,.post-title,.auth-panel h2,.profile-panel h2){ color:#242429; }
+html[data-theme="light"] body.impeccable-public :is(.contact-card-desc,.contact-card-handle,.recruit-card p,.recruit-step p,.forum-post p,.forum-post-excerpt,.forum-post-meta,.auth-intro p,.form-heading p,.profile-bio,.center-help){ color:#5e5e64; }
+
+/* ---- 论坛工具条/标签页/分类芯片 ---- */
+html[data-theme="light"] body.impeccable-public :is(.forum-search,.forum-toolbar,.forum-categories,.forum-tag,.forum-sort,.auth-tabs,.center-tabs){ background:#f2f2f4; color:#4d4d54; border-color:#e0e0e4; }
+html[data-theme="light"] body.impeccable-public :is(.forum-category,.forum-filter,.forum-tab,.auth-tab,.center-tab,.auth-tabs button){ color:#4d4d54; }
+html[data-theme="light"] body.impeccable-public :is(.forum-category.active,.forum-tab.active,.auth-tab.active,.auth-tabs button[aria-selected=true]){ color:#ffffff; background:#2a2a31; }
+html[data-theme="light"] body.impeccable-public .forum-categories button{ color:#4d4d54; border-color:#dcdcdf; background:#ffffff; }
+html[data-theme="light"] body.impeccable-public .forum-categories button.is-active{ color:#ffffff; background:#2a2a31; border-color:#2a2a31; }
+
+/* ---- 全部表单输入 ---- */
+html[data-theme="light"] body.impeccable-public :is(.forum-page input,.forum-page select,.forum-search input,.auth-form input,.auth-form select,.auth-form textarea,.publish-form input,.publish-form textarea,.center-page input,.center-page textarea){ background:#ffffff; color:#242429; border-color:#dcdcdf; }
+html[data-theme="light"] body.impeccable-public .form-heading h2{ color:#242429; }
+html[data-theme="light"] body.impeccable-public :is(.auth-form label,a.auth-inline-link,.auth-inline-link){ color:#1d1d23; }
+html[data-theme="light"] body.impeccable-public .auth-intro h1{ color:#242429; }
+html[data-theme="light"] body.impeccable-public .auth-intro :is(.auth-steps b,li>span){ background:#f1f1f4; color:#1d1d23; }
+html[data-theme="light"] body.impeccable-public .local-notice{ background:#f2f2f4; border-color:#e0e0e4; }
+html[data-theme="light"] body.impeccable-public .local-notice strong{ color:#4d4d54; }
+html[data-theme="light"] body.impeccable-public .account-nav a{ color:#4d4d54; }
+html[data-theme="light"] body.impeccable-public .account-nav strong{ color:#1d1d23; background:#f1f1f4; }
+
+/* ---- 旧版 home.html hero ---- */
+html[data-theme="light"] body.impeccable-public .hero{ background:linear-gradient(120deg,#ececee,#f4f4f5 60%,#f0f0f2); }
+html[data-theme="light"] body.impeccable-public .hero-title{ color:#242429; }
+html[data-theme="light"] body.impeccable-public :is(.hero-tagline,.hero-community){ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .stage-background{ filter:none; }
+
+/* ---- 客服弹窗 ---- */
+html[data-theme="light"] body.impeccable-public :is(.support-dialog,.recruit-dialog){ background:#ffffff; border-color:#e4e4e7; color:#242429; }
+html[data-theme="light"] body.impeccable-public .support-header{ background:#f2f2f4; color:#242429; border-color:#e0e0e4; }
+html[data-theme="light"] body.impeccable-public .support-header h2{ color:#242429; }
+html[data-theme="light"] body.impeccable-public :is(.support-agent,.support-agent-button,.support-list button,.support-row){ color:#242429; background:#ffffff; border-color:#e4e4e7; }
+html[data-theme="light"] body.impeccable-public :is(.support-agent-name,.support-detail h3,.support-name){ color:#242429; }
+html[data-theme="light"] body.impeccable-public :is(.support-agent-desc,.support-hint){ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .support-button{ color:#ffffff; background:#2a2a31; }
+html[data-theme="light"] body.impeccable-public :is(.support-button--secondary,.recruit-close){ color:#4d4d54; background:#ffffff; border-color:#dadade; }
+html[data-theme="light"] body.impeccable-public dialog::backdrop{ background:rgba(33,30,46,.32); backdrop-filter:blur(4px); }
+
+/* ---- 内容型页面面板（公告/招募/权益/抽奖） ---- */
+html[data-theme="light"] body.impeccable-public :is(.page-intro,.page-activities-content,.forum-page-head,.forum-sidebar section,.recruit-notices,.recruit-notice-item,.recruit-invite,.recruit-art,.poster-menu-benefit,.menu-lottery,.menu-owner-rights){ background:#ffffff; border-color:#e4e4e7; }
+html[data-theme="light"] body.impeccable-public .recruit-notice-item:hover{ background:#f2f2f4; }
+html[data-theme="light"] body.impeccable-public :is(.recruit-notices h2,.recruit-notice-copy strong,.forum-page-head h1,.forum-sidebar h2,.forum-sidebar h3,.recruit-copy h1,.recruit-copy h1 span,.feedback-benefits .poster-menu-benefit,.poster-menu-benefit strong){ color:#242429; }
+html[data-theme="light"] body.impeccable-public :is(.recruit-notices>header,.recruit-notice-item,.post-stats,.side-heading,.topic-list li,.active-item,.reply-item){ border-color:#e4e4e7; }
+html[data-theme="light"] body.impeccable-public :is(.site-notice-empty,.recruit-notices>header>span,.recruit-notice-excerpt,.recruit-notice-copy small,.forum-page-head span,.forum-post .post-excerpt,.post-meta,.post-stats,.topic-list a,.topic-list span,.rules-panel p,.active-item small,.recruit-copy p,.recruit-section-head>span,.contact-intro,.contact-note,.contact-panel-heading>span,.auth-steps span){ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .recruit-entry{ color:#1d1d23; border-color:#c6c6cb; }
+html[data-theme="light"] body.impeccable-public .recruit-art{ background:#f2f2f4; }
+html[data-theme="light"] body.impeccable-public :is(.recruit-unavailable,.recruit-empty){ color:#5e5e64; background:#f7f7f8; border:1px dashed #d6d6da; }
+html[data-theme="light"] body.impeccable-public .recruit-save{ color:#ffffff; background:#2a2a31; }
+
+/* ---- 论坛侧栏/话题/回复细节 ---- */
+html[data-theme="light"] body.impeccable-public .feed-heading select{ color:#242429; background:#ffffff; border-color:#dcdcdf; }
+html[data-theme="light"] body.impeccable-public .forum-search{ color:#4d4d54; }
+html[data-theme="light"] body.impeccable-public .forum-search input{ color:#242429; }
+html[data-theme="light"] body.impeccable-public .forum-search span{ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .forum-sidebar .topic-list a{ color:#4d4d54; }
+html[data-theme="light"] body.impeccable-public .community-account :is(strong,small){ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .community-account{ border-top:1px solid #e4e4e7; }
+html[data-theme="light"] body.impeccable-public .active-item strong{ color:#242429; }
+html[data-theme="light"] body.impeccable-public .post-meta>span{ color:#4d4d54; background:#f1f1f4; }
+html[data-theme="light"] body.impeccable-public :is(.post-meta>strong,.post-meta>a){ color:#1d1d23; }
+html[data-theme="light"] body.impeccable-public .topic-list button{ color:#4d4d54; border-color:#dcdcdf; }
+html[data-theme="light"] body.impeccable-public .post-meta .platform-demo-badge{ color:#1d1d23; background:#f1f1f4; }
+html[data-theme="light"] body.impeccable-public .platform-demo-note{ color:#4d4d54; background:#f2f2f4; }
+
+/* ---- 联系页 ---- */
+html[data-theme="light"] body.impeccable-public .contact-scene{ position:relative; }
+html[data-theme="light"] body.impeccable-public .contact-support-cta{ color:#ffffff; background:#2a2a31; }
+html[data-theme="light"] body.impeccable-public .contact-card-desc strong{ color:#242429; }
+html[data-theme="light"] body.impeccable-public .contact-panel .contact-card-qr-placeholder{ color:#5e5e64; background:#f2f2f4; border-color:#e0e0e4; }
+html[data-theme="light"] body.impeccable-public .contact-card-cta-arrow{ color:#1d1d23; background:#f1f1f4; }
+html[data-theme="light"] body.impeccable-public .contact-card-cta-text{ color:#4d4d54; }
+
+/* ---- 好评页 ---- */
+html[data-theme="light"] body.impeccable-public .feedback-art{ filter:brightness(1.2) saturate(.85); }
+html[data-theme="light"] body.impeccable-public .feedback-benefits .poster-menu-benefit{ background:#f2f2f4; color:#4d4d54; border-color:#e0e0e4; }
+html[data-theme="light"] body.impeccable-public :is(.feedback-copy>span,.empty-status){ color:#5e5e64; }
+
+/* ---- 菜单页权益区/抽奖/保障 ---- */
+html[data-theme="light"] body.impeccable-public :is(.menu-lottery-icon,.menu-lottery-action,.menu-rules-label){ color:#1d1d23; background:#f1f1f4; border-color:#dfdfe3; }
+html[data-theme="light"] body.impeccable-public .menu-guarantees li,
+html[data-theme="light"] body.impeccable-public.page-menu .menu-assurance .menu-guarantees li,
+html[data-theme="light"] body.impeccable-public.page-menu .menu-assurance .menu-guarantees li:last-child{ background:#f7f7f8; border-color:#e4e4e7; color:#242429; }
+html[data-theme="light"] body.impeccable-public.page-menu .menu-assurance .menu-guarantees h3{ color:#242429; }
+html[data-theme="light"] body.impeccable-public.page-menu .menu-assurance .menu-guarantees h3 em{ color:#b45309; }
+html[data-theme="light"] body.impeccable-public.page-menu .menu-assurance .menu-guarantees p{ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public :is(.menu-lottery h2,.menu-lottery h3,.menu-lottery strong,.menu-owner-rights h2,.menu-section-heading h2,.menu-rights-list h3){ color:#242429; }
+html[data-theme="light"] body.impeccable-public .menu-guarantee-note{ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .menu-guarantee-note strong{ color:#1d1d23; }
+html[data-theme="light"] body.impeccable-public .menu-rights-list li{ border-color:#e4e4e7; }
+html[data-theme="light"] body.impeccable-public .menu-rights-list p{ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .menu-lottery-copy strong{ color:#242429; }
+html[data-theme="light"] body.impeccable-public :is(.menu-lottery-copy small,.menu-lottery-prizes,.menu-lottery-kicker){ color:#5e5e64; }
+
+/* ---- 首页底部：帮助卡/快捷卡/服务快捷项 ---- */
+html[data-theme="light"] body.impeccable-public .platform-help{ background:linear-gradient(120deg,#f0f0f2,#f6f6f7); border:1px solid #e4e4e7; }
+html[data-theme="light"] body.impeccable-public .platform-help h2{ color:#242429; }
+html[data-theme="light"] body.impeccable-public .platform-help p{ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .platform-shortcuts a{ background:#ffffff; border:1px solid #e4e4e7; color:#242429; }
+html[data-theme="light"] body.impeccable-public .platform-shortcuts small{ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .service-quick-item{ background:#ffffff; border:1px solid #e4e4e7; }
+html[data-theme="light"] body.impeccable-public .service-quick-item strong{ color:#242429; }
+html[data-theme="light"] body.impeccable-public .service-quick-item small{ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .service-quick-item svg{ color:#8a8a90; }
+
+/* ---- 首页推荐陪玩人物卡/严选卡/展示卡 ---- */
+html[data-theme="light"] body.impeccable-public :is(.platform-person,.companion-card,.showcase-card,.curator-card){ background:#ffffff; border:1px solid #e4e4e7; color:#242429; }
+html[data-theme="light"] body.impeccable-public :is(.platform-person-visual,.companion-card-image){ background:#f2f2f4; }
+html[data-theme="light"] body.impeccable-public .platform-person-copy>p{ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public :is(.platform-person-tags span,.companion-card-meta span){ background:#f1f1f4; color:#1d1d23; border-color:#dfdfe3; }
+html[data-theme="light"] body.impeccable-public :is(.platform-person-audio,.platform-person-audio:disabled){ background:#f1f1f4; color:#1d1d23; border-color:#dfdfe3; }
+html[data-theme="light"] body.impeccable-public .platform-person-level{ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public :is(.companion-card-foot small,.companion-card-foot b,.showcase-card small){ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .companion-card{ --accent-rgb:122,63,242; border-color:#e4e4e7; }
+html[data-theme="light"] body.impeccable-public .companion-card:hover{ border-color:#c6c6cb; box-shadow:0 10px 22px rgba(33,30,46,.08); }
+html[data-theme="light"] body.impeccable-public .curator-card--blue{ background:linear-gradient(120deg,#f0f0f2,#f6f6f7); }
+html[data-theme="light"] body.impeccable-public .curator-card--apricot{ background:linear-gradient(120deg,#fdf3e7,#f0eff1); }
+
+/* ---- 账号中心/个人主页/发帖 ---- */
+html[data-theme="light"] body.impeccable-public :is(.account-card,.profile-hero,.profile-section,.preview-card,.article-card,.article-side section,.editor-card,.reply-block,.account-notices,.moments-studio,.moment-composer,.my-moments){ background:#ffffff; border-color:#e4e4e7; color:#242429; }
+html[data-theme="light"] body.impeccable-public :is(.identity-chip,.verification-status,.category-field span,.upload-box,.profile-safety,.preview-tip,.moment-locked,.md-toolbar,.captcha-row){ background:#f2f2f4; border-color:#e0e0e4; color:#4d4d54; }
+html[data-theme="light"] body.impeccable-public :is(.profile-nickname input,.security-form input,.security-form select,.field-grid input,.field-grid select,.full-field textarea,.editor-label input,.editor-label select,.md-editor,.moment-composer textarea){ color:#242429; background:#ffffff; border-color:#dcdcdf; }
+html[data-theme="light"] body.impeccable-public :is(.security-actions a,.security-actions>button,.article-actions button,.md-toolbar button,.media-reselect button,.captcha-row button){ color:#4d4d54; background:#ffffff; border-color:#dadade; }
+html[data-theme="light"] body.impeccable-public :is(.article-title,.markdown-body h1,.markdown-body h2,.markdown-body h3,.profile-section h2,.account-card h2,.account-card h3,.identity-chip strong,.profile-heading h1,.preview-card h2,.preview-card h3){ color:#242429; }
+html[data-theme="light"] body.impeccable-public :is(.markdown-body,.article-meta,.reply-item p,.account-card p,.profile-section p,.profile-label,.full-field,.field-grid label,.preview-card p){ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .markdown-body a{ color:#1d1d23; }
+html[data-theme="light"] body.impeccable-public .markdown-body blockquote{ color:#4d4d54; background:#f2f2f4; border-color:#e0e0e4; }
+html[data-theme="light"] body.impeccable-public .reply-item{ background:#f7f7f8; border-color:#e4e4e7; }
+html[data-theme="light"] body.impeccable-public .companion-entry{ background:#f2f2f4; }
+
+/* ---- 价格详情页返回芯片 ---- */
+html[data-theme="light"] body.impeccable-public .poster-back{ background:#f1f1f4; border-color:#dfdfe3; color:#1d1d23; }
+
+/* ---- 顶栏"特效"与主题按钮：浅色下改用浅色芯片 ---- */
+html[data-theme="light"] body.impeccable-public .fx-motion-switch,
+html[data-theme="light"] body.impeccable-public #theme-toggle{ background:#ffffff; border-color:#dadade; color:#4d4d54; }
+html[data-theme="light"] body.impeccable-public :is(.fx-motion-switch,#theme-toggle):hover{ border-color:#c6c6cb; color:#1d1d23; }
+
+/* ---- 扫描收尾：6 处深色残留 ---- */
+/* 特色卡内"点击查看详细玩法"芯片 */
+html[data-theme="light"] body.impeccable-public .poster-menu-card--feature .poster-feature-hint{ background:#f1f1f4; color:#1d1d23; }
+/* 论坛头图文装饰区 */
+html[data-theme="light"] body.impeccable-public .forum-conversation-art{ background:#f2f2f4; border:1px solid #e4e4e7; }
+/* 活动页文案渐变（对抗 section-illustrations.css 的 (0,5,0) 规则） */
+html[data-theme="light"] body.impeccable-public.page-activities .campaign:not(.campaign-recruit) .campaign-copy{ background:linear-gradient(90deg,#ffffffed,rgba(255,255,255,.55) 62%,rgba(255,255,255,0)); }
+html[data-theme="light"] body.impeccable-public.page-activities .campaign:not(.campaign-recruit) .campaign-copy :is(h3,p){ color:#242429; }
+/* 联系页/好评页装饰图区：提亮融入浅色 */
+html[data-theme="light"] body.impeccable-public :is(.contact-scene,.feedback-art){ background-color:#f2f2f4; filter:brightness(1.15) saturate(.92); }
+/* 价格详情页深色横幅 */
+html[data-theme="light"] body.impeccable-public .poster-detail-header{ background:linear-gradient(120deg,#ececee,#f4f4f5); border-bottom:1px solid #e4e4e7; }
+html[data-theme="light"] body.impeccable-public .poster-detail-header :is(h1,h2){ color:#242429; }
+
+/* ---- 人物卡内部细节文字（白卡上需要深色） ---- */
+html[data-theme="light"] body.impeccable-public :is(.companion-card-foot,.companion-card-meta,.companion-card-foot small,.companion-card-foot b,.companion-card-top em){ color:#4d4d54; }
+html[data-theme="light"] body.impeccable-public :is(.companion-card-meta i,.companion-card-meta span){ color:#1d1d23; }
+
+/* ---- 陪玩页 hero 文字（浅紫天空上需深色文字） ---- */
+html[data-theme="light"] body.impeccable-public :is(.companion-copy h1,.companion-showcase-title){ color:#242429; }
+html[data-theme="light"] body.impeccable-public :is(.companion-eyebrow,.companion-lead,.companion-promises li,.companion-promises li span){ color:#4d4d54; }
+
+/* ---- 分区标题（严选推荐等）与文字链接 ---- */
+html[data-theme="light"] body.impeccable-public :is(.companion-section-head h2,.companion-section-head strong){ color:#242429; }
+html[data-theme="light"] body.impeccable-public :is(.companion-section-head p,.companion-section-head span){ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public .text-link{ color:#1d1d23; }
+
+/* ============================================================
+   去紫化收尾：主按钮、联系客服胶囊、光效、插画素材
+   ============================================================ */
+/* 主按钮（炭黑）与悬浮态 */
+html[data-theme="light"] body.impeccable-public :is(.button-primary,.auth-submit){ background:#2a2a31; box-shadow:0 6px 14px rgba(33,30,46,.18); }
+html[data-theme="light"] body.impeccable-public :is(.button-primary,.auth-submit):hover{ background:#1d1d23; }
+html[data-theme="light"] body.impeccable-public .button-primary:active{ transform:translateY(0); }
+
+/* 联系客服浮动胶囊（炭黑） */
+html[data-theme="light"] body.impeccable-public .support-entry{ background:#2a2a31; box-shadow:0 10px 22px rgba(33,30,46,.22); }
+html[data-theme="light"] body.impeccable-public .support-entry:hover{ background:#1d1d23; }
+
+/* 杂项紫色点缀 */
+html[data-theme="light"] body.impeccable-public .carousel-dot.active{ background:#2a2a31; }
+html[data-theme="light"] body.impeccable-public .platform-load{ color:#63636b; background:#f7f7f8; }
+html[data-theme="light"] body.impeccable-public .fx-holo>.fx-material::before{ background:none; }
+html[data-theme="light"] body.impeccable-public .support-row .support-button:hover{ background:#1d1d23; }
+
+/* 紫色天空 canvas 去紫（players 页极光） */
+html[data-theme="light"] body.impeccable-public canvas.fx-sky{ filter:saturate(.3) brightness(1.15); opacity:.5; }
+
+/* 插画素材降饱和去紫（保留人物形态，色彩转中性灰调） */
+html[data-theme="light"] body.impeccable-public .platform-feature-art{ filter:brightness(1.12) saturate(.95); }
+html[data-theme="light"] body.impeccable-public .recruit-art img{ filter:none; }
+
+/* ---- 顶栏"登录/注册"按钮去紫 ---- */
+html[data-theme="light"] body.impeccable-public .platform-account{ background:#2a2a31; }
+html[data-theme="light"] body.impeccable-public .platform-account:hover{ background:#1d1d23; }
+
+/* ---- 导航激活滑块与杂项链接去紫 ---- */
+html[data-theme="light"] body.impeccable-public .fx-glider{ background:#ececee; }
+html[data-theme="light"] body.impeccable-public :is(.companion-card-foot,.companion-card-foot small,.companion-card-foot b){ color:#5e5e64; }
+
+/* ---- 考核页（assessment-service-page）变量级去紫 ---- */
+html[data-theme="light"] body.impeccable-public.assessment-service-page{
+  --page:#f5f5f6; --paper:#ffffff; --ink:#242429; --muted:#5e5e64;
+  --line:#e4e4e7; --blue:#2a2a31; --blue-deep:#1d1d20;
+  --assessment-surface:#ffffff; --assessment-raised:#f2f2f4;
+}
+
+/* ============================================================
+   考核页组件级去紫（assessment-platform.css 硬编码镜像覆盖）
+   ============================================================ */
+/* 深紫面板 → 白卡 */
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(
+  .arena-hero,.assessment-quality-hero,.club-notice-bar,.assessment-document,
+  .assessment-resource,.assessment-service-reminder,.join-table-wrap,.join-table,
+  .join-table caption,.join-table thead,.club-enrol-panel,.assessment-message-board,
+  .assessment-groups,.assessment-examiners,.club-notices,.assessment-notice-item,
+  .join-content,.join-supervision,.assessment-quality,.assessment-quality-columns,
+  .assessment-quality-grade,.assessment-group-entry,.assessment-examiner-preview button,
+  .assessment-dialog,.report-dialog,.assessment-picker,.assessment-empty){ background:#ffffff; background-image:none; border-color:#e4e4e7; color:#242429; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.join-table tbody tr:nth-child(even),.assessment-quality-grade,.club-enrol-image){ background:#f7f7f8; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page .join-table thead{ background:#f2f2f4; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.join-table thead th,.join-table caption){ color:#4d4d54; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.join-table td,.join-table th,.assessment-notice-item,.assessment-resource,.join-rule-tabs button,.examiner-type-filters button){ border-color:#e4e4e7; }
+
+/* 紫色按钮/激活态 → 炭黑 */
+html[data-theme="light"] body.impeccable-public.assessment-service-page .arena-cta{ background:#2a2a31; color:#ffffff; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page .arena-cta:hover{ background:#1d1d20; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.join-rule-tabs button,.quality-kind-tabs button,.examiner-type-filters button)[aria-pressed=true]{ background:#2a2a31; border-color:#2a2a31; color:#ffffff; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.join-rule-tabs button,.quality-kind-tabs button,.examiner-type-filters button){ background:#ffffff; color:#4d4d54; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.join-rule-tabs button,.quality-kind-tabs button,.examiner-type-filters button):hover:not([aria-pressed=true]){ background:#f1f1f3; color:#242429; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.join-platform-switch a){ background:#ffffff; color:#4d4d54; border-color:#e4e4e7; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page .join-platform-switch a[aria-current]{ background:#2a2a31; border-color:#2a2a31; color:#ffffff; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page .join-platform-switch a:hover{ background:#f1f1f3; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page .assessment-motion-toggle{ background:#f1f1f4; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page .assessment-motion-toggle:hover:not(:disabled){ background:#e4e4e7; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page .assessment-motion-toggle[aria-pressed="false"]{ background:#ffffff; }
+
+/* 淡紫文字 → 中性 */
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(p,li,small,label,dt,dd){ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(strong,b){ color:#242429; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(h1,h2,h3,h4,.arena-kicker,.arena-section-label,.arena-section-label i,.arena-nav-tail){ color:#242429; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page .arena-lead{ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page .arena-secondary{ color:#4d4d54; border-color:#dfdfe3; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page .assessment-quality-hero>header p{ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.assessment-quality-icon,.assessment-quality-all){ color:#2a2a31; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page .assessment-quality-all{ border-color:#dfdfe3; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.arena-section-nav a,.assessment-empty,.assessment-picker-meta,.assessment-notice-meta){ color:#4d4d54; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page .arena-section-nav a:is(:hover,.is-active){ color:#1d1d20; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.club-notice-label h2,.assessment-notice-meta b,.assessment-notice-item>strong){ color:#242429; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.join-text-link,.assessment-document-icon,.assessment-resource-tag){ background:#f1f1f4; color:#2a2a31; border-color:#dfdfe3; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page .assessment-resource:hover{ background:#f7f7f8; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page .assessment-dialog::backdrop,
+html[data-theme="light"] body.impeccable-public.assessment-service-page .report-dialog::backdrop{ background:rgba(33,33,38,.32); }
+html[data-theme="light"] body.impeccable-public.assessment-service-page .club-mobile-actions a:last-child,
+html[data-theme="light"] body.impeccable-public.assessment-service-page .arena-kicker>span{ color:#2a2a31; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page .message-compose-actions button{ background:#2a2a31; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page .message-compose-actions button:hover{ background:#1d1d20; }
+
+/* 考核页插画素材去紫（hero/enrol 立绘） */
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.section-art-image,.club-enrol-image img,.club-enrol-image){ filter:brightness(1.5) saturate(.32); }
+
+/* hero 插画降透明度变浅色水印（白底透出），JOIN 卡头部条转浅灰 */
+html[data-theme="light"] body.impeccable-public.assessment-service-page .section-art-image{ opacity:.32; filter:brightness(1.3) saturate(.3); }
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.arena-enrol-heading,.arena-enrol-heading :is(h2,h3,strong)){ background:#f2f2f4; color:#242429; }
+
+/* 考核页最后 4 处紫色小元素 */
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.join-eyebrow,.arena-step){ color:#4d4d54; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(#message-prev,#message-next){ background:#ffffff; color:#4d4d54; border-color:#dfdfe3; }
+
+/* ---- 最后 4 处紫色残留 ---- */
+/* 首页人物卡姓名/查看资料链接（压在照片上，保持白字） */
+html[data-theme="light"] body.impeccable-public :is(.platform-person-heading a,.platform-person-heading strong){ color:#ffffff; }
+/* 账号中心返回导航与忘记密码链接 */
+html[data-theme="light"] body.impeccable-public :is(.account-nav,.account-nav a){ color:#4d4d54; }
+html[data-theme="light"] body.impeccable-public .auth-inline-link a,
+html[data-theme="light"] body.impeccable-public a.auth-inline-link,
+html[data-theme="light"] body.impeccable-public .auth-inline-link{ color:#4d4d54; }
+/* 旧版 home.html：导航激活、导语、链接、二维码框 */
+html[data-theme="light"] body.impeccable-public :is(.nav-link.active,.poster-menu-heading-note,.poster-menu-heading p){ color:#242429; }
+html[data-theme="light"] body.impeccable-public .support-qr-frame{ color:#2a2a31; }
+
+/* 好评页空状态无类 p 文字（漏网灰紫） */
+html[data-theme="light"] body.impeccable-public .feedback-copy p{ color:#5e5e64; }
+
+/* 考核 hero：深紫渐变遮罩 → 白色渐变（左侧文字区白底，右侧透出插画） */
+html[data-theme="light"] body.impeccable-public.assessment-service-page .arena-shade{
+  background:linear-gradient(90deg,#ffffff 4%,rgba(255,255,255,.6) 45%,rgba(255,255,255,0));
+}
+html[data-theme="light"] body.impeccable-public.assessment-service-page .section-art-image{ opacity:.55; filter:brightness(1.15) saturate(.8); }
+/* 面包屑激活下划线去紫 */
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.arena-section-nav a,.arena-section-nav a.is-active){ color:#242429; border-color:#242429; }
+
+/* 面包屑激活下划线（::after 元素）去紫 */
+html[data-theme="light"] body.impeccable-public.assessment-service-page .arena-section-nav a::after{ background:#242429; }
+
+/* ---- 考核页下方区域：规则卡/资源区/通知区/留言区 ---- */
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(
+  .quality-result-card,.assessment-work-resources,.join-notices,
+  .assessment-work-resources :is(.assessment-document,.assessment-resource),
+  .join-notices :is(.assessment-notice-item)){ background:#ffffff; background-image:none; border-color:#e4e4e7; color:#242429; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.assessment-work-resources,.join-notices) :is(p,li,small,span,time){ color:#5e5e64; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.assessment-work-resources,.join-notices) :is(h2,h3,h4,strong,b){ color:#242429; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page .assessment-choose{ background:#2a2a31; border-color:#2a2a31; color:#ffffff; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page .assessment-message-board :is(input,textarea){ background:#ffffff; color:#242429; border-color:#dcdcdf; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.message-author-mark,.assessment-examiner-mark){ background:#f1f1f4; color:#4d4d54; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.message-item-meta time,.message-item-meta strong,.message-role,.assessment-resource-arrow){ color:#4d4d54; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page :is(.message-item,.message-admin-list .message-item){ background:#f7f7f8; border-color:#e4e4e7; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page .assessment-selection-track{ background:#d6d6da; }
+
+/* 考核页序号计数器块与表格角标去紫 */
+html[data-theme="light"] body.impeccable-public.assessment-service-page .join-notices li::before{ color:#2a2a31; background:#f1f1f4; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page .ent-process-list li::marker{ color:#2a2a31; }
+html[data-theme="light"] body.impeccable-public.assessment-service-page .join-table tbody th::before{ background:#d6d6da; }

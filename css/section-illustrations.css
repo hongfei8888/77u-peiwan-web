@@ -1,0 +1,66 @@
+/* Seven section-specific illustrations. This sheet is loaded by these six pages only. */
+.impeccable-public .section-art-image { display:block; width:100%; height:100%; object-fit:cover; }
+
+/* Recruitment: the invitation and the preparation scene share a single frame. */
+.impeccable-public[data-page="join"] .recruit-art { overflow:hidden; background:#201a28; --art-opacity:1; }
+.impeccable-public[data-page="join"] .recruit-art img { object-position:50% 40%; mask-image:linear-gradient(90deg,transparent,#000 14%); }
+
+/* Community: a real conversational scene gives the page header a middle layer. */
+.impeccable-public.community-page .forum-page-head { display:grid; grid-template-columns:minmax(210px,1fr) minmax(220px,330px) auto; align-items:center; gap:24px; min-height:198px; }
+.impeccable-public.community-page .forum-page-head>div { display:block; }
+.impeccable-public.community-page .forum-page-head>div>span { display:block; margin-top:10px; }
+.impeccable-public .forum-conversation-art { margin:0; height:164px; min-width:0; border-radius:11px; overflow:hidden; background:#201b29; }
+.impeccable-public .forum-conversation-art img { object-position:50% 40%; }
+
+/* Activities: a single composed illustration replaces the repeated cut-out pair. */
+.impeccable-public.page-activities .campaign-duo { inset:0 0 0 auto; width:61%; height:100%; padding:0; background:none; display:block; overflow:hidden; mask-image:linear-gradient(90deg,transparent,#000 20%); }
+.impeccable-public.page-activities .campaign-duo>.section-art-image { height:100%; width:100%; object-fit:cover; object-position:52% 40%; margin:0; transform:none; }
+.impeccable-public.page-activities .campaign:not(.campaign-recruit) .campaign-copy { position:relative; z-index:2; width:54%; background:linear-gradient(90deg,#201629 62%,#201629ba 80%,transparent); }
+
+/* Contact: retain the reception desk as one landscape, including on phones. */
+.impeccable-public.page-contact .contact-scene { position:relative; inset:auto; height:292px; width:100%; margin:24px 0 0; overflow:hidden; background:#201b29; }
+.impeccable-public.page-contact .contact-scene>.section-art-image { display:block; position:static; inset:auto; width:100%; height:100%; object-fit:cover; object-position:50% 43%; }
+
+/* Reviews: warm paper, keepsakes and characters rather than another gaming sofa. */
+.impeccable-public.page-reviews .feedback-art { background:#2c1d2b; overflow:hidden; max-width:none; }
+.impeccable-public.page-reviews .feedback-art>.section-art-image { display:block; object-position:50% 39%; }
+
+/* Assessment: a wide preparation scene and a separate, smaller welcoming guide. */
+.impeccable-public.assessment-service-page .arena-scene { width:100%; inset:0; opacity:.9; }
+.impeccable-public.assessment-service-page .arena-scene img { object-position:50% 0%; }
+.impeccable-public.assessment-service-page .arena-shade { background:linear-gradient(90deg,#1b1427 2%,#1b1427ef 22%,#1b1427b0 38%,#1b142720 58%,#1b142700 78%); }
+.impeccable-public.assessment-service-page .club-enrol-image { height:auto; aspect-ratio:3/2; background:#261d2c; }
+.impeccable-public.assessment-service-page .club-enrol-image img { width:100%; height:100%; object-fit:cover; object-position:50% 44%; filter:none; }
+.impeccable-public.assessment-service-page .club-enrol-image::after { background:linear-gradient(0deg,#1b1823,transparent 50%); }
+
+@media(max-width:1200px) {
+ .impeccable-public.community-page .forum-page-head { grid-template-columns:minmax(210px,1fr) 260px; }
+ .impeccable-public.community-page .forum-page-head>.forum-conversation-art { grid-column:2; grid-row:1/span 2; height:176px; }
+ .impeccable-public.community-page .forum-page-head>.button { justify-self:start; width:max-content; }
+}
+@media(max-width:900px) {
+ .impeccable-public.page-contact .contact-scene { height:260px; }
+}
+@media(max-width:700px) {
+ .impeccable-public[data-page="join"] .recruit-invite { min-height:0; }
+ .impeccable-public[data-page="join"] .recruit-copy p { max-width:100%; }
+ .impeccable-public[data-page="join"] .recruit-art { position:relative; inset:auto; width:100%; height:236px; min-height:236px; opacity:1; mask-image:none; }
+ .impeccable-public[data-page="join"] .recruit-art img { mask-image:linear-gradient(180deg,transparent,#000 12%); object-fit:cover; object-position:50% 32%; }
+}
+@media(max-width:600px) {
+ .impeccable-public.community-page .forum-page-head { grid-template-columns:1fr; gap:18px; padding:20px; }
+ .impeccable-public.community-page .forum-page-head>.forum-conversation-art { grid-column:auto; grid-row:auto; width:100%; height:auto; aspect-ratio:8/5; }
+ .impeccable-public.community-page .forum-page-head>.button { width:100%; }
+ .impeccable-public.page-activities .campaign:not(.campaign-recruit) { display:flex; flex-direction:column; align-items:stretch; min-height:0; }
+ .impeccable-public.page-activities .campaign:not(.campaign-recruit) .campaign-copy { order:0; width:100%; background:#201629; }
+ .impeccable-public.page-activities .campaign-duo { position:relative; order:1; flex:none; inset:auto; width:100%; height:auto; aspect-ratio:16/9; padding:0; mask-image:none; }
+ .impeccable-public.page-activities .campaign-duo>.section-art-image { object-position:50% 32%; }
+ .impeccable-public.page-contact .contact-scene { position:relative; inset:auto; width:100%; height:auto; aspect-ratio:8/5; margin:22px 0 4px; }
+ .impeccable-public.page-reviews .feedback-art { height:240px; min-height:240px; width:100%; margin:0; }
+ .impeccable-public.assessment-service-page .arena-hero { display:flex; flex-direction:column; align-items:stretch; }
+ .impeccable-public.assessment-service-page .arena-copy { order:0; }
+ .impeccable-public.assessment-service-page .arena-scene { position:relative; order:1; flex:none; inset:auto; width:calc(100% - 32px); height:auto; aspect-ratio:12/5; margin:0 16px 16px; opacity:1; border-radius:10px; overflow:hidden; }
+ .impeccable-public.assessment-service-page .arena-scene img { object-position:center; }
+ .impeccable-public.assessment-service-page .arena-shade { display:none; }
+ .impeccable-public.assessment-service-page .assessment-quality-hero { order:2; }
+}

@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "style": "mature-precise-duotone",
+  "format": "inline SVG",
+  "approvedConcept": "_本地工作记录/sidebar-icon-concepts/2026-11-12/mature-v2/sidebar-mature-a-precise-duotone-v2.png",
+  "css": "css/sidebar-icons.css?v=de8c602508f3",
+  "size": 22,
+  "pages": [
+    "account.html",
+    "activities.html",
+    "assessment.html",
+    "community.html",
+    "companion-center.html",
+    "contact.html",
+    "forgot-password.html",
+    "home.html",
+    "index.html",
+    "join.html",
+    "menu.html",
+    "players.html",
+    "post.html",
+    "profile.html",
+    "publish.html",
+    "reviews.html",
+    "price/detail.html"
+  ],
+  "instanceCount": 111,
+  "icons": {
+    "home": {
+      "name": "首页",
+      "page": "index.html",
+      "src": "images/sidebar-icons/home.svg",
+      "sha256": "ad9e5f6e6ea9f117b9d74af090a64357abc266562ef08c8e60c162c91675a962",
+      "bytes": 421
+    },
+    "events": {
+      "name": "活动",
+      "page": "activities.html",
+      "src": "images/sidebar-icons/events.svg",
+      "sha256": "c8028a2cd0f90a3666fc9c09c1ac78d1d2258e89aaa99145f4ed5c88407fa639",
+      "bytes": 626
+    },
+    "menu": {
+      "name": "玩法菜单",
+      "page": "menu.html",
+      "src": "images/sidebar-icons/menu.svg",
+      "sha256": "b6b8ff9e2ba94c7a7b76d2d61c67fbae5fcd6054b8859f1bd13aada7705e6b16",
+      "bytes": 688
+    },
+    "players": {
+      "name": "陪玩社区",
+      "page": "players.html",
+      "src": "images/sidebar-icons/players.svg",
+      "sha256": "a4ca0a4fcbf2c6e86ba5912f8f564afb1397ebeb07bca3473f69356d882fac10",
+      "bytes": 492
+    },
+    "community": {
+      "name": "交流社区",
+      "page": "community.html",
+      "src": "images/sidebar-icons/community.svg",
+      "sha256": "f5a5acd6b4176d7de064fff2409e2455af1e84166a59f53a7e3ca7edd58d5f80",
+      "bytes": 487
+    },
+    "join": {
+      "name": "加入我们",
+      "page": "join.html",
+      "src": "images/sidebar-icons/join.svg",
+      "sha256": "f03a9cfaae89bb42ae627da238693a04d5a1b5358581ee649ffc0f042fce6c1c",
+      "bytes": 506
+    },
+    "reviews": {
+      "name": "好评",
+      "page": "reviews.html",
+      "src": "images/sidebar-icons/reviews.svg",
+      "sha256": "4694bdd658a1a5df1dfa39a78924b78d6218e014066932b94f2890a581684114",
+      "bytes": 435
+    },
+    "contact": {
+      "name": "联系我们",
+      "page": "contact.html",
+      "src": "images/sidebar-icons/contact.svg",
+      "sha256": "8bd914f3a347b1d6005cd4747d1e258cdf0006ce3b690ca196ba7c7c4d007863",
+      "bytes": 647
+    }
+  }
+}

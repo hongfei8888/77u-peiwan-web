@@ -1,0 +1,18 @@
+.page-home .hero--mascots{isolation:isolate;background:linear-gradient(120deg,rgba(251,253,255,.94),rgba(244,248,253,.88) 72%,rgba(237,245,255,.9));}
+.page-home .hero--mascots::after{content:"";position:absolute;z-index:0;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(74,125,196,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(74,125,196,.16) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(90deg,#000,transparent 42%,transparent 68%,#000);}
+.page-home .hero-inner{z-index:2;}
+.ambient-enabled{position:relative;isolation:isolate;background:linear-gradient(180deg,#f8fbff,#eef5ff 52%,#f7faff);}
+.ambient-enabled>main,.ambient-enabled>.footer{position:relative;z-index:1;}
+.ambient-particle-stage{position:relative;isolation:isolate;overflow:hidden;}
+.ambient-particle-stage>.container,.ambient-particle-stage>.companion-copy,.ambient-particle-stage>.companion-showcase{position:relative;z-index:2;}
+.page-intro.ambient-particle-stage{background:linear-gradient(120deg,rgba(248,251,255,.94),rgba(235,244,255,.9));}
+.companion-hero.ambient-particle-stage{overflow:visible;}
+.home-particles{position:fixed;z-index:2;inset:0;width:100vw;height:100vh;pointer-events:none;opacity:.84;mix-blend-mode:multiply;transition:opacity .35s ease;}
+.ambient-enabled .poster-menu--home,.ambient-enabled .page-activities-content{background:rgba(244,247,250,.74);}
+.ambient-enabled .companion-page{background:rgba(247,249,252,.58);}
+.home-ambient-orb{position:absolute;z-index:0;border-radius:50%;pointer-events:none;filter:blur(8px);opacity:.48;will-change:transform;animation:home-orb-drift 13s ease-in-out infinite alternate;}
+.home-ambient-orb--one{left:-8%;top:4%;width:32vw;height:32vw;background:radial-gradient(circle,rgba(74,143,255,.18),rgba(74,143,255,.05) 48%,transparent 70%);}
+.home-ambient-orb--two{right:7%;bottom:-35%;width:36vw;height:36vw;background:radial-gradient(circle,rgba(49,192,223,.13),rgba(75,127,240,.045) 48%,transparent 70%);animation-delay:-6s;}
+@keyframes home-orb-drift{to{transform:translate3d(4vw,3vh,0) scale(1.12);opacity:.62}}
+@media(max-width:600px){.home-particles{opacity:.68}.page-home .hero--mascots::after{background-size:52px 52px;opacity:.12}.home-ambient-orb{width:70vw;height:70vw}}
+@media(prefers-reduced-motion:reduce){.home-particles{display:none}.home-ambient-orb{animation:none;opacity:.32}}

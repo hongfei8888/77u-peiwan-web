@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "style": "game-item-illustration",
+  "generator": "built-in image_gen",
+  "approvedConcept": "_本地工作记录/icon-concepts/2026-11-12/icon-concept-b-game-items.png",
+  "icons": {
+    "run": {
+      "name": "跑刀/陪跑",
+      "src": "images/service-icons/run-5c7af2b61fd7.webp",
+      "width": 192,
+      "height": 192,
+      "bytes": 7972,
+      "sha256": "5c7af2b61fd7064c6c664a3c738cfa8b0e2188981a816f06790f38397020d304",
+      "source": "_本地工作记录/icon-assets/2026-11-12-game-items/run-source.png",
+      "sourceSha256": "fc6b12ca09c5fff669f492607496adcf812945cdc81343114eec86ddec3ec4f2",
+      "transparentPixels": 5836
+    },
+    "sweet-day": {
+      "name": "甜蜜包天",
+      "src": "images/service-icons/sweet-day-668a5955698c.webp",
+      "width": 192,
+      "height": 192,
+      "bytes": 8632,
+      "sha256": "668a5955698c1a948c82c4f518dffc03b696c04d8d10de516d87718db82189ea",
+      "source": "_本地工作记录/icon-assets/2026-11-12-game-items/sweet-day-source.png",
+      "sourceSha256": "f91a6fb8e9e9740273290b504457eb2861c7f04391ec98f5b5fd610ba5239749",
+      "transparentPixels": 6440
+    },
+    "assault-day": {
+      "name": "包天猛攻",
+      "src": "images/service-icons/assault-day-6b8415a26240.webp",
+      "width": 192,
+      "height": 192,
+      "bytes": 10312,
+      "sha256": "6b8415a26240c4eaa9fd7b1cfb7ee0b0f1a593e1f43773a99910d525b25846a2",
+      "source": "_本地工作记录/icon-assets/2026-11-12-game-items/assault-day-source.png",
+      "sourceSha256": "c0463c8debeb75354b81e68a97eeb0910817251921893686449465f9a4dfe4ed",
+      "transparentPixels": 5871
+    },
+    "other-games": {
+      "name": "其他游戏",
+      "src": "images/service-icons/other-games-eb06ed44f8c8.webp",
+      "width": 192,
+      "height": 192,
+      "bytes": 9272,
+      "sha256": "eb06ed44f8c8f7f3880b356bd82a875a9b1c8e28e88dfad89d2770e4552b085f",
+      "source": "_本地工作记录/icon-assets/2026-11-12-game-items/other-games-source.png",
+      "sourceSha256": "1bde504943707e3a84e3afe9ac6771f044948e1406045ab4dc93ed5b7aae31c1",
+      "transparentPixels": 5911
+    },
+    "season-3x3": {
+      "name": "赛季3×3代肝",
+      "src": "images/service-icons/season-3x3-6751f5957988.webp",
+      "width": 192,
+      "height": 192,
+      "bytes": 14090,
+      "sha256": "6751f595798863a6063274bb30af1a05e9f4f188bd08c940ef4d6b3a2d2526a1",
+      "source": "_本地工作记录/icon-assets/2026-11-12-game-items/season-3x3-source.png",
+      "sourceSha256": "7c647085683f1154e46072d64492f6aef45fd645534fd7c3a275cb93393ffddb",
+      "transparentPixels": 5883
+    },
+    "gifts": {
+      "name": "礼物打赏单",
+      "src": "images/service-icons/gifts-2fc5692796c5.webp",
+      "width": 192,
+      "height": 192,
+      "bytes": 9552,
+      "sha256": "2fc5692796c59d7484aa47bf3d12a878a71395f9d2115df598be30ebfcc49e45",
+      "source": "_本地工作记录/icon-assets/2026-11-12-game-items/gifts-source.png",
+      "sourceSha256": "ef9cc3e0f151f79f326afd06adef74a87f53768d1c946feefdb49cd9017513b3",
+      "transparentPixels": 5655
+    },
+    "prepaid": {
+      "name": "充值预存",
+      "src": "images/service-icons/prepaid-367769d69a8f.webp",
+      "width": 192,
+      "height": 192,
+      "bytes": 8982,
+      "sha256": "367769d69a8f59bd0e2072909cb1aa161e6066e55a30e62df4e453d16d08122f",
+      "source": "_本地工作记录/icon-assets/2026-11-12-game-items/prepaid-source.png",
+      "sourceSha256": "af277388d14ea626a74ae57839205ae891aa5ecac08a944065c957739dcf9aa2",
+      "transparentPixels": 5909
+    }
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "pages": {
+    "index.html": [
+      {
+        "id": "menu-link-pc",
+        "href": "price/detail.html?category=pc",
+        "text": "TACTICAL OPS三角洲端游战术协作 · 并肩作战点击查看详细玩法",
+        "portrait": null
+      },
+      {
+        "id": "menu-link-mobile",
+        "href": "price/detail.html?category=mobile",
+        "text": "MOBILE OPS三角洲手游随时开黑 · 快速上分点击查看详细玩法",
+        "portrait": null
+      },
+      {
+        "id": "menu-link-run",
+        "href": "price/detail.html?item=run",
+        "text": "跑刀/陪跑轻装出发，一起行动",
+        "portrait": null
+      },
+      {
+        "id": "menu-link-laotai",
+        "href": "price/detail.html?category=laotai",
+        "text": "老太专属单护航、陪做与专属玩法",
+        "portrait": "images/poster-menu/icon-5b61bf4e8eca.jpg"
+      },
+      {
+        "id": "menu-link-double-fun",
+        "href": "price/detail.html?item=double-fun",
+        "text": "双妹趣味单查看娱乐玩法与价格",
+        "portrait": "images/poster-menu/icon-051479ac995a.jpg"
+      },
+      {
+        "id": "menu-link-sweet-day",
+        "href": "price/detail.html?item=sweet-day",
+        "text": "甜蜜包天轻松聊天，游戏相伴",
+        "portrait": null
+      },
+      {
+        "id": "menu-link-assault-day",
+        "href": "price/detail.html?item=assault-day",
+        "text": "包天猛攻认真配合，尽兴开局",
+        "portrait": null
+      },
+      {
+        "id": "menu-link-other-games",
+        "href": "price/detail.html?item=other-games",
+        "text": "其他游戏换个游戏，一样默契",
+        "portrait": null
+      },
+      {
+        "id": "menu-link-season-3x3",
+        "href": "price/detail.html?item=season-3x3",
+        "text": "赛季3×3代肝",
+        "portrait": null
+      },
+      {
+        "id": "menu-link-gifts",
+        "href": "price/detail.html?item=gifts",
+        "text": "礼物打赏单",
+        "portrait": null
+      },
+      {
+        "id": "menu-link-prepaid",
+        "href": "price/detail.html?item=prepaid",
+        "text": "充值预存",
+        "portrait": null
+      }
+    ],
+    "home.html": [
+      {
+        "id": "menu-link-pc",
+        "href": "price/detail.html?category=pc",
+        "text": "TACTICAL OPS三角洲端游战术协作 · 并肩作战",
+        "portrait": null
+      },
+      {
+        "id": "menu-link-mobile",
+        "href": "price/detail.html?category=mobile",
+        "text": "MOBILE OPS三角洲手游随时开黑 · 快速上分",
+        "portrait": null
+      },
+      {
+        "id": "menu-link-run",
+        "href": "price/detail.html?item=run",
+        "text": "跑刀/陪跑轻装出发，一起行动",
+        "portrait": null
+      },
+      {
+        "id": "menu-link-laotai",
+        "href": "price/detail.html?category=laotai",
+        "text": "老太专属单护航、陪做与专属玩法",
+        "portrait": "images/poster-menu/icon-5b61bf4e8eca.jpg"
+      },
+      {
+        "id": "menu-link-double-fun",
+        "href": "price/detail.html?item=double-fun",
+        "text": "双妹趣味单查看娱乐玩法与价格",
+        "portrait": "images/poster-menu/icon-051479ac995a.jpg"
+      },
+      {
+        "id": "menu-link-sweet-day",
+        "href": "price/detail.html?item=sweet-day",
+        "text": "甜蜜包天轻松聊天，游戏相伴",
+        "portrait": null
+      },
+      {
+        "id": "menu-link-assault-day",
+        "href": "price/detail.html?item=assault-day",
+        "text": "包天猛攻认真配合，尽兴开局",
+        "portrait": null
+      },
+      {
+        "id": "menu-link-other-games",
+        "href": "price/detail.html?item=other-games",
+        "text": "其他游戏换个游戏，一样默契",
+        "portrait": null
+      }
+    ],
+    "menu.html": [
+      {
+        "id": "menu-link-pc",
+        "href": "price/detail.html?category=pc",
+        "text": "TACTICAL OPS三角洲端游战术协作 · 并肩作战点击查看详细玩法",
+        "portrait": null
+      },
+      {
+        "id": "menu-link-mobile",
+        "href": "price/detail.html?category=mobile",
+        "text": "MOBILE OPS三角洲手游随时开黑 · 快速上分点击查看详细玩法",
+        "portrait": null
+      },
+      {
+        "id": "menu-link-run",
+        "href": "price/detail.html?item=run",
+        "text": "跑刀/陪跑轻装出发，一起行动",
+        "portrait": null
+      },
+      {
+        "id": "menu-link-laotai",
+        "href": "price/detail.html?category=laotai",
+        "text": "老太专属单护航、陪做与专属玩法",
+        "portrait": "images/poster-menu/icon-5b61bf4e8eca.jpg"
+      },
+      {
+        "id": "menu-link-double-fun",
+        "href": "price/detail.html?item=double-fun",
+        "text": "双妹趣味单查看娱乐玩法与价格",
+        "portrait": "images/poster-menu/icon-051479ac995a.jpg"
+      },
+      {
+        "id": "menu-link-sweet-day",
+        "href": "price/detail.html?item=sweet-day",
+        "text": "甜蜜包天轻松聊天，游戏相伴",
+        "portrait": null
+      },
+      {
+        "id": "menu-link-assault-day",
+        "href": "price/detail.html?item=assault-day",
+        "text": "包天猛攻认真配合，尽兴开局",
+        "portrait": null
+      },
+      {
+        "id": "menu-link-other-games",
+        "href": "price/detail.html?item=other-games",
+        "text": "其他游戏换个游戏，一样默契",
+        "portrait": null
+      },
+      {
+        "id": "menu-link-season-3x3",
+        "href": "price/detail.html?item=season-3x3",
+        "text": "赛季3×3代肝",
+        "portrait": null
+      },
+      {
+        "id": "menu-link-gifts",
+        "href": "price/detail.html?item=gifts",
+        "text": "礼物打赏单",
+        "portrait": null
+      },
+      {
+        "id": "menu-link-prepaid",
+        "href": "price/detail.html?item=prepaid",
+        "text": "充值预存",
+        "portrait": null
+      }
+    ]
+  },
+  "files": {
+    "js/poster-menu.generated.js": "cb1c831dee357c227e0bd9a15c9ecedc6163ee35f583e7f06e310390ceab8449",
+    "content/owner-rights.json": "16ade745445c541bcbace6c3d3f896c13f8c14d5ec953b1c173240f6031686d4",
+    "js/poster-menu.js": "42191e237d7e74c480b29c319d9e6209274509141a9cb7bc02ea6cefb9ab201e"
+  }
+}

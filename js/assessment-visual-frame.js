@@ -1,0 +1,1 @@
+// Whole-page visual editing is retired; use the scoped forms in assessment-admin.html.

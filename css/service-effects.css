@@ -1,0 +1,77 @@
+/* Purple lounge motion: native canvas atmosphere, foil and pointer light. */
+.impeccable-public { --fx-violet:#ad80ff; --fx-cyan:#8ae3ec; }
+.fx-aurora-stage { position:relative; isolation:isolate; }
+.fx-sky { position:absolute; z-index:-1; inset:0 0 auto; width:100%; height:640px; pointer-events:none; opacity:.9; }
+.companion-hero>.fx-sky { top:-55px; height:calc(100% + 100px); }
+.fx-card { --fx-x:50%; --fx-y:35%; --fx-rx:0deg; --fx-ry:0deg; position:relative; isolation:isolate; }
+.impeccable-public .companion-card { will-change:auto; }
+.impeccable-public .companion-card.fx-card { transform:perspective(900px) rotateX(var(--fx-rx)) rotateY(var(--fx-ry)); }
+.impeccable-public .companion-card.fx-card:is(:hover,:focus-visible) { transform:perspective(900px) rotateX(var(--fx-rx)) rotateY(var(--fx-ry)) translateY(-5px); }
+.impeccable-public .showcase-card.fx-card {
+ transform:perspective(900px) rotateX(var(--fx-rx)) rotateY(var(--fx-ry))!important;
+ transition:transform .24s ease-out,box-shadow .3s; border:1px solid #665080;
+}
+.impeccable-public .showcase-card.fx-card:is(:hover,:focus-visible) { box-shadow:0 20px 36px #05020b90; }
+.fx-material { display:block; position:absolute; z-index:3; inset:0; overflow:hidden; border-radius:inherit; pointer-events:none; opacity:0; transition:opacity .35s ease-out; }
+.fx-material::before,.fx-material::after { content:''; position:absolute; inset:0; border-radius:inherit; }
+.fx-material::before { background:radial-gradient(350px circle at var(--fx-x) var(--fx-y),#c69aff35,transparent 70%); }
+.fx-card:is(:hover,:focus-within)>.fx-material { opacity:1; }
+.fx-holo>.fx-material { opacity:.25; mask-image:linear-gradient(#000 50%,transparent 88%); }
+.fx-holo>.fx-material::before {
+ background:linear-gradient(115deg,transparent 12%,#a19aff38 25%,#81edec52 34%,#eab4f468 42%,#ffe6a450 50%,#c898ff42 59%,transparent 71%);
+ background-size:230% 230%; background-position:var(--fx-x) var(--fx-y); mix-blend-mode:color-dodge;
+}
+.fx-holo>.fx-material::after {
+ background:radial-gradient(ellipse at var(--fx-x) var(--fx-y),#fff4 0,transparent 40%),linear-gradient(128deg,transparent 25%,#e1c7ff40 48%,transparent 67%);
+ mix-blend-mode:soft-light;
+}
+.fx-holo:is(:hover,:focus-within)>.fx-material { opacity:.85; }
+.impeccable-public .showcase-card.fx-holo>.fx-material { mask-image:linear-gradient(#000 20%,#000b 65%,transparent 87%); }
+.impeccable-public .platform-person.fx-card:focus-within { border-color:#b392e8; }
+.impeccable-public .companion-card.fx-card:focus-visible { border-color:#bda1ef; }
+.fx-electric { border-color:#af7ed9!important; }
+.fx-electric>.fx-electric-canvas { position:absolute; inset:0; width:100%; height:100%; z-index:6; border-radius:inherit; pointer-events:none; }
+.fx-electric .platform-person-level,.fx-electric .companion-card-top em { color:#f4e5ff; background:#6d3a8a; }
+.fx-beam { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; z-index:3; overflow:visible; border-radius:inherit; }
+.fx-beam rect { fill:none; stroke:#d9b8ff; stroke-width:1.5; vector-effect:non-scaling-stroke; stroke-dasharray:15 85; stroke-dashoffset:0; filter:drop-shadow(0 0 3px #b97cff); animation:fx-border-orbit 6s linear infinite; animation-play-state:paused; }
+.fx-in-view>.fx-beam rect { animation-play-state:running; }
+.fx-beam-host { position:relative; isolation:isolate; }
+@keyframes fx-border-orbit { to { stroke-dashoffset:-100; } }
+.fx-control-shine { position:relative; overflow:hidden; isolation:isolate; }
+.fx-control-shine::before { content:''; position:absolute; z-index:-1; inset:-80% -30%; background:linear-gradient(115deg,transparent 35%,#ffffff30 48%,transparent 62%); transform:translateX(-100%); pointer-events:none; }
+.fx-control-shine:is(:hover,:focus-visible)::before { animation:fx-control-sheen .75s cubic-bezier(.16,1,.3,1) both; }
+@keyframes fx-control-sheen { to { transform:translateX(100%); } }
+.impeccable-public .platform-person-audio { transition:background .2s,color .2s; }
+.impeccable-public .platform-person-audio.is-playing { color:#f7eaff; background:#61358b; }
+.impeccable-public .platform-wave { flex-shrink:0; gap:3px; }
+.impeccable-public .platform-wave i { transform-origin:center; background:currentColor; }
+.impeccable-public .platform-wave i:nth-child(3n) { animation-delay:-.23s; }
+.impeccable-public .platform-wave i:nth-child(4n) { animation-delay:-.5s; }
+.impeccable-public .companion-audio { background:#2c1c3a; border-color:#65417e; }
+.impeccable-public .companion-audio>span { color:#d2b5ee; letter-spacing:0; }
+.impeccable-public .companion-audio .fx-audio-wave { display:inline-flex; vertical-align:middle; margin:0 0 0 10px; height:15px; color:#d2a0ff; }
+.impeccable-public .companion-audio.is-playing { border-color:#b487e1; }
+.impeccable-public .companion-dialog::backdrop { animation:fx-backdrop-in .35s ease-out; }
+@keyframes fx-backdrop-in { from { background:#08050b00; backdrop-filter:blur(0); } to { background:#08050bd1; backdrop-filter:blur(5px); } }
+.impeccable-public.fx-suspended .fx-beam rect,.impeccable-public.fx-suspended .platform-wave i,
+.impeccable-public .fx-card:not(.fx-in-view) .platform-wave i { animation-play-state:paused; }
+@media(hover:none) {
+ .fx-holo>.fx-material { opacity:.32; }
+ .fx-card:active>.fx-material { opacity:.7; }
+ .impeccable-public .showcase-card.fx-card { transform:none!important; }
+ .impeccable-public .companion-card.fx-card { transform:none; }
+ .fx-sky { opacity:.8; }
+}
+@media(max-width:600px) {
+ .fx-sky { height:760px; }
+ .companion-hero>.fx-sky { top:-20px; height:100%; }
+ .fx-holo>.fx-material { mask-image:linear-gradient(#000 30%,transparent 80%); }
+}
+@media(prefers-reduced-motion:reduce) {
+ .impeccable-public .fx-card,.impeccable-public .showcase-card.fx-card { transform:none!important; }
+ .impeccable-public .fx-beam rect { animation:none!important; stroke-dasharray:none; opacity:.5; }
+ .impeccable-public .fx-control-shine::before { display:none; }
+ .impeccable-public .platform-wave i { animation:none!important; }
+ .impeccable-public .platform-person-audio.is-playing .platform-wave { color:#fff; }
+ .impeccable-public .fx-material { transition:opacity .15s!important; }
+}

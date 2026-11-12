@@ -1,0 +1,211 @@
+/* Assessment reader in the established purple lounge. Content and editing hooks stay owned by the original page. */
+html:has(.assessment-service-page) { background:#101014; scroll-padding-top:104px; scrollbar-gutter:auto; }
+body.impeccable-public.assessment-service-page {
+ --page:#101014; --paper:#1b1a23; --ink:#f6f4fc; --muted:#b7a9c8; --line:#393044;
+ --blue:#b794ff; --blue-deep:#9367e8; --display:'Glacier Display','Microsoft YaHei',sans-serif;
+ --assessment-surface:#1e1928; --assessment-raised:#282033;
+ background:var(--page); color:var(--ink); color-scheme:dark;
+}
+.impeccable-public.assessment-service-page .join-main { width:min(1320px,calc(100% - 72px)); max-width:1320px; padding-top:30px; padding-bottom:68px; }
+.impeccable-public.assessment-service-page .nav-inner { min-height:0; gap:0; }
+.impeccable-public.assessment-service-page .nav-community { display:flex; margin-left:0; }
+.impeccable-public.assessment-service-page :is(h1,h2,h3,h4) { color:var(--ink); font-family:var(--display); font-weight:900; }
+.impeccable-public.assessment-service-page :is(p,li,small,label,dt,dd) { color:#bdafce; }
+.impeccable-public.assessment-service-page :is(strong,b) { color:#eee5fa; }
+.impeccable-public.assessment-service-page :is(a,button,summary,input,textarea,select):focus-visible { outline:2px solid #bd9cff; outline-offset:4px; }
+.impeccable-public.assessment-service-page .platform-topbar-actions { gap:20px; }
+.impeccable-public.assessment-service-page .assessment-motion-toggle { order:-1; border-color:#59416d; background:#2b2038; color:#e6d4ff; }
+.impeccable-public.assessment-service-page .assessment-motion-toggle:hover:not(:disabled) { background:#423052; border-color:#9572bd; }
+.impeccable-public.assessment-service-page .assessment-motion-toggle[aria-pressed="false"] { background:#201b28; color:#b9aeca; border-color:#393040; }
+
+/* Masthead and quality preview are distinct layers rather than overlapping text. */
+.impeccable-public.assessment-service-page .arena-hero { display:grid; grid-template-columns:minmax(0,1fr) 330px; align-items:center; gap:0; min-height:304px; margin:0; border:1px solid #3d304e; border-radius:15px; background:#1d162b; }
+.impeccable-public.assessment-service-page .arena-copy { width:auto; max-width:none; padding:32px 20px 34px 30px; }
+.impeccable-public.assessment-service-page .arena-copy h1 { font-family:var(--display); font-size:clamp(29px,2.6vw,39px); font-weight:900; line-height:1.43; letter-spacing:-.025em; margin:0 0 12px; text-wrap:balance; }
+.impeccable-public.assessment-service-page .arena-lead { color:#c0afcf; font-size:13px; line-height:1.9; max-width:42ch; margin:0; }
+.impeccable-public.assessment-service-page .arena-kicker { display:none; }
+.impeccable-public.assessment-service-page.visual-is-editing .arena-kicker { display:flex; color:#b9a7cb; }
+.impeccable-public.assessment-service-page .arena-scene { width:80%; inset:-12px -12px -12px auto; opacity:.55; }
+.impeccable-public.assessment-service-page .arena-scene img { object-position:75% 45%; }
+.impeccable-public.assessment-service-page .arena-shade { background:linear-gradient(90deg,#1a1428 15%,#1c142bf5 40%,#21172e85 74%,#21172e4a); }
+.impeccable-public.assessment-service-page .arena-actions { gap:16px; margin-top:22px; }
+.impeccable-public.assessment-service-page .arena-cta { min-height:44px; color:#fff; border-radius:8px; background:#8155fa; padding:11px 18px; gap:20px; font-size:12px; }
+.impeccable-public.assessment-service-page .arena-cta:hover { background:#936cff; }
+.impeccable-public.assessment-service-page .arena-secondary { color:#e0cefa; border-color:#73558e; font-size:12px; }
+.impeccable-public.assessment-service-page .assessment-quality-hero { position:relative; inset:auto; grid-column:2; width:auto; max-width:none; height:248px; margin:24px 24px 24px 0; padding:17px 18px 13px; border:1px solid #58416f; border-radius:12px; background:#211b2cf2; box-shadow:none; }
+.impeccable-public.assessment-service-page .assessment-quality-hero h2 { color:#f0e3fc; font-size:17px; }
+.impeccable-public.assessment-service-page .assessment-quality-hero>header { border-color:#493754; }
+.impeccable-public.assessment-service-page .assessment-quality-hero>header p { color:#b9a4cc; }
+.impeccable-public.assessment-service-page .assessment-quality-icon { color:#c0a0f7; }
+.impeccable-public.assessment-service-page .assessment-quality-all { color:#cfadff; border-color:#493754; font-size:12px; }
+.impeccable-public.assessment-service-page .assessment-quality-scroll>.assessment-empty { color:#c4b2d6; }
+.impeccable-public.assessment-service-page .arena-section-nav { border-color:var(--line); gap:23px; margin-bottom:20px; }
+.impeccable-public.assessment-service-page .arena-section-nav a { color:#b9a9cb; font-size:12px; }
+.impeccable-public.assessment-service-page .arena-section-nav a:is(:hover,.is-active) { color:#e0c9ff; }
+.impeccable-public.assessment-service-page .arena-section-nav a::after,.impeccable-public.assessment-service-page .assessment-selection-track { background:#bd92ff; }
+.impeccable-public.assessment-service-page :is(.arena-section-label,.arena-nav-tail,.arena-section-label i) { color:#bba9cc; }
+
+/* Shared reading surfaces. */
+.impeccable-public.assessment-service-page :is(.club-notice-bar,.join-supervision,.assessment-work-resources,.join-content,.join-notices,.club-enrol-panel,.assessment-message-board,.assessment-groups,.assessment-examiners) { background:#1b1823; border-color:var(--line); border-radius:13px; box-shadow:none; }
+.impeccable-public.assessment-service-page .club-notice-bar { background:#251c33; border:1px solid #483355; padding:13px 16px; }
+.impeccable-public.assessment-service-page :is(.club-notice-label,.join-supervision-grid>div) { border-color:#47344f; }
+.impeccable-public.assessment-service-page :is(.club-notice-label h2,.assessment-notice-meta b) { color:#d7b6ff; }
+.impeccable-public.assessment-service-page .assessment-notice-item { background:transparent; color:var(--ink); border-color:#49374e; }
+.impeccable-public.assessment-service-page .assessment-notice-item>strong { color:#eadcf8; }
+.impeccable-public.assessment-service-page :is(.assessment-notice-meta,.assessment-empty,.assessment-picker-meta) { color:#bba9ca; }
+.impeccable-public.assessment-service-page .join-supervision { margin-bottom:24px; }
+.impeccable-public.assessment-service-page .assessment-supervision-head { border-color:var(--line); }
+.impeccable-public.assessment-service-page :is(.join-supervision-grid h2,.join-supervision-grid h3) { color:#e3d2f3; font-size:14px; }
+.impeccable-public.assessment-service-page .join-supervision-grid p { color:#bba8cc; }
+.impeccable-public.assessment-service-page .join-text-link { color:#e0c4ff; background:#332342; border-color:#604470; border-radius:7px; }
+.impeccable-public.assessment-service-page .club-layout { grid-template-columns:minmax(0,1fr) 290px; gap:22px; }
+.impeccable-public.assessment-service-page .club-sidebar { gap:20px; }
+.impeccable-public.assessment-service-page :is(.arena-section-heading h2,.assessment-resources-heading h2,.join-section-heading h2,.join-notices .join-section-heading h2,.message-board-heading h2) { color:#f3ebfc; font-size:23px; }
+.impeccable-public.assessment-service-page :is(.arena-section-heading>p,.arena-section-heading>p span,.assessment-resources-heading p,.join-section-heading>p,.join-eyebrow,.assessment-item-arrow) { color:#ba9fd6; }
+.impeccable-public.assessment-service-page .assessment-document { color:var(--ink); background:#231e2d; border-color:#42354e; border-radius:11px; min-height:100px; }
+.impeccable-public.assessment-service-page .assessment-document:hover { border-color:#9570c4; box-shadow:none; }
+.impeccable-public.assessment-service-page .assessment-document-icon { color:#c7a2f6; background:#392847; }
+.impeccable-public.assessment-service-page .assessment-document strong { color:#f0e6fc; font-size:14px; }
+.impeccable-public.assessment-service-page :is(.assessment-document small,.assessment-document-arrow) { color:#bda6d3; font-size:11px; }
+.impeccable-public.assessment-service-page .assessment-resource-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
+.impeccable-public.assessment-service-page .assessment-resource { background:#251f30; border-color:#45354f; border-radius:9px; color:#e4d6f5; }
+.impeccable-public.assessment-service-page .assessment-resource:hover { border-color:#9a73c4; background:#30253d; }
+.impeccable-public.assessment-service-page .assessment-resource strong { color:#edddfc; font-size:13px; }
+.impeccable-public.assessment-service-page .assessment-resource small { color:#bea8d2; font-size:11px; }
+.impeccable-public.assessment-service-page :is(.assessment-resource-tag,.assessment-resource-system .assessment-resource-tag) { color:#d7b6fa; background:#3a2949; }
+.impeccable-public.assessment-service-page :is(.assessment-resource-arrow,.assessment-service-reminder strong) { color:#d1b0f2; }
+.impeccable-public.assessment-service-page .assessment-service-reminder { background:#292031; border-color:#4c365b; }
+.impeccable-public.assessment-service-page .assessment-service-reminder>span { color:#bfa9d1; }
+.impeccable-public.assessment-service-page .join-content { padding:25px; }
+.impeccable-public.assessment-service-page .join-platform-switch { gap:9px; border-color:var(--line); }
+.impeccable-public.assessment-service-page .join-platform-switch a { min-width:0; min-height:48px; padding:12px 9px; font-size:14px; color:#c5afd8; background:#282132; border-color:#46354f; border-radius:8px; box-shadow:none; }
+.impeccable-public.assessment-service-page .join-platform-switch a[aria-current] { color:#f0e0ff; background:#442d5b; border-color:#8c62b4; box-shadow:none; }
+.impeccable-public.assessment-service-page .join-platform-switch a:hover { color:#f1e3ff; background:#35263f; }
+.impeccable-public.assessment-service-page :is(.join-rule-tabs button,.quality-kind-tabs button,.examiner-type-filters button) { color:#c5afd9; border-color:#50385e; background:#2a2035; border-radius:7px; }
+.impeccable-public.assessment-service-page :is(.join-rule-tabs button,.quality-kind-tabs button,.examiner-type-filters button)[aria-pressed=true] { color:#fff; background:#7546bb; border-color:#9e74d3; }
+.impeccable-public.assessment-service-page :is(.join-rule-tabs button,.quality-kind-tabs button,.examiner-type-filters button):hover:not([aria-pressed=true]) { background:#3a2947; }
+.impeccable-public.assessment-service-page .join-table-wrap { border-color:#4c3858; background:#211b29; border-radius:9px; }
+.impeccable-public.assessment-service-page .join-table { color:#d5c2e6; background:#211b29; }
+.impeccable-public.assessment-service-page .join-table caption { color:#c3a7d8; background:#2a2035; }
+.impeccable-public.assessment-service-page .join-table thead { color:#d6b8ed; background:#33233f; }
+.impeccable-public.assessment-service-page .join-table :is(th,td) { border-color:#3c2e48; }
+.impeccable-public.assessment-service-page .join-table tbody tr:nth-child(even) { background:#281f32; }
+.impeccable-public.assessment-service-page .join-table tbody th { color:#efe2fb; }
+.impeccable-public.assessment-service-page .join-table tbody th::before { background:#9368bd; }
+.impeccable-public.assessment-service-page .join-table td strong { color:#caa6ff; }
+.impeccable-public.assessment-service-page :is(.join-table-note,.join-facts small,.join-facts>div>span,.join-deposits span) { color:#baa4cd; }
+.impeccable-public.assessment-service-page :is(.join-facts,.join-facts>div+div,.management-document-section,.talent-rule-card,.talent-rule-card>header,.talent-order-note,.talent-price-row,.join-notices li) { border-color:#44304f; }
+.impeccable-public.assessment-service-page :is(.join-facts>div>strong,.join-deposits strong,.talent-price-row strong,.talent-rule-card header strong) { color:#d2b2ff; }
+.impeccable-public.assessment-service-page .management-document { color:#cdb8df; }
+.impeccable-public.assessment-service-page :is(.management-document-lead,.quality-report-fields p,.talent-voices) { color:#d3bfe3; background:#30223a; border-color:#4b3357; }
+.impeccable-public.assessment-service-page .talent-rule-card { background:#241c2e; border-radius:11px; }
+.impeccable-public.assessment-service-page :is(.management-document-section h3,.management-document-section h4,.quality-kind-section>h3,.talent-rule-card h3,.talent-rule-card h4) { color:#e9d5f8; }
+.impeccable-public.assessment-service-page :is(.management-document-section p,.management-process-list,.quality-kind-section [data-rule-panel]>p,.talent-rule-card p,.talent-rule-card header p) { color:#c7aed9; }
+.impeccable-public.assessment-service-page .management-process-list li::marker,.impeccable-public.assessment-service-page .join-notices li::before { color:#c9a4f3; background:#34213f; }
+.impeccable-public.assessment-service-page .club-enrol-image { background:#2a2037; }
+.impeccable-public.assessment-service-page .club-enrol-image img { filter:brightness(.8); object-position:72% 42%; }
+.impeccable-public.assessment-service-page .club-enrol-image::after { background:linear-gradient(0deg,#1b1823,transparent 85%); }
+.impeccable-public.assessment-service-page .arena-enrol-heading { background:#2a2035; border-color:#493550; }
+.impeccable-public.assessment-service-page .arena-enrol-heading>span { color:#cdb0e9; }
+.impeccable-public.assessment-service-page .arena-enrol-heading>.arena-step { color:#c5a6e1; }
+.impeccable-public.assessment-service-page :is(.club-enrol-copy h2,.assessment-groups h2,.assessment-examiners h2) { color:#eee2fb; }
+.impeccable-public.assessment-service-page .assessment-group-entry { color:#e0c7f1; background:#292031; border-color:#4c3658; border-radius:9px; }
+.impeccable-public.assessment-service-page .assessment-group-entry:hover { background:#34263f; border-color:#9a75bf; }
+.impeccable-public.assessment-service-page :is(.assessment-group-entry strong,.assessment-examiner-preview button) { color:#ead8f9; }
+.impeccable-public.assessment-service-page :is(.assessment-group-entry small,.assessment-group-entry p,.assessment-group-entry span) { color:#bfa4d1; }
+.impeccable-public.assessment-service-page :is(.assessment-choose,.assessment-examiner-open,.assessment-quality-pages button,.assessment-back,.assessment-group-save) { color:#ead8ff; background:#3c2852; border-color:#795497; border-radius:7px; }
+.impeccable-public.assessment-service-page .assessment-examiner-preview button { color:#e0c9f3; background:#332340; border-color:#5b3c6c; }
+.impeccable-public.assessment-service-page .assessment-quality-columns { color:#d1b3e7; background:#31213b; }
+.impeccable-public.assessment-service-page .assessment-quality-preview-table td { color:#cfb5df; border-color:#4b3356; }
+
+/* Dialogs and QR imagery: dark controls around an unchanged white scanning area. */
+.impeccable-public.assessment-service-page :is(.assessment-dialog,.report-dialog) { background:#211929; color:#f3e8fb; border-color:#765287; border-radius:15px; box-shadow:0 24px 80px #0009; }
+.impeccable-public.assessment-service-page :is(.assessment-dialog,.report-dialog)::backdrop { background:#0b0714d9; backdrop-filter:blur(5px); }
+.impeccable-public.assessment-service-page :is(.assessment-dialog-header,.report-dialog-header) { background:#2d2139; border-color:#4b3258; }
+.impeccable-public.assessment-service-page :is(.assessment-dialog-header h2,.report-dialog-header h2,.assessment-examiner-detail h3,.assessment-notice-article h2) { color:#f0e0fc; }
+.impeccable-public.assessment-service-page :is(.assessment-dialog-close,.report-close) { color:#edddfa; background:#3b2848; border-color:#654576; }
+.impeccable-public.assessment-service-page :is(input:not([type=checkbox]):not([type=radio]),textarea,select) { color:#eee0fa; border-color:#624374; background:#2a1f35; border-radius:7px; }
+.impeccable-public.assessment-service-page :is(input,textarea)::placeholder { color:#b7a1c7; opacity:1; }
+.impeccable-public.assessment-service-page input { caret-color:#bd9cff; }
+.impeccable-public.assessment-service-page input:is([type=checkbox],[type=radio]) { accent-color:#b58af3; }
+.impeccable-public.assessment-service-page .platform-search input { background:transparent; border-radius:0; }
+.impeccable-public.assessment-service-page .platform-search input[name] { background:transparent; }
+.impeccable-public.assessment-service-page :is(.assessment-examiner-item,.quality-result-card) { color:#e8d8f5; background:#2d2038; border-color:#5d3e6b; border-radius:10px; }
+.impeccable-public.assessment-service-page :is(.assessment-examiner-item:hover,.assessment-quality-hero .quality-result-card) { background:#33223f; }
+.impeccable-public.assessment-service-page :is(.assessment-avatar,.examiner-tag-badges>span) { color:#dbc0f3; background:#4a2e5b; }
+.impeccable-public.assessment-service-page :is(.quality-result-grade,.quality-result-person>strong) { color:#e4cafa; }
+.impeccable-public.assessment-service-page :is(.quality-result-card>header>span,.quality-result-person>span,.assessment-qr-hint,.assessment-group-scan-hint,.assessment-notice-article time) { color:#c2a8d3; }
+.impeccable-public.assessment-service-page .quality-result-members.is-pair .quality-result-person+.quality-result-person { border-color:#5c3f67; }
+.impeccable-public.assessment-service-page :is(.report-qr,.assessment-qr-frame,.assessment-group-qr) { background:#fff; border:1px solid #e7dced; border-radius:10px; }
+.impeccable-public.assessment-service-page :is(.assessment-qr-frame,.assessment-group-qr) :is(p,[role=status]) { color:#43334e; }
+.impeccable-public.assessment-service-page :is(.report-save,.assessment-dialog .assessment-choose,.message-compose-actions button) { color:#fff; background:#8050ce; border-color:#9b6cd9; }
+
+/* Guest posts and form states keep their original semantics. */
+.impeccable-public.assessment-service-page .message-board-kicker { color:#b9a0cb; }
+.impeccable-public.assessment-service-page :is(.message-board-intro,.message-board-heading>span,.message-identity>span,.message-content,.message-compose-actions>span,.message-item-meta time,.message-empty,.message-pages>span,.message-list-heading h3,.message-board-status) { color:#c3add5; }
+.impeccable-public.assessment-service-page :is(.message-item,.message-item:first-child,.message-list,.message-list-heading) { border-color:#48314f; }
+.impeccable-public.assessment-service-page :is(.message-item-meta strong,.message-author-field,.message-anonymous-choice) { color:#e0c9ef; }
+.impeccable-public.assessment-service-page :is(.message-author-mark,.message-role) { color:#dcbcf4; background:#43294f; }
+.impeccable-public.assessment-service-page :is(.message-identity button,.message-identity>a,.message-list-heading button,.message-pages button) { color:#d3b4e9; background:#32223e; border-color:#5e3c6e; }
+.impeccable-public.assessment-service-page :is(.message-board-status.is-error,.message-delete) { color:#ffb4cc; }
+.impeccable-public.assessment-service-page :is(.message-author-field input:disabled,button:disabled) { opacity:.55; }
+.impeccable-public.assessment-service-page .club-mobile-actions { background:#17121ff2; border-color:#4c345a; }
+.impeccable-public.assessment-service-page .club-mobile-actions a { color:#e0caf5; background:#2c1f39; border-color:#5e3b71; border-radius:8px; }
+.impeccable-public.assessment-service-page .club-mobile-actions a:last-child { color:#fff; background:#7948ca; border-color:#a173dd; }
+.impeccable-public.assessment-service-page.visual-is-editing [data-join-field] { color:inherit; }
+.impeccable-public.assessment-service-page.visual-is-editing [data-join-field]:is(:hover,:focus) { color:#22162e; }
+
+@media(max-width:1400px) {
+ .impeccable-public.assessment-service-page .club-layout { grid-template-columns:minmax(0,1fr); grid-template-areas:'primary' 'sidebar'; }
+ .impeccable-public.assessment-service-page .club-primary { grid-area:primary; }
+ .impeccable-public.assessment-service-page .club-sidebar { grid-area:sidebar; }
+ .impeccable-public.assessment-service-page .club-sidebar { display:grid; grid-template-columns:1fr 1fr; align-items:start; }
+}
+@media(max-width:1200px) {
+ .impeccable-public.assessment-service-page .join-main { width:calc(100% - 48px); }
+ .impeccable-public.assessment-service-page .arena-hero { grid-template-columns:minmax(0,1fr) 280px; }
+ .impeccable-public.assessment-service-page .arena-copy { padding:26px 20px 28px 25px; }
+ .impeccable-public.assessment-service-page .assessment-quality-hero { margin-right:18px; padding-inline:14px; }
+ .impeccable-public.assessment-service-page .assessment-resource-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:900px) {
+ .impeccable-public.assessment-service-page .nav-inner { min-height:67px; }
+ .impeccable-public.assessment-service-page .nav-community { display:none; }
+ .impeccable-public.assessment-service-page .arena-hero { grid-template-columns:minmax(0,1fr) 285px; }
+ .impeccable-public.assessment-service-page .join-main { padding-top:20px; }
+}
+@media(max-width:600px) {
+ html:has(.assessment-service-page) { scroll-padding-top:146px; }
+ .impeccable-public.assessment-service-page .join-main { width:calc(100% - 32px); padding-bottom:102px; }
+ .impeccable-public.assessment-service-page .platform-topbar-actions { gap:8px; }
+ .impeccable-public.assessment-service-page .platform-topbar-join { display:none; }
+ .impeccable-public.assessment-service-page .assessment-motion-toggle { width:32px; height:32px; }
+ .impeccable-public.assessment-service-page .arena-hero { display:block; min-height:0; }
+ .impeccable-public.assessment-service-page .arena-copy { padding:25px 20px 20px; }
+ .impeccable-public.assessment-service-page .arena-copy h1 { font-size:29px; line-height:1.43; max-width:none; }
+ .impeccable-public.assessment-service-page .arena-lead { font-size:12px; max-width:28ch; }
+ .impeccable-public.assessment-service-page .arena-scene { width:100%; height:295px; inset:-10px -10px auto; opacity:.45; }
+ .impeccable-public.assessment-service-page .arena-shade { background:linear-gradient(90deg,#1b1427f2,#1b14279c 60%,#1b142750); }
+ .impeccable-public.assessment-service-page .arena-actions { margin-top:18px; gap:14px; }
+ .impeccable-public.assessment-service-page .arena-cta { font-size:12px; gap:15px; padding-inline:13px; }
+ .impeccable-public.assessment-service-page .arena-secondary { font-size:12px; gap:10px; }
+ .impeccable-public.assessment-service-page .assessment-quality-hero { width:auto; height:218px; margin:0 16px 16px; padding:15px; }
+ .impeccable-public.assessment-service-page .arena-section-nav { gap:20px; }
+ .impeccable-public.assessment-service-page .arena-section-nav a { font-size:11px; }
+ .impeccable-public.assessment-service-page .arena-section-label,.impeccable-public.assessment-service-page .arena-nav-tail { display:none; }
+ .impeccable-public.assessment-service-page .club-sidebar { display:flex; }
+ .impeccable-public.assessment-service-page .join-content { padding:19px 14px; }
+ .impeccable-public.assessment-service-page :is(.arena-section-heading h2,.assessment-resources-heading h2,.join-section-heading h2,.message-board-heading h2) { font-size:21px; }
+ .impeccable-public.assessment-service-page .join-platform-switch { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .impeccable-public.assessment-service-page .join-platform-switch a { font-size:13px; }
+ .impeccable-public.assessment-service-page .assessment-document { padding:14px 11px; }
+ .impeccable-public.assessment-service-page .assessment-document strong { font-size:13px; }
+ .impeccable-public.assessment-service-page .assessment-resource-grid { gap:9px; }
+ .impeccable-public.assessment-service-page .assessment-resource strong { font-size:12px; }
+ .impeccable-public.assessment-service-page .assessment-resource small { font-size:11px; }
+ .impeccable-public.assessment-service-page .support-entry { bottom:86px; }
+}
+@media(max-width:370px) {
+ .impeccable-public.assessment-service-page .arena-copy { padding:22px 16px 20px; }
+ .impeccable-public.assessment-service-page .arena-copy h1 { font-size:27px; }
+}
